@@ -130,11 +130,7 @@ export async function runExperiment() {
   const instructions = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: `
-        <p>You're  a contestant on a game show where contestants choose from a set of items.</p>
-        <p>Some of the items are associated with prizes, while other are not.</p> 
-        <p> You do not know which items are associated with prize and which are not.</p> 
-        <p>The game show host does know, but they cannot explicitly tell you this information.</p>
-        <p>However, at various points in the game, the host can give you hints</p>
+        <p>You're  a contestant on a game show where contestants choose from a set of items. Some of the items are associated with prizes, while others are not. You do not know which items are associated with prize and which are not. The game show host does know, but they cannot explicitly tell you this information. However, at various points in the game, the host can give you hints</p>
         <p>Press any key to begin.</p>
       `,
     post_trial_gap: 2000,
