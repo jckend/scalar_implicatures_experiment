@@ -140,17 +140,9 @@ export async function runExperiment() {
   const instructions = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: `
-        <p>In this experiment, a circle will appear in the center of the screen.</p>
-        <p>If the circle is <span class="text-blue-500 font-semibold">blue</span>, 
-        press the letter <span class="text-blue-500 font-semibold">F</span> on the keyboard as fast as you can.</p>
-        <p>If the circle is <span class="text-orange-500 font-semibold">orange</span>, 
-        press the letter <span class="text-orange-500 font-semibold">J</span> as fast as you can.</p>
-        <div style='width: 700px;'>
-        <div style='float: left;'><img src='${imgStimBlue}'></img>
-        <p class='small'><strong>Press the F key</strong></p></div>
-        <div style='float: right;'><img src='${imgStimOrange}'></img>
-        <p class='small'><strong>Press the J key</strong></p></div>
-        </div>
+        <p>You're  a contestant on a game show where contestants choose from a set of items. Some of the items are associated with prizes, while other are not.</p> 
+        <p> You do not know which items are associated with prize and which are not.</p> 
+        <p>The game show host does know, but they cannot explicitly tell you this information. However, at various points in the game, the host can give you hints</p>
         <p>Press any key to begin.</p>
       `,
     post_trial_gap: 2000,
@@ -183,7 +175,7 @@ export async function runExperiment() {
   const test = {
     type: jsPsychImageKeyboardResponse,
     stimulus: jsPsych.timelineVariable('stimulus') as unknown as string,
-    choices: ['f', 'j'] as KeyboardResponse[],
+    choices: ['a', 'b'] as KeyboardResponse[],
     data: {
       task: 'response' as Task,
       correct_response: jsPsych.timelineVariable('correct_response') as unknown as string,
