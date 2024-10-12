@@ -1,5 +1,5 @@
 import surveyMultiChoice from '@jspsych/plugin-survey-multi-choice'
-import htmlKeyboardResponse from '@jspsych/plugin-html-keyboard-response';
+import htmlKeyboardResponse from '@jspsych/plugin-html-keyboard-response'
 import jsPsychPreload from '@jspsych/plugin-preload'
 import { initJsPsych } from 'jspsych'
 
