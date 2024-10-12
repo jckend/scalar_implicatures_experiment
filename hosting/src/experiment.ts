@@ -146,7 +146,7 @@ export async function runExperiment() {
   type: jsPsychSurveyMultiChoice,
   questions: [
     {
-      prompt: "Your task is to choose a numbered box. There are 100 numbered boxes in total and 5 of them contain a million dollar prize. The host tells the first contestant that there is money in box 20 or box 25. This contestant picks box 20 and finds a million dollars there. Imagine you are the next contestant in this game. The host does not give you any hints. Which action are you most likely to take?", 
+      prompt: "Your task is to choose a numbered box. There are 100 numbered boxes in total and 5 of them contain a million dollar prize. The host tells the first contestant that there is money in <b>box 20 or box 25</b>. This contestant <b>picks box 20</b> and <b>finds a million dollars</b> there. Imagine you are the next contestant in this game. The host does not give you any hints. Which action are you most likely to take?", 
       name: 'ExFindsMil', 
       options: ['Choose box 25', 'Choose another box'], 
       required: true
