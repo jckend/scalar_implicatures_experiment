@@ -11,6 +11,8 @@ import { getMockDbState } from './lib/mockDatabase' // Mock Database Panel
 import type { jsPsychSurveyMultiChoice, Task, TrialData } from './project'
 import type { DataCollection } from 'jspsych'
 
+import imgStim1 from './images/medium_skin.png'
+
 /* Alternatively
  * type JsPsychInstance = ReturnType<typeof initJsPsych>
  * type JsPsychGetData = JsPsychInstance['data']['get']
@@ -204,7 +206,7 @@ export async function runExperiment() {
   /* define trial stimuli array for timeline variables */
   var hair_trial1 = {
   type: jsPsychImageKeyboardResponse,
-  stimulus: './images/medium_skin.png',
+  stimulus: imgStim1,
   choices: ['e', 'f', 'j'],
   prompt: "<p>Your task is to find Waldo. If you find Waldo, you win a million dollars. The host tells you <b>Waldo has dark hair</b>. Which face do you think is Waldo? Press 'e' for the left face, 'f' for middle face, and 'j' for the right face.</p>",
   }
