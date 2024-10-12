@@ -9,10 +9,6 @@ import { getMockDbState } from './lib/mockDatabase' // Mock Database Panel
 
 import type { KeyboardResponse, Task, TrialData } from './project'
 import type { DataCollection } from 'jspsych'
-
-import imgStimBlue from './images/blue.png'
-import imgStimOrange from './images/orange.png'
-import imgStimFrosty from './images/frosted_flakes.png'
   
 /* Alternatively
  * type JsPsychInstance = ReturnType<typeof initJsPsych>
@@ -122,12 +118,7 @@ export async function runExperiment() {
   /* create timeline */
   const timeline: Record<string, any>[] = []
 
-  /* preload images */
-  const preload = {
-    type: jsPsychPreload,
-    images: [imgStimBlue, imgStimOrange, imgStimFrosty],
-  }
-  timeline.push(preload)
+;
 
   /* define welcome message trial */
   const welcome = {
@@ -149,68 +140,28 @@ export async function runExperiment() {
   }
   timeline.push(instructions)
 
-  /* define trial stimuli array for timeline variables */
-  const test_stimuli: Record<string, string>[] = [
-    { stimulus: imgStimBlue, correct_response: 'f' as KeyboardResponse },
-    { stimulus: imgStimOrange, correct_response: 'j' as KeyboardResponse },
-    { stimulus: imgStimFrosty, correct_response: 'f' as KeyboardResponse }
-  ]
+  /* define trials */
+  var trial = {
+  type: jsPsychSurveyMultiChoice,
+  questions: [
+    {
+      prompt: "Your task is to choose a numbered box. There are 100 numbered boxes in total and 5 of them contain a million dollar prize. The host tells the first contestant that there is money in box 20 or box 25. This contestant picks box 20 and finds a million dollars there. Imagine you are the next contestant in this game. The host does not give you any hints. Which action are you most likely to take?", 
+      name: 'ExFindsMil', 
+      options: ['Choose box 25', 'Choose another box'], 
+      required: true
+    }, 
+    {
+      prompt: ""Your task is to choose a numbered box. There are 100 numbered boxes in total and 5 of them contain a million dollar prize. The host tells the first contestant that there is money in box 20 or box 25. This contestant picks box 20 discovers that the box is empty. Imagine you are the next contestant in this game. The host does not give you any hints. Which action are you most likely to take?", 
+      name: 'ExFindsNothing', 
+      options: ['Choose box 25', 'Choose another box'], 
+      required: false
+    }
+  ],
+};
 
-  /* define fixation and test trials */
-  const fixation = {
-    type: jsPsychHtmlKeyboardResponse,
-    stimulus: '<div style="font-size:60px;">+</div>',
-    choices: 'NO_KEYS',
-    trial_duration: function () {
-      return jsPsych.randomization.sampleWithoutReplacement(
-        [250, 500, 750, 1000, 1250, 1500, 1750, 2000],
-        1,
-      )[0] as number
-    },
-    data: {
-      task: 'fixation' as Task,
-    },
-  }
-
-  const test = {
-    type: jsPsychImageKeyboardResponse,
-    stimulus: jsPsych.timelineVariable('stimulus') as unknown as string,
-    choices: ['a', 'b'] as KeyboardResponse[],
-    data: {
-      task: 'response' as Task,
-      correct_response: jsPsych.timelineVariable('correct_response') as unknown as string,
-    },
-    on_finish: function (data: TrialData) {
-      data.correct = jsPsych.pluginAPI.compareKeys(data.response || null, data.correct_response || null)
-      data.saveToFirestore = true
-    },
-  }
-
-  /* define test procedure */
-  const test_procedure = {
-    timeline: [fixation, test],
-    timeline_variables: test_stimuli,
-    repetitions: 3,
-    randomize_order: true,
-  }
-  timeline.push(test_procedure)
-
-  /* define debrief */
-  const debrief_block = {
-    type: jsPsychHtmlKeyboardResponse,
-    stimulus: function () {
-      const trials = jsPsych.data.get().filter({ task: 'response' })
-      const correct_trials = trials.filter({ correct: true })
-      const accuracy = Math.round((correct_trials.count() / trials.count()) * 100)
-      const rt = Math.round(correct_trials.select('rt').mean())
-
-      return `<p>You responded correctly on ${accuracy.toString()}% of the trials.</p>
-          <p>Your average response time was ${rt.toString()}ms.</p>
-          <p>Press any key to complete the experiment. Thank you!</p>`
-    },
-  }
-  timeline.push(debrief_block)
-
+  var experiment = [];
+  experiment.push(trial)
+  
   /* Mock Database Panel */
   if (debug && mock) {
     if (debugButton) {
