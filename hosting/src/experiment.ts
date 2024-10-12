@@ -126,8 +126,8 @@ export async function runExperiment() {
   }
   timeline.push(welcome)
 
-  /* define instructions trial */
-  const instructions = {
+  /* define instructions for first trial */
+  const instructions1 = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: `
         <p>You're  a contestant on a game show where contestants choose from a set of items. Some of the items are associated with prizes, while others are not. You do not know which items are associated with prize and which are not. The game show host does know, but they cannot explicitly tell you this information. However, at various points in the game, the host can give you hints</p>
@@ -135,7 +135,7 @@ export async function runExperiment() {
       `,
     post_trial_gap: 2000,
   }
-  timeline.push(instructions)
+  timeline.push(instructions1)
 
   /* define trials */
   var trial1 = {
@@ -190,6 +190,16 @@ export async function runExperiment() {
 };
   timeline.push(trial4)
 
+  /* define instructions for second trial */
+  const instructions2 = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: `
+        <p>where's waldo game</p>
+        <p>Press any key to begin.</p>
+      `,
+    post_trial_gap: 2000,
+  }
+  timeline.push(instructions2)
 
 
   
