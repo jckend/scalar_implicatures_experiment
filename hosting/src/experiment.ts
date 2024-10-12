@@ -121,6 +121,14 @@ export async function runExperiment() {
   /* create timeline */
   var timeline = [];
 
+  /* preload images */
+  var preload = {
+  type: jsPsychPreload,
+  images: ['./images/medium_skin.png']
+}
+  timeline.push(preload)
+
+
   /* define welcome message trial */
   const welcome = {
     type: jsPsychHtmlKeyboardResponse,
