@@ -206,8 +206,8 @@ export async function runExperiment() {
   type: jsPsychImageKeyboardResponse,
   stimulus: './images/medium_skin.png',
   choices: ['s', 'f', 'j', 'l']
-  };
-  timeline.push(hair_trial);
+  }
+  timeline.push(hair_trial)
 
   
   /* Mock Database Panel */
