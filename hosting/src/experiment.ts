@@ -154,6 +154,20 @@ export async function runExperiment() {
   ],
 };
   timeline.push(trial1)
+
+  var trial2 = {
+  type: jsPsychSurveyMultiChoice,
+  questions: [
+    {
+      prompt: "Your task is to choose a numbered box. There are 100 numbered boxes in total and 5 of them contain a million dollar prize. The host tells the first contestant that there is money in <b>box 20 or box 25</b>. This contestant <b>picks box 20</b> and <b>discovers it's empty</b>. Imagine you are the next contestant in this game. The host does not give you any hints. Which action are you most likely to take?", 
+      name: 'ExFindsNothing', 
+      options: ['Choose box 25', 'Choose another box'], 
+      required: true
+    }, 
+  ],
+};
+  timeline.push(trial2)
+
   
   /* Mock Database Panel */
   if (debug && mock) {
