@@ -202,12 +202,13 @@ export async function runExperiment() {
   timeline.push(instructions2)
 
   /* define trial stimuli array for timeline variables */
-  var hair_trial = {
+  var hair_trial1 = {
   type: jsPsychImageKeyboardResponse,
   stimulus: './images/medium_skin.png',
-  choices: ['s', 'f', 'j', 'l']
+  choices: ['e', 'f', 'j'],
+  prompt: "<p>Your task is to find Waldo. If you find Waldo, you win a million dollars. The host tells you <b>Waldo has dark hair</b>. Which face do you think is Waldo? Press 'e' for the left face, 'f' for middle face, and 'j' for the right face.</p>",
   }
-  timeline.push(hair_trial)
+  timeline.push(hair_trial1)
 
   
   /* Mock Database Panel */
