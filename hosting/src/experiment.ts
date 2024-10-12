@@ -116,9 +116,7 @@ export async function runExperiment() {
   })
 
   /* create timeline */
-  const timeline: Record<string, any>[] = []
-
-;
+  const timeline = [];
 
   /* define welcome message trial */
   const welcome = {
@@ -141,7 +139,7 @@ export async function runExperiment() {
   timeline.push(instructions)
 
   /* define trials */
-  var trial = {
+  const trial = {
   type: jsPsychSurveyMultiChoice,
   questions: [
     {
@@ -158,9 +156,7 @@ export async function runExperiment() {
     }
   ],
 };
-
-  var experiment = [];
-  experiment.push(trial)
+  timeline.push(trial)
   
   /* Mock Database Panel */
   if (debug && mock) {
