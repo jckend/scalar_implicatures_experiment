@@ -116,7 +116,7 @@ export async function runExperiment() {
   })
 
   /* create timeline */
-  const timeline = [];
+  var timeline = [];
 
   /* define welcome message trial */
   const welcome = {
@@ -139,7 +139,7 @@ export async function runExperiment() {
   timeline.push(instructions)
 
   /* define trials */
-  const trial = {
+  var trial = {
   type: jsPsychSurveyMultiChoice,
   questions: [
     {
