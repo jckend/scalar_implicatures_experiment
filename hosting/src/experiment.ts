@@ -7,7 +7,7 @@ import { debugging, getUserInfo, mockStore, prolificCC, prolificCUrl } from './g
 import { saveTrialDataComplete, saveTrialDataPartial } from './lib/databaseUtils'
 import { getMockDbState } from './lib/mockDatabase' // Mock Database Panel
 
-import type { KeyboardResponse, Task, TrialData } from './project'
+import type { jsPsychSurveyMultiChoice, Task, TrialData } from './project'
 import type { DataCollection } from 'jspsych'
   
 /* Alternatively
