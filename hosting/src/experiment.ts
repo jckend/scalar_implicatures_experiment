@@ -124,7 +124,7 @@ export async function runExperiment() {
   /* preload images */
   var preload = {
   type: jsPsychPreload,
-  images: ['./images/medium_skin.png']
+  images: [imgStim1]
 }
   timeline.push(preload)
 
