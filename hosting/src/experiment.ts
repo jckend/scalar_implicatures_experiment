@@ -12,7 +12,8 @@ import type { DataCollection } from 'jspsych'
 
 import imgStimBlue from './images/blue.png'
 import imgStimOrange from './images/orange.png'
-
+import imgStimFrosty from './images/frosted_flakes.png'
+  
 /* Alternatively
  * type JsPsychInstance = ReturnType<typeof initJsPsych>
  * type JsPsychGetData = JsPsychInstance['data']['get']
@@ -124,7 +125,7 @@ export async function runExperiment() {
   /* preload images */
   const preload = {
     type: jsPsychPreload,
-    images: [imgStimBlue, imgStimOrange],
+    images: [imgStimBlue, imgStimOrange, imgStimFrosty],
   }
   timeline.push(preload)
 
@@ -160,6 +161,7 @@ export async function runExperiment() {
   const test_stimuli: Record<string, string>[] = [
     { stimulus: imgStimBlue, correct_response: 'f' as KeyboardResponse },
     { stimulus: imgStimOrange, correct_response: 'j' as KeyboardResponse },
+    { stimulus: imgStimFrosty, correct_response: 'f' as KeyboardResponse }
   ]
 
   /* define fixation and test trials */
