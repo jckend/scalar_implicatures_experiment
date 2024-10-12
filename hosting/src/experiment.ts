@@ -130,9 +130,11 @@ export async function runExperiment() {
   const instructions = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: `
-        <p>You're  a contestant on a game show where contestants choose from a set of items. Some of the items are associated with prizes, while other are not.</p> 
+        <p>You're  a contestant on a game show where contestants choose from a set of items.</p>
+        <p>Some of the items are associated with prizes, while other are not.</p> 
         <p> You do not know which items are associated with prize and which are not.</p> 
-        <p>The game show host does know, but they cannot explicitly tell you this information. However, at various points in the game, the host can give you hints</p>
+        <p>The game show host does know, but they cannot explicitly tell you this information.</p>
+        <p>However, at various points in the game, the host can give you hints</p>
         <p>Press any key to begin.</p>
       `,
     post_trial_gap: 2000,
@@ -140,7 +142,7 @@ export async function runExperiment() {
   timeline.push(instructions)
 
   /* define trials */
-  var trial = {
+  var trial1 = {
   type: jsPsychSurveyMultiChoice,
   questions: [
     {
@@ -149,15 +151,9 @@ export async function runExperiment() {
       options: ['Choose box 25', 'Choose another box'], 
       required: true
     }, 
-    {
-      prompt: "Your task is to choose a numbered box. There are 100 numbered boxes in total and 5 of them contain a million dollar prize. The host tells the first contestant that there is money in box 20 or box 25. This contestant picks box 20 discovers that the box is empty. Imagine you are the next contestant in this game. The host does not give you any hints. Which action are you most likely to take?", 
-      name: 'ExFindsNothing', 
-      options: ['Choose box 25', 'Choose another box'], 
-      required: false
-    }
   ],
 };
-  timeline.push(trial)
+  timeline.push(trial1)
   
   /* Mock Database Panel */
   if (debug && mock) {
