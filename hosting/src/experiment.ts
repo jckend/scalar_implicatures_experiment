@@ -154,20 +154,6 @@ export async function runExperiment() {
   ],
 };
   timeline.push(trial1)
-
-    var trial2 = {
-  type: jsPsychSurveyMultiChoice,
-  questions: [
-    {
-      prompt: "Your task is to choose a numbered box. There are 100 numbered boxes in total and 5 of them contain a million dollar prize. The host tells the first contestant that there is money in <span class="text-blue-500 font-semibold">box 20 or box 25</span>. This contestant <span class="text-blue-500 font-semibold">picks box 20</span> and <span class="text-blue-500 font-semibold">finds a million dollars there</span>. Imagine you are the next contestant in this game. The host does not give you any hints. Which action are you most likely to take?", 
-      name: 'ExFindsMil', 
-      options: ['Choose box 25', 'Choose another box'], 
-      required: true
-    }, 
-  ],
-};
-  timeline.push(trial2)
-
   
   /* Mock Database Panel */
   if (debug && mock) {
