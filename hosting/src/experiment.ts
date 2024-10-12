@@ -208,7 +208,7 @@ export async function runExperiment() {
   /* define trial stimuli array for timeline variables */
   var hair_trial = {
   type: 'image-keyboard-response',
-  stimulus: ['img/medium_skin.png', 'img/medium_light_skin.png','img/very_light_skin.png'],
+  stimulus: 'img/medium_skin.png',
   choices: ['s', 'f', 'j', 'l']
   };
   timeline.push(hair_trial);
