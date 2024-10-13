@@ -11,7 +11,7 @@ import { getMockDbState } from './lib/mockDatabase' // Mock Database Panel
 import type { jsPsychSurveyMultiChoice, Task, TrialData } from './project'
 import type { DataCollection } from 'jspsych'
 
-import imgStim1 from './images/blue.png'
+import imgStim1 from './images/medium_skin.png'
 
 /* Alternatively
  * type JsPsychInstance = ReturnType<typeof initJsPsych>
