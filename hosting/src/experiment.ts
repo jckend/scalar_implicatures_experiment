@@ -12,6 +12,8 @@ import type { jsPsychSurveyMultiChoice, Task, TrialData } from './project'
 import type { DataCollection } from 'jspsych'
 
 import imgStim1 from './images/medium_skin.png'
+import imgStim2 from './images/medium_light_skin.png'
+import imgStim3 from './images/very_light_skin.png'
 
 /* Alternatively
  * type JsPsychInstance = ReturnType<typeof initJsPsych>
@@ -124,7 +126,7 @@ export async function runExperiment() {
   /* preload images */
   var preload = {
   type: jsPsychPreload,
-  images: [imgStim1]
+  images: [imgStim1, imgStim2]
 }
   timeline.push(preload)
 
