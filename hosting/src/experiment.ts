@@ -216,13 +216,7 @@ export async function runExperiment() {
   /* define trial stimuli array for timeline variables */
   var hair_trial1 = {
   type: jsPsychImageKeyboardResponse,
-  stimulus: function () {
-        // note: the outer parentheses are only here so we can break the line
-        return (
-           '<img src="'+jsPsych.timelineVariable(imgStim1)+'">'
-           +'<img src="'+jsPsych.timelineVariable(imgStim2)+'">'
-        );
-    },
+  stimulus: imgStim1,
   choices: ['e', 'f', 'j'],
   prompt: "<p>Your task is to find Waldo. If you find Waldo, you win a million dollars. The host tells you <b>Waldo has dark hair</b>. Which face do you think is Waldo? Press 'e' for the left face, 'f' for middle face, and 'j' for the right face.</p>",
   }
