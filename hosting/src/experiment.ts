@@ -220,6 +220,14 @@ export async function runExperiment() {
   }
   timeline.push(hair_trial1)
 
+  var hair_trial2 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgStim1,
+  choices: ['e', 'f', 'j'],
+  prompt: "<p>Your task is to find Waldo. If you find Waldo, you win a million dollars. The host tells you <b>Waldo has black hair</b>. Which face do you think is Waldo? Press 'e' for the left face, 'f' for middle face, and 'j' for the right face.</p>",
+  }
+  timeline.push(hair_trial2)
+
   
   /* Mock Database Panel */
   if (debug && mock) {
