@@ -11,7 +11,7 @@ import { getMockDbState } from './lib/mockDatabase' // Mock Database Panel
 import type { jsPsychSurveyMultiChoice, Task, TrialData } from './project'
 import type { DataCollection } from 'jspsych'
 
-import imgStim1 from './images/medium_skin.png'
+import imgStim1 from './images/very_light_skin-imageonline.co-merged.png'
 import imgStim2 from './images/medium_light_skin.png'
 import imgStim3 from './images/very_light_skin.png'
 
