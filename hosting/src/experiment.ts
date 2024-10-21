@@ -205,8 +205,7 @@ export async function runExperiment() {
   const instructions2 = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: `
-        <p>where's waldo game</p>
-        <p>Press any key to begin.</p>
+        <p>Your contestant on a game show where your task is to find Waldo. If you correctly identify Waldo, you will win a prize. The host cannot tell you where Waldo is, but he can give you hint. Press any key to begin.</p>
       `,
     post_trial_gap: 2000,
   }
@@ -217,7 +216,7 @@ export async function runExperiment() {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgStim1,
   choices: ['e', 'f', 'j'],
-  prompt: "<p>Your task is to find Waldo. If you find Waldo, you win a million dollars. The host tells you <b>Waldo has dark hair</b>. Which face do you think is Waldo? Press 'e' for the left face, 'f' for middle face, and 'j' for the right face.</p>",
+  prompt: "<p>The host tells you <b>Waldo has dark hair</b>. Which face do you think is Waldo?</p>",
   }
   timeline.push(hair_trial1)
 
@@ -225,7 +224,7 @@ export async function runExperiment() {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgStim1,
   choices: ['e', 'f', 'j'],
-  prompt: "<p>Your task is to find Waldo. If you find Waldo, you win a million dollars. The host tells you <b>Waldo has black hair</b>. Which face do you think is Waldo? Press 'e' for the left face, 'f' for middle face, and 'j' for the right face.</p>",
+  prompt: "<p>The host tells you <b>Waldo has black hair</b>. Which face do you think is Waldo?</p>",
   }
   timeline.push(hair_trial2)
 
