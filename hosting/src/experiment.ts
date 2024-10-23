@@ -213,9 +213,6 @@ export async function runExperiment() {
     as fast as you can.</p>
     <div style='width: 700px;'>
     <div style='float: left;'><img src='images/allburgers_majorityburgers.png'></img>
-    <p class='small'><strong>Press the F key</strong></p></div>
-    <div style='float: right;'><img src='images/allburgers_minorityburgers.png'></img>
-    <p class='small'><strong>Press the J key</strong></p></div>
     </div>
     <p>Press any key to begin.</p>
   `,
