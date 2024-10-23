@@ -210,9 +210,10 @@ export async function runExperiment() {
     <p>In this experiment, you will be presented with two images. Your goal is to select the winning image. The host cannot tell you which image is the winning image, but he can give you hints.</p><p>If the winning image is on the left,  
     press the letter F on the keyboard as fast as you can. If the winning image is on the right, press the letter J 
     as fast as you can.</p>
-    <div style='width: 700px;'>
-    <div style="margin:0px auto"><img src='${imgStim3}'></img>
+    <center>
+    <div style='width: 700px;'><img src='${imgStim3}'></img>
     </div>
+    </center>
     <p>Press any key to begin.</p>
   `,
   post_trial_gap: 2000
