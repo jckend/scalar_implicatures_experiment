@@ -145,7 +145,9 @@ export async function runExperiment() {
  var instructions2 = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: `
-    <p>You are a contestant on a game show. You will be presented with two images. Your goal is to select the winning image. The host cannot tell you which image is the winning image, but she can provide hints.</p><p>If the winning image is on the left,  
+    <p>You are a contestant on a game show. You will be presented with two images. Your goal is to select the winning image.</p>
+    <p>The host cannot tell you which image is the winning image, but she can provide hints.</p>
+    <p>If the winning image is on the left,  
     press the letter F on the keyboard as fast as you can. If the winning image is on the right, press the letter J 
     as fast as you can.</p>
     <center>
@@ -171,6 +173,7 @@ timeline.push(instructions2)
   var most_trial2 = {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgStim1,
+  stimulus_width: 700, 
   choices: ['f', 'j'],
   prompt: "<p>Host hint: <b>Most but not all of the items are burgers</b>.</p>",
   }
@@ -179,6 +182,7 @@ timeline.push(instructions2)
   var some_trial1 = {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgStim2,
+  stimulus_width: 700, 
   choices: ['f', 'j'],
   prompt: "<p>Host hint: <b>Some of the items are burgers</b>.</p>",
   }
@@ -187,6 +191,7 @@ timeline.push(instructions2)
   var some_trial2 = {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgStim2,
+  stimulus_width: 700, 
   choices: ['f', 'j'],
   prompt: "<p>Host hint: <b>Some but not all of the items are burgers</b>.</p>",
   }
@@ -195,6 +200,7 @@ timeline.push(instructions2)
   var adhoc_trial1 = {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgStim3,
+  stimulus_width: 700, 
   choices: ['f', 'j'],
   prompt: "<p>Host hint: <b>The top item is a burger</b>.</p>",
   }
@@ -203,6 +209,7 @@ timeline.push(instructions2)
   var hair_trial1 = {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgStim4,
+  stimulus_width: 700, 
   choices: ['f', 'j'],
   prompt: "<p>Host hint: <b>The figure on the card has dark hair</b>.</p>",
   }
@@ -211,6 +218,7 @@ timeline.push(instructions2)
   var hair_trial2 = {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgStim4,
+  stimulus_width: 700, 
   choices: ['f', 'j'],
   prompt: "<p>Host hint: <b>The figure on the card has dark hair, but not black hair</b>.</p>",
   }
@@ -219,6 +227,7 @@ timeline.push(instructions2)
   var heat_trial1 = {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgStim5,
+  stimulus_width: 700, 
   choices: ['f', 'j'],
   prompt: "<p>Host hint: <b>The item on the card is warm</b>.</p>",
   }
@@ -227,6 +236,7 @@ timeline.push(instructions2)
   var heat_trial2 = {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgStim5,
+  stimulus_width: 700, 
   choices: ['f', 'j'],
   prompt: "<p>Host hint: <b>The item on the card is warm but not hot</b>.</p>",
   }
