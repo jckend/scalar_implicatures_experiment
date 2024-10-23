@@ -14,6 +14,8 @@ import type { DataCollection } from 'jspsych'
 import imgStim1 from './images/allburgers_majorityburgers.png'
 import imgStim2 from './images/allburgers_minorityburgers.png'
 import imgStim3 from './images/adhoc.png'
+import imgStim4 from './images/darkbrown_blackhair.png'
+import imgStim5 from './images/warm_hot.png'
 
 /* Alternatively
  * type JsPsychInstance = ReturnType<typeof initJsPsych>
@@ -126,7 +128,7 @@ export async function runExperiment() {
   /* preload images */
   var preload = {
   type: jsPsychPreload,
-  images: [imgStim1, imgStim2]
+  images: [imgStim1, imgStim2, imgStim3, imgStim4, imgStim5]
 }
   timeline.push(preload)
 
@@ -202,21 +204,31 @@ export async function runExperiment() {
   timeline.push(trial4)
 
   /* define instructions for second trial */
-  const instructions2 = {
-    type: jsPsychHtmlKeyboardResponse,
-    stimulus: `
-        <p>Your contestant on a game show where your task is to find Waldo. If you correctly identify Waldo, you will win a prize. The host cannot tell you where Waldo is, but he can give you hint. Press any key to begin.</p>
-      `,
-    post_trial_gap: 2000,
-  }
-  timeline.push(instructions2)
+ var instructions2 = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: `
+    <p>In this experiment, you will be presented with two images. Your goal is to select the winning image. The host cannot tell you which image is the winning image, but he can give you hints.</p><p>If the winning image is on the left,  
+    press the letter F on the keyboard as fast as you can.</p>
+    <p>If the winning image is on the right, press the letter J 
+    as fast as you can.</p>
+    <div style='width: 700px;'>
+    <div style='float: left;'><img src='images/allburgers_majorityburgers.png'></img>
+    <p class='small'><strong>Press the F key</strong></p></div>
+    <div style='float: right;'><img src='images/allburgers_minorityburgers.png'></img>
+    <p class='small'><strong>Press the J key</strong></p></div>
+    </div>
+    <p>Press any key to begin.</p>
+  `,
+  post_trial_gap: 2000
+};
+timeline.push(instructions2)
 
   /* define trial stimuli array for timeline variables */
   var most_trial1 = {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgStim1,
   choices: ['f', 'j'],
-  prompt: "<p>Host hint: <b>Most of the items are burgers.</b>.</p>",
+  prompt: "<p>Host hint: <b>Most of the items are burgers</b>.</p>",
   }
   timeline.push(most_trial1)
 
@@ -243,6 +255,47 @@ export async function runExperiment() {
   prompt: "<p>Host hint: <b>Some but not all of the items are burgers</b>.</p>",
   }
   timeline.push(some_trial2)
+
+  var adhoc_trial1 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgStim3,
+  choices: ['f', 'j'],
+  prompt: "<p>Host hint: <b>The top item is a burger</b>.</p>",
+  }
+  timeline.push(adhoc_trial1)
+
+  var hair_trial1 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgStim4,
+  choices: ['f', 'j'],
+  prompt: "<p>Host hint: <b>The figure on the card has dark hair</b>.</p>",
+  }
+  timeline.push(hair_trial1)
+
+  var hair_trial2 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgStim4,
+  choices: ['f', 'j'],
+  prompt: "<p>Host hint: <b>The figure on the card has dark hair, but not black hair</b>.</p>",
+  }
+  timeline.push(hair_trial2)
+
+  var heat_trial1 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgStim5,
+  choices: ['f', 'j'],
+  prompt: "<p>Host hint: <b>The item on the card is warm</b>.</p>",
+  }
+  timeline.push(hair_trial1)
+
+  var heat_trial2 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgStim5,
+  choices: ['f', 'j'],
+  prompt: "<p>Host hint: <b>The item on the card is warm but not hot</b>.</p>",
+  }
+  timeline.push(hair_trial2)
+
 
   /* Mock Database Panel */
   if (debug && mock) {
