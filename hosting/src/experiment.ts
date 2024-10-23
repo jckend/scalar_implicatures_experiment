@@ -11,9 +11,9 @@ import { getMockDbState } from './lib/mockDatabase' // Mock Database Panel
 import type { jsPsychSurveyMultiChoice, Task, TrialData } from './project'
 import type { DataCollection } from 'jspsych'
 
-import imgStim1 from './images/very_light_skin-imageonline.co-merged.png'
-import imgStim2 from './images/medium_light_skin.png'
-import imgStim3 from './images/very_light_skin.png'
+import imgStim1 from './images/allburgers_majorityburgers.png'
+import imgStim2 from './images/allburgers_minorityburgers.png'
+import imgStim3 from './images/adhoc.png'
 
 /* Alternatively
  * type JsPsychInstance = ReturnType<typeof initJsPsych>
@@ -212,23 +212,38 @@ export async function runExperiment() {
   timeline.push(instructions2)
 
   /* define trial stimuli array for timeline variables */
-  var hair_trial1 = {
+  var most_trial1 = {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgStim1,
-  choices: ['e', 'f', 'j'],
-  prompt: "<p>The host tells you <b>Waldo has dark hair</b>. Which face do you think is Waldo?</p>",
+  choices: ['f', 'j'],
+  prompt: "<p>Host hint: <b>Most of the items are burgers.</b>.</p>",
   }
-  timeline.push(hair_trial1)
+  timeline.push(most_trial1)
 
-  var hair_trial2 = {
+  var most_trial2 = {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgStim1,
-  choices: ['e', 'f', 'j'],
-  prompt: "<p>The host tells you <b>Waldo has black hair</b>. Which face do you think is Waldo?</p>",
+  choices: ['f', 'j'],
+  prompt: "<p>Host hint: <b>Most but not all of the items are burgers</b>.</p>",
   }
-  timeline.push(hair_trial2)
+  timeline.push(most_trial2)
 
-  
+  var some_trial1 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgStim2,
+  choices: ['f', 'j'],
+  prompt: "<p>Host hint: <b>Some of the items are burgers</b>.</p>",
+  }
+  timeline.push(some_trial1)
+
+  var some_trial2 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgStim2,
+  choices: ['f', 'j'],
+  prompt: "<p>Host hint: <b>Some but not all of the items are burgers</b>.</p>",
+  }
+  timeline.push(some_trial2)
+
   /* Mock Database Panel */
   if (debug && mock) {
     if (debugButton) {
