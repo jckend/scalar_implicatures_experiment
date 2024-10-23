@@ -212,7 +212,7 @@ export async function runExperiment() {
     <p>If the winning image is on the right, press the letter J 
     as fast as you can.</p>
     <div style='width: 700px;'>
-    <div style='float: center;'><img src='images/adhoc.png'></img>
+    <div style='float: center;'><img src='./images/adhoc.png'></img>
     </div>
     <p>Press any key to begin.</p>
   `,
