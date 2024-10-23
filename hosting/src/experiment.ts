@@ -208,15 +208,14 @@ export async function runExperiment() {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: `
     <p>In this experiment, you will be presented with two images. Your goal is to select the winning image. The host cannot tell you which image is the winning image, but he can give you hints.</p><p>If the winning image is on the left,  
-    press the letter F on the keyboard as fast as you can.</p>
-    <p>If the winning image is on the right, press the letter J 
+    press the letter F on the keyboard as fast as you can. If the winning image is on the right, press the letter J 
     as fast as you can.</p>
-        <div style='width: 700px;'>
-        <div style='float: left;'><img src='${imgStim3}'></img>
-        <p class='small'><strong>Press the F key</strong></p></div>
-        <div style='float: right;'><img src='${imgStim4}'></img>
-        <p class='small'><strong>Press the J key</strong></p></div>
-        </div>
+    <div style='width: 700px;'>
+    <div style='float: left;'><img src='${imgStim3}'></img>
+    </div>
+    <div style='float: right;'><img src='${imgStim4}'></img>
+   </div>
+    </div>
     <p>Press any key to begin.</p>
   `,
   post_trial_gap: 2000
