@@ -140,74 +140,12 @@ export async function runExperiment() {
   }
   timeline.push(welcome)
 
-  /* define instructions for first trial */
-  const instructions1 = {
-    type: jsPsychHtmlKeyboardResponse,
-    stimulus: `
-        <p>You're  a contestant on a game show where contestants choose from a set of items. Some of the items are associated with prizes, while others are not. You do not know which items are associated with prize and which are not. The game show host does know, but they cannot explicitly tell you this information. However, at various points in the game, the host can give you hints. Press any key to begin.</p>
-      `,
-    post_trial_gap: 2000,
-  }
-  timeline.push(instructions1)
-
-  /* define trials */
-  var trial1 = {
-  type: jsPsychSurveyMultiChoice,
-  questions: [
-    {
-      prompt: "Your task is to choose a numbered box. There are 100 numbered boxes in total and 5 of them contain a million dollar prize. The host tells the first contestant that there is money in <b>box 20 or box 25</b>. This contestant <b>picks box 20</b> and <b>finds a million dollars there</b>. Imagine you are the next contestant in this game. The host does not give you any hints. Which action are you most likely to take?", 
-      name: 'ExFindsMil', 
-      options: ['Choose box 25', 'Choose another box'], 
-      required: true
-    }, 
-  ],
-};
-  timeline.push(trial1)
-
-  var trial2 = {
-  type: jsPsychSurveyMultiChoice,
-  questions: [
-    {
-      prompt: "Your task is to choose a numbered box. There are 100 numbered boxes in total and 5 of them contain a million dollar prize. The host tells the first contestant that there is money in <b>box 20 or box 25</b>. This contestant <b>picks box 20</b> and <b>discovers it's empty</b>. Imagine you are the next contestant in this game. The host does not give you any hints. Which action are you most likely to take?", 
-      name: 'ExFindsNothing', 
-      options: ['Choose box 25', 'Choose another box'], 
-      required: true
-    }, 
-  ],
-};
-  timeline.push(trial2)
-
-  var trial3 = {
-  type: jsPsychSurveyMultiChoice,
-  questions: [
-    {
-      prompt: "Your task is to choose a numbered box. There are 100 numbered boxes in total and 5 of them contain a million dollar prize. The host tells the first contestant that there is money in <b>box 20 or box 25 or both</b>. This contestant <b>picks box 20</b> and <b>discovers it's empty</b>. Imagine you are the next contestant in this game. The host does not give you any hints. Which action are you most likely to take?", 
-      name: 'InFindsNothing', 
-      options: ['Choose box 25', 'Choose another box'], 
-      required: true
-    }, 
-  ],
-};
-  timeline.push(trial3)
-
-  var trial4 = {
-  type: jsPsychSurveyMultiChoice,
-  questions: [
-    {
-      prompt: "Your task is to choose a numbered box. There are 100 numbered boxes in total and 5 of them contain a million dollar prize. The host tells the first contestant that there is money in <b>box 20 or box 25 or both</b>. This contestant <b>picks box 20</b> and <b>finds a million dollars there</b>. Imagine you are the next contestant in this game. The host does not give you any hints. Which action are you most likely to take?", 
-      name: 'InFindsMil', 
-      options: ['Choose box 25', 'Choose another box'], 
-      required: true
-    }, 
-  ],
-};
-  timeline.push(trial4)
 
   /* define instructions for second trial */
  var instructions2 = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: `
-    <p>In this experiment, you will be presented with two images. Your goal is to select the winning image. The host cannot tell you which image is the winning image, but he can give you hints.</p><p>If the winning image is on the left,  
+    <p>You are a contestant on a game show. You will be presented with two images. Your goal is to select the winning image. The host cannot tell you which image is the winning image, but she can provide hints.</p><p>If the winning image is on the left,  
     press the letter F on the keyboard as fast as you can. If the winning image is on the right, press the letter J 
     as fast as you can.</p>
     <center>
