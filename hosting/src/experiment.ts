@@ -211,10 +211,7 @@ export async function runExperiment() {
     press the letter F on the keyboard as fast as you can. If the winning image is on the right, press the letter J 
     as fast as you can.</p>
     <div style='width: 700px;'>
-    <div style='float: left;'><img src='${imgStim3}'></img>
-    </div>
-    <div style='float: right;'><img src='${imgStim4}'></img>
-   </div>
+    <div style='display: inline-block;'><img src='${imgStim3}'></img>
     </div>
     <p>Press any key to begin.</p>
   `,
