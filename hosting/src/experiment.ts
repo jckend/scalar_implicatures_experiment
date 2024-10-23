@@ -282,7 +282,7 @@ timeline.push(instructions2)
   choices: ['f', 'j'],
   prompt: "<p>Host hint: <b>The item on the card is warm</b>.</p>",
   }
-  timeline.push(hair_trial1)
+  timeline.push(heat_trial1)
 
   var heat_trial2 = {
   type: jsPsychImageKeyboardResponse,
@@ -290,7 +290,7 @@ timeline.push(instructions2)
   choices: ['f', 'j'],
   prompt: "<p>Host hint: <b>The item on the card is warm but not hot</b>.</p>",
   }
-  timeline.push(hair_trial2)
+  timeline.push(heat_trial2)
 
 
   /* Mock Database Panel */
