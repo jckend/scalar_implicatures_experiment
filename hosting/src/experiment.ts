@@ -162,6 +162,7 @@ timeline.push(instructions2)
   var most_trial1 = {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgStim1,
+  stimulus_width: 700px, 
   choices: ['f', 'j'],
   prompt: "<p>Host hint: <b>Most of the items are burgers</b>.</p>",
   }
