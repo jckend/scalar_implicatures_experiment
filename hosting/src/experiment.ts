@@ -170,7 +170,7 @@ export async function runExperiment() {
     <p>If the likelier image is on the left, press the left arrow &larr; on the keyboard as fast as you can. If the likelier image is on the right, press the right arrow &rarr; 
     as fast as you can.</p>
     <center>
-    <div style='width: 700px;'><img src='${imgBurg21}'></img>
+    <div style='width: 700px;'><img src='${imgBurg2}'></img>
     </div>
     </center>
     <p>Press any key to begin.</p>
