@@ -208,7 +208,7 @@ export async function runExperiment() {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgBurg1,
   stimulus_width: 700, 
-  choices: ['f', 'j'],
+  choices: ['ArrowLeft','ArrowRight'],
   prompt: "<p>Host hint: <b>Few of the items are spoons</b>.</p>",
   }
 
@@ -216,7 +216,7 @@ export async function runExperiment() {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgSax1,
   stimulus_width: 700, 
-  choices: ['f', 'j'],
+  choices: ['ArrowLeft','ArrowRight'],
   prompt: "<p>Host hint: <b>Few of the items are clamps</b>.</p>",
   }
 
@@ -224,7 +224,7 @@ export async function runExperiment() {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgSax2,
   stimulus_width: 700, 
-  choices: ['f', 'j'],
+  choices: ['ArrowLeft','ArrowRight'],
   prompt: "<p>Host hint: <b>Few of the items are clamps</b>.</p>",
   }
 
@@ -232,7 +232,7 @@ export async function runExperiment() {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgSnail2,
   stimulus_width: 700, 
-  choices: ['f', 'j'],
+ choices: ['ArrowLeft','ArrowRight'],
   prompt: "<p>Host hint: <b>Few of the items on the card are snails</b>.</p>",
   }
 
@@ -240,7 +240,7 @@ export async function runExperiment() {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgWarm1,
   stimulus_width: 700, 
-  choices: ['f', 'j'],
+  choices: ['ArrowLeft','ArrowRight'],
   prompt: "<p>Host hint: <b>The item on the card is warm</b>.</p>",
   }
 
@@ -248,7 +248,7 @@ export async function runExperiment() {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgSnail1,
   stimulus_width: 700, 
-  choices: ['f', 'j'],
+  choices: ['ArrowLeft','ArrowRight'],
   prompt: "<p>Host hint: <b>Some of the items are spoons</b>.</p>",
   }
 
@@ -264,7 +264,7 @@ export async function runExperiment() {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgBurg1,
   stimulus_width: 700, 
-  choices: ['f', 'j'],
+  choices: ['ArrowLeft','ArrowRight'],
   prompt: "<p>Host hint: <b>Some of the items are burgers</b>.</p>",
   }
 
@@ -272,7 +272,7 @@ export async function runExperiment() {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgSnail2,
   stimulus_width: 700, 
-  choices: ['f', 'j'],
+  choices: ['ArrowLeft','ArrowRight'],
   prompt: "<p>Host hint: <b>Some of the items are spoons</b>.</p>",
   }
 
@@ -280,7 +280,7 @@ export async function runExperiment() {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgSax2,
   stimulus_width: 700, 
-  choices: ['f', 'j'],
+  choices: ['ArrowLeft','ArrowRight'],
   prompt: "<p>Host hint: <b>Some of the items are saxophones</b>.</p>",
   }
 
@@ -288,7 +288,7 @@ export async function runExperiment() {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgBurg2,
   stimulus_width: 700, 
-  choices: ['f', 'j'],
+  choices: ['ArrowLeft','ArrowRight'],
   prompt: "<p>Host hint: <b>Some of the items are burgers</b>.</p>",
   }
 
@@ -296,7 +296,7 @@ export async function runExperiment() {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgCouples2,
   stimulus_width: 700, 
-  choices: ['f', 'j'],
+  choices: ['ArrowLeft','ArrowRight'],
   prompt: "<p>Host hint: <b>The man on the card is wearing a teal shirt</b>.</p>",
   }
 
@@ -304,7 +304,7 @@ export async function runExperiment() {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgCouples1,
   stimulus_width: 700, 
-  choices: ['f', 'j'],
+  choices: ['ArrowLeft','ArrowRight'],
   prompt: "<p>Host hint: <b>The man on the card is wearing a teal shirt</b>.</p>",
   }
 
@@ -312,7 +312,7 @@ export async function runExperiment() {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgBurg2,
   stimulus_width: 700, 
-  choices: ['f', 'j'],
+  choices: ['ArrowLeft','ArrowRight'],
   prompt: "<p>Host hint: <b>Most of the items are burgers</b>.</p>",
   }
 
@@ -320,7 +320,7 @@ export async function runExperiment() {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgBurg1,
   stimulus_width: 700, 
-  choices: ['f', 'j'],
+  choices: ['ArrowLeft','ArrowRight'],
   prompt: "<p>Host hint: <b>Most of the items are burgers</b>.</p>",
   }
 
@@ -328,7 +328,7 @@ export async function runExperiment() {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgSnail1,
   stimulus_width: 700, 
-  choices: ['f', 'j'],
+  choices: ['ArrowLeft','ArrowRight'],
   prompt: "<p>Host hint: <b>Most of the items are spoons</b>.</p>",
   }
 
@@ -336,7 +336,7 @@ export async function runExperiment() {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgSax1,
   stimulus_width: 700, 
-  choices: ['f', 'j'],
+  choices: ['ArrowLeft','ArrowRight'],
   prompt: "<p>Host hint: <b>Most of the items are saxophones</b>.</p>",
   }
 
@@ -344,7 +344,7 @@ export async function runExperiment() {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgDark2,
   stimulus_width: 700, 
-  choices: ['f', 'j'],
+  choices: ['ArrowLeft','ArrowRight'],
   prompt: "<p>Host hint: <b>The figure on the card has dark hair</b>.</p>",
   }
 
@@ -352,7 +352,7 @@ export async function runExperiment() {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgPartic2,
   stimulus_width: 700, 
-  choices: ['f', 'j'],
+ choices: ['ArrowLeft','ArrowRight'],
   prompt: "<p>Host hint: <b>The medal on the card was won by someone who participated</b>.</p>",
   }
 
@@ -360,7 +360,7 @@ export async function runExperiment() {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgPartic1,
   stimulus_width: 700, 
-  choices: ['f', 'j'],
+ choices: ['ArrowLeft','ArrowRight'],
   prompt: "<p>Host hint: <b>The medal on the card was won by someone who participated</b>.</p>",
   }
 
@@ -368,7 +368,7 @@ export async function runExperiment() {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgWarm1,
   stimulus_width: 700, 
-  choices: ['f', 'j'],
+  choices: ['ArrowLeft','ArrowRight'],
   prompt: "<p>Host hint: <b>The item on the card is warm</b>.</p>",
   }
 
@@ -376,13 +376,191 @@ export async function runExperiment() {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgWarm2,
   stimulus_width: 700, 
-  choices: ['f', 'j'],
+  choices: ['ArrowLeft','ArrowRight'],
   prompt: "<p>Host hint: <b>The item on the card is warm</b>.</p>",
   }
 
+      /* define trial variables for non-cooperative trials */
+  var nfew_trial1 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgBurg1,
+  stimulus_width: 700, 
+  choices: ['ArrowLeft','ArrowRight'],
+  prompt: "<p>Opponent description: <b>Few of the items are spoons</b>.</p>",
+  }
+
+  var nfew_trial2 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgSax1,
+  stimulus_width: 700, 
+  choices: ['ArrowLeft','ArrowRight'],
+  prompt: "<p>Opponent description: <b>Few of the items are clamps</b>.</p>",
+  }
+
+  var nfew_trial3 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgSax2,
+  stimulus_width: 700, 
+  choices: ['ArrowLeft','ArrowRight'],
+  prompt: "<p>Opponent description: <b>Few of the items are clamps</b>.</p>",
+  }
+
+  var nfew_trial4 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgSnail2,
+  stimulus_width: 700, 
+ choices: ['ArrowLeft','ArrowRight'],
+  prompt: "<p>Opponent description: <b>Few of the items on the card are snails</b>.</p>",
+  }
+
+  var nheat_trial1 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgWarm1,
+  stimulus_width: 700, 
+  choices: ['ArrowLeft','ArrowRight'],
+  prompt: "<p>Opponent description: <b>The item on the card is warm</b>.</p>",
+  }
+
+  var nsome_trial1 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgSnail1,
+  stimulus_width: 700, 
+  choices: ['ArrowLeft','ArrowRight'],
+  prompt: "<p>Opponent description: <b>Some of the items are spoons</b>.</p>",
+  }
+
+  var nsome_trial2 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgSax1,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Opponent description: <b>Some of the items are saxophones</b>.</p>",
+  }
+
+  var nsome_trial3 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgBurg1,
+  stimulus_width: 700, 
+  choices: ['ArrowLeft','ArrowRight'],
+  prompt: "<p>Opponent description: <b>Some of the items are burgers</b>.</p>",
+  }
+
+  var nsome_trial4 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgSnail2,
+  stimulus_width: 700, 
+  choices: ['ArrowLeft','ArrowRight'],
+  prompt: "<p>Opponent description: <b>Some of the items are spoons</b>.</p>",
+  }
+
+  var nsome_trial5 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgSax2,
+  stimulus_width: 700, 
+  choices: ['ArrowLeft','ArrowRight'],
+  prompt: "<p>Opponent description: <b>Some of the items are saxophones</b>.</p>",
+  }
+
+  var nsome_trial6 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgBurg2,
+  stimulus_width: 700, 
+  choices: ['ArrowLeft','ArrowRight'],
+  prompt: "<p>Opponent description: <b>Some of the items are burgers</b>.</p>",
+  }
+
+  var nadhoc_trial1 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgCouples2,
+  stimulus_width: 700, 
+  choices: ['ArrowLeft','ArrowRight'],
+  prompt: "<p>Opponent description: <b>The man on the card is wearing a teal shirt</b>.</p>",
+  }
+
+  var nadhoc_trial2 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgCouples1,
+  stimulus_width: 700, 
+  choices: ['ArrowLeft','ArrowRight'],
+  prompt: "<p>Opponent description: <b>The man on the card is wearing a teal shirt</b>.</p>",
+  }
+
+  var nmost_trial1 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgBurg2,
+  stimulus_width: 700, 
+  choices: ['ArrowLeft','ArrowRight'],
+  prompt: "<p>Opponent description: <b>Most of the items are burgers</b>.</p>",
+  }
+
+  var nmost_trial2 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgBurg1,
+  stimulus_width: 700, 
+  choices: ['ArrowLeft','ArrowRight'],
+  prompt: "<p>Opponent description: <b>Most of the items are burgers</b>.</p>",
+  }
+
+  var nmost_trial3 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgSnail1,
+  stimulus_width: 700, 
+  choices: ['ArrowLeft','ArrowRight'],
+  prompt: "<p>Opponent description: <b>Most of the items are spoons</b>.</p>",
+  }
+
+  var nmost_trial4 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgSax1,
+  stimulus_width: 700, 
+  choices: ['ArrowLeft','ArrowRight'],
+  prompt: "<p>Opponent description: <b>Most of the items are saxophones</b>.</p>",
+  }
+
+  var nhair_trial1 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgDark2,
+  stimulus_width: 700, 
+  choices: ['ArrowLeft','ArrowRight'],
+  prompt: "<p>Opponent description: <b>The figure on the card has dark hair</b>.</p>",
+  }
+
+  var npartic_trial1 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgPartic2,
+  stimulus_width: 700, 
+ choices: ['ArrowLeft','ArrowRight'],
+  prompt: "<p>Opponent description: <b>The medal on the card was won by someone who participated</b>.</p>",
+  }
+
+  var npartic_trial2 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgPartic1,
+  stimulus_width: 700, 
+ choices: ['ArrowLeft','ArrowRight'],
+  prompt: "<p>Opponent description: <b>The medal on the card was won by someone who participated</b>.</p>",
+  }
+
+  var nwarm_trial1 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgWarm1,
+  stimulus_width: 700, 
+  choices: ['ArrowLeft','ArrowRight'],
+  prompt: "<p>Opponent description: <b>The item on the card is warm</b>.</p>",
+  }
+
+  var nwarm_trial2 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgWarm2,
+  stimulus_width: 700, 
+  choices: ['ArrowLeft','ArrowRight'],
+  prompt: "<p>Opponent description: <b>The item on the card is warm</b>.</p>",
+  }
+
+
   const training =[few_trial0, some_trial0, adhoc_trial0, heat_trial0, most_trial0]
   const trials = [few_trial1, few_trial2, few_trial3, few_trial4, some_trial1, some_trial2, some_trial3, some_trial4, some_trial5, some_trial6, most_trial1, most_trial2, most_trial3, hair_trial1, adhoc_trial1, adhoc_trial2, partic_trial1, partic_trial2, warm_trial1, warm_trial2]
-
+  const ntrials = [nfew_trial1, nfew_trial2, nfew_trial3, nfew_trial4, nsome_trial1, nsome_trial2, nsome_trial3, nsome_trial4, nsome_trial5, nsome_trial6, nmost_trial1, nmost_trial2, nmost_trial3, nhair_trial1, nadhoc_trial1, nadhoc_trial2, npartic_trial1, npartic_trial2, nwarm_trial1, nwarm_trial2]
 
   /* define fixation and test trials */
   const fixation = {
@@ -468,6 +646,35 @@ timeline.push(instructions1)
     randomize_order: true,
   }
   timeline.push(test_procedure)
+
+    /* define instructions for semi-cooperative trial */
+ var instructions2 = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: `
+    <p>You are a contestant on a game show. You will be presented with two images. Your goal is to select the winning image, while your opponent's goal is to get you to select the lose image.</p>
+    <p>Your opponent will provide you with a description of the winning image. These descriptions will never be false, but they may be misleading.</p>
+    <p>If the winning image is on the left,  
+    press the letter F on the keyboard as fast as you can. If the winning image is on the right, press the letter J 
+    as fast as you can.</p>
+    <center>
+    <div style='width: 700px;'><img src='${imgSnail1}'></img>
+    </div>
+    </center>
+    <p>Press any key to begin.</p>
+  `,
+  post_trial_gap: 2000
+};
+timeline.push(instructions2)
+  
+  /* define test procedure */
+  const test_procedure2 = {
+    timeline: [fixation, test],
+    timeline_variables: trials,
+    repetitions: 3,
+    randomize_order: true,
+  }
+  timeline.push(test_procedure2)
+
 
   /* Mock Database Panel */
   if (debug && mock) {
