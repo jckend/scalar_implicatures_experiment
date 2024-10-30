@@ -197,7 +197,7 @@ export async function runExperiment() {
 
   var heat_trial1 = {
   type: jsPsychImageKeyboardResponse,
-  stimulus: imgStim5,
+  stimulus: imgWarm1,
   stimulus_width: 700, 
   choices: ['f', 'j'],
   prompt: "<p>Host hint: <b>The item on the card is warm</b>.</p>",
