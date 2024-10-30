@@ -40,7 +40,7 @@ const mock = mockStore()
 
 type Task = 'response' | 'fixation'
 type Response = 'left' | 'right'
-type KeyboardResponse = 'f' | 'j'
+type KeyboardResponse = 37 | 39
 
 interface TrialData {
   task: Task
