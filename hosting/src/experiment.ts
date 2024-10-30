@@ -405,10 +405,173 @@ timeline.push(instructions2)
 };
 timeline.push(instructions2)
 
-  /* define test procedure */
+  var nfew_trial1 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgBurg1,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Opponent description: <b>Few of the items are spoons</b>.</p>",
+  }
+
+  var nfew_trial2 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgSax1,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Opponent description: <b>Few of the items are clamps</b>.</p>",
+  }
+
+  var nfew_trial3 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgSax2,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Opponent description: <b>Few of the items are clamps</b>.</p>",
+  }
+
+  var nfew_trial4 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgSnail2,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Opponent description: <b>Few of the items on the card are snails</b>.</p>",
+  }
+
+  var nheat_trial1 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgStim5,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Opponent description: <b>The item on the card is warm</b>.</p>",
+  }
+
+  var nsome_trial1 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgSnail1,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Opponent description: <b>Some of the items are spoons</b>.</p>",
+  }
+
+  var nsome_trial2 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgSax1,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Opponent description: <b>Some of the items are saxophones</b>.</p>",
+  }
+
+  var nsome_trial3 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgBurg1,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Opponent description: <b>Some of the items are burgers</b>.</p>",
+  }
+
+  var nsome_trial4 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgSnail2,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Opponent description: <b>Some of the items are spoons</b>.</p>",
+  }
+
+  var nsome_trial5 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgSax2,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Opponent description: <b>Some of the items are saxophones</b>.</p>",
+  }
+
+  var nsome_trial6 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgBurg2,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Opponent description: <b>Some of the items are burgers</b>.</p>",
+  }
+
+  var nadhoc_trial1 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgCouples2,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Opponent description: <b>The man on the left is wearing a teal shirt</b>.</p>",
+  }
+
+  var nadhoc_trial2 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgCouples1,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Opponent description: <b>The man on the left is wearing a teal shirt</b>.</p>",
+  }
+
+  var nmost_trial1 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgBurg2,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Opponent description: <b>Most of the items are burgers</b>.</p>",
+  }
+
+  var nmost_trial2 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgBurg1,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Opponent description: <b>Most of the items are burgers</b>.</p>",
+  }
+
+  var nmost_trial3 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgSnail1,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Opponent description: <b>Most of the items are spoons</b>.</p>",
+  }
+
+  var nmost_trial4 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgSax1,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Opponent description: <b>Most of the items are saxophones</b>.</p>",
+  }
+
+  var nhair_trial1 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgDark2,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Opponent description: <b>The figure on the card has dark hair</b>.</p>",
+  }
+
+  var npartic_trial1 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgPartic2,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Opponent description: <b>The medal was won by someone who participated in the race</b>.</p>",
+  }
+
+  var npartic_trial2 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgPartic1,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Opponent description: <b>The medal was won by someone who participated in the race</b>.</p>",
+  }
+
+
+  const ntrials = [nfew_trial1, nfew_trial2, nfew_trial3, nfew_trial4, nsome_trial1, nsome_trial2, nsome_trial3, nsome_trial4, nsome_trial5, nsome_trial6, nmost_trial1, nmost_trial2, nmost_trial3, nhair_trial1, nadhoc_trial1, nadhoc_trial2, npartic_trial1, npartic_trial2]
+
+  /* define non-cooperative test procedure */
   const test_procedure2 = {
     timeline: [fixation, test],
-    timeline_variables: trials,
+    timeline_variables: ntrials,
     repetitions: 3,
     randomize_order: true,
   }
