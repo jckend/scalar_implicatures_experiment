@@ -35,6 +35,16 @@ import imgCouples2 from './images/couples_adhoc2.png'
 const debug = debugging()
 const mock = mockStore()
 
+type Task = 'response' | 'fixation'
+type Response = 'left' | 'right'
+type KeyboardResponse = 'f' | 'j'
+
+interface TrialData {
+  task: Task
+  response: Response
+  saveIncrementally: Response
+}
+
 /* Mock Database Panel */
 
 const debugButton = document.getElementById('debug-panel-button')
@@ -236,15 +246,6 @@ export async function runExperiment() {
 };
 timeline.push(instructions2)
 
-  timeline.push(few_trial1)
-  timeline.push(heat_trial1)
-  timeline.push(some_trial1)
-  timeline.push(adhoc_trial1)
-  timeline.push(most_trial1)
-  timeline.push(some_trial2)
-  timeline.push(few_trial2)
-  timeline.push(hair_trial1)
-
   /* define fixation and test trials */
   const fixation = {
     type: jsPsychHtmlKeyboardResponse,
@@ -266,7 +267,7 @@ timeline.push(instructions2)
     stimulus: jsPsych.timelineVariable('stimulus') as unknown as string,
     choices: ['f', 'j'] satisfies KeyboardResponse[],
     data: {
-      task: 'response' satisfies Task,
+      task: 'response' satisfies Task
     },
     on_finish: function (data: TrialData) {
       data.correct = jsPsych.pluginAPI.compareKeys(data.response || null, data.correct_response || null)
@@ -282,7 +283,6 @@ timeline.push(instructions2)
     randomize_order: true,
   }
   timeline.push(test_procedure)
-
 
   
   /* define instructions for semi-cooperative trial */
