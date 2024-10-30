@@ -16,7 +16,8 @@ import imgBurg2 from './images/all_some_burger2.png'
 import imgStim3 from './images/adhoc.png'
 import imgDark1 from './images/dark_black1.png'
 import imgDark2 from './images/dark_black2.png'
-import imgStim5 from './images/warmhot_1.png'
+import imgWarm1 from './images/warmhot_1.png'
+import imgWarm2 from './images/warmhot_2.png'
 import imgSnail1 from './images/all_some_snail1.png' 
 import imgSnail2 from './images/all_some_snail2.png' 
 import imgSpoon1 from './images/all_some_spoon1.png' 
@@ -149,7 +150,7 @@ export async function runExperiment() {
   /* preload images */
   var preload = {
   type: jsPsychPreload,
-  images: [imgBurg1, imgBurg2, imgStim3, imgDark1, imgDark2, imgStim5, imgSnail1, imgSnail2, imgSpoon1, imgSpoon2, imgSax1, imgSax2, imgCouples1, imgCouples2]
+  images: [imgBurg1, imgBurg2, imgStim3, imgDark1, imgDark2, imgWarm1, imgWarm2, imgSnail1, imgSnail2, imgSpoon1, imgSpoon2, imgSax1, imgSax2, imgCouples1, imgCouples2]
 }
   timeline.push(preload)
 
@@ -255,7 +256,7 @@ export async function runExperiment() {
   stimulus: imgCouples2,
   stimulus_width: 700, 
   choices: ['f', 'j'],
-  prompt: "<p>Host hint: <b>The man on the left is wearing a teal shirt</b>.</p>",
+  prompt: "<p>Host hint: <b>The man on the card is wearing a teal shirt</b>.</p>",
   }
 
   var adhoc_trial2 = {
@@ -263,7 +264,7 @@ export async function runExperiment() {
   stimulus: imgCouples1,
   stimulus_width: 700, 
   choices: ['f', 'j'],
-  prompt: "<p>Host hint: <b>The man on the left is wearing a teal shirt</b>.</p>",
+  prompt: "<p>Host hint: <b>The man on the card is wearing a teal shirt</b>.</p>",
   }
 
   var most_trial1 = {
@@ -311,7 +312,7 @@ export async function runExperiment() {
   stimulus: imgPartic2,
   stimulus_width: 700, 
   choices: ['f', 'j'],
-  prompt: "<p>Host hint: <b>The medal was won by someone who participated in the race</b>.</p>",
+  prompt: "<p>Host hint: <b>The medal on the card was won by someone who participated</b>.</p>",
   }
 
   var partic_trial2 = {
@@ -319,12 +320,26 @@ export async function runExperiment() {
   stimulus: imgPartic1,
   stimulus_width: 700, 
   choices: ['f', 'j'],
-  prompt: "<p>Host hint: <b>The medal was won by someone who participated in the race</b>.</p>",
+  prompt: "<p>Host hint: <b>The medal on the card was won by someone who participated</b>.</p>",
   }
 
+  var warm_trial1 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgWarm1,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Host hint: <b>The item on the card is warm</b>.</p>",
+  }
 
+  var warm_trial2 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgWarm2,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Host hint: <b>The item on the card is warm</b>.</p>",
+  }
 
-  const trials = [few_trial1, few_trial2, few_trial3, few_trial4, some_trial1, some_trial2, some_trial3, some_trial4, some_trial5, some_trial6, most_trial1, most_trial2, most_trial3, hair_trial1, adhoc_trial1, adhoc_trial2, partic_trial1, partic_trial2]
+  const trials = [few_trial1, few_trial2, few_trial3, few_trial4, some_trial1, some_trial2, some_trial3, some_trial4, some_trial5, some_trial6, most_trial1, most_trial2, most_trial3, hair_trial1, adhoc_trial1, adhoc_trial2, partic_trial1, partic_trial2, warm_trial1, warm_trial2]
     
   /* define instructions for semi-cooperative trial */
  var instructions2 = {
@@ -565,8 +580,23 @@ timeline.push(instructions2)
   prompt: "<p>Opponent description: <b>The medal was won by someone who participated in the race</b>.</p>",
   }
 
+  var nwarm_trial1 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgWarm1,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Opponent description: <b>The item on the card is warm</b>.</p>",
+  }
 
-  const ntrials = [nfew_trial1, nfew_trial2, nfew_trial3, nfew_trial4, nsome_trial1, nsome_trial2, nsome_trial3, nsome_trial4, nsome_trial5, nsome_trial6, nmost_trial1, nmost_trial2, nmost_trial3, nhair_trial1, nadhoc_trial1, nadhoc_trial2, npartic_trial1, npartic_trial2]
+  var nwarm_trial2 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgWarm2,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Opponent description: <b>The item on the card is warm</b>.</p>",
+  }
+
+  const ntrials = [nfew_trial1, nfew_trial2, nfew_trial3, nfew_trial4, nsome_trial1, nsome_trial2, nsome_trial3, nsome_trial4, nsome_trial5, nsome_trial6, nmost_trial1, nmost_trial2, nmost_trial3, nhair_trial1, nadhoc_trial1, nadhoc_trial2, npartic_trial1, npartic_trial2, nwarm_trial1, nwarm_trial2]
 
   /* define non-cooperative test procedure */
   const test_procedure2 = {
