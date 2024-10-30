@@ -15,7 +15,7 @@ import imgStim1 from './images/all_some_burger1.png'
 import imgStim2 from './images/all_some_burger2.png'
 import imgStim3 from './images/adhoc.png'
 import imgStim4 from './images/dark_black1.png'
-import imgStim5 from './images/warmhot2.png'
+import imgStim5 from './images/warm_hot.png'
 
 /* Alternatively
  * type JsPsychInstance = ReturnType<typeof initJsPsych>
