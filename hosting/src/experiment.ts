@@ -201,7 +201,7 @@ timeline.push(instructions2)
   stimulus: imgCouples2,
   stimulus_width: 700, 
   choices: ['f', 'j'],
-  prompt: "<p>Host hint: <b>The man is wearing a teal shirt</b>.</p>",
+  prompt: "<p>Host hint: <b>A man is wearing a teal shirt</b>.</p>",
   }
   timeline.push(adhoc_trial1)
 
