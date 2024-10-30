@@ -597,8 +597,7 @@ export async function runExperiment() {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: `
     <p>You will be presented with two images. Select the image you think is likelier to fit the description.</p>
-    <p>If the likelier image is on the left, press the left arrow &larr; on the keyboard as fast as you can. If the likelier image is on the right, press the right arrow &rarr; 
-    as fast as you can.</p>
+    <p>If the likelier image is on the left, press the left arrow <i class="material-icons" style="font-size:36px">keyboard_arrow_left</i> on the keyboard as fast as you can. If the likelier image is on the right, press the right arrow <i class="material-icons" style="font-size:36px">keyboard_arrow_right</i> as fast as you can.</p>
     <center>
     <div style='width: 700px;'><img src='${imgBurg2}'></img>
     </div>
