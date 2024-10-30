@@ -165,10 +165,26 @@ export async function runExperiment() {
   stimulus: imgBurg1,
   stimulus_width: 700, 
   choices: ['f', 'j'],
-  prompt: "<p>Opponent description: <b>Few of the items are spoons</b>.</p>",
+  prompt: "<p>Host hint: <b>Few of the items are spoons</b>.</p>",
   }
 
   var few_trial2 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgSax1,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Host hint: <b>Few of the items are clamps</b>.</p>",
+  }
+
+  var few_trial3 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgSax2,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Host hint: <b>Few of the items are clamps</b>.</p>",
+  }
+
+  var few_trial4 = {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgSnail2,
   stimulus_width: 700, 
@@ -200,14 +216,56 @@ export async function runExperiment() {
   prompt: "<p>Host hint: <b>Some of the items are saxophones</b>.</p>",
   }
 
+  var some_trial3 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgBurg1,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Host hint: <b>Some of the items are burgers</b>.</p>",
+  }
+
+  var some_trial4 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgSnail2,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Host hint: <b>Some of the items are spoons</b>.</p>",
+  }
+
+  var some_trial5 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgSax2,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Host hint: <b>Some of the items are saxophones</b>.</p>",
+  }
+
+  var some_trial6 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgBurg2,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Host hint: <b>Some of the items are burgers</b>.</p>",
+  }
+
+
 
   var adhoc_trial1 = {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgCouples2,
   stimulus_width: 700, 
   choices: ['f', 'j'],
-  prompt: "<p>Host hint: <b>A man is wearing a teal shirt</b>.</p>",
+  prompt: "<p>Host hint: <b>The man on the left is wearing a teal shirt</b>.</p>",
   }
+
+  var adhoc_trial2 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgCouples1,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Host hint: <b>The man on the left is wearing a teal shirt</b>.</p>",
+  }
+
 
   var most_trial1 = {
   type: jsPsychImageKeyboardResponse,
@@ -225,7 +283,7 @@ export async function runExperiment() {
   prompt: "<p>Host hint: <b>The figure on the card has dark hair</b>.</p>",
   }
 
-  const trials = [few_trial1, few_trial2, some_trial1, some_trial2, most_trial1, hair_trial1, adhoc_trial1]
+  const trials = [few_trial1, few_trial2, some_trial1, some_trial2, some_trial3, most_trial1, hair_trial1, adhoc_trial1, adhoc_trial2]
     
   /* define instructions for semi-cooperative trial */
  var instructions2 = {
