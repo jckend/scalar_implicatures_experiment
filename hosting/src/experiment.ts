@@ -400,28 +400,9 @@ timeline.push(instructions2)
   }
   timeline.push(test_procedure)
 
-  
-  /* define instructions for non-cooperative trial */
- var instructions3 = {
-  type: jsPsychHtmlKeyboardResponse,
-  stimulus: `
-    <p>You are a contestant on a game show. You will be presented with two images. Your goal is to select the winning image.</p>
-    <p>Your opponent knows which card is the winning card. Your opponent wins if you select the wrong card.</p> 
-    <p>She must provide you with a description of the winning card. This description cannot be false, but it may be misleading.</p>
-    <p>If the winning image is on the left,  
-    press the letter F on the keyboard as fast as you can. If the winning image is on the right, press the letter J 
-    as fast as you can.</p>
-    <center>
-    <div style='width: 700px;'><img src='${imgSax1}'></img>
-    </div>
-    </center>
-    <p>Press any key to begin.</p>
-  `,
-  post_trial_gap: 2000
-};
-timeline.push(instructions3)
+  /*define non-cooperative procedure */
 
-  var nfew_trial1 = {
+    var nfew_trial1 = {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgBurg1,
   stimulus_width: 700, 
@@ -599,6 +580,27 @@ timeline.push(instructions3)
 
   const ntrials = [nfew_trial1, nfew_trial2, nfew_trial3, nfew_trial4, nsome_trial1, nsome_trial2, nsome_trial3, nsome_trial4, nsome_trial5, nsome_trial6, nmost_trial1, nmost_trial2, nmost_trial3, nhair_trial1, nadhoc_trial1, nadhoc_trial2, npartic_trial1, npartic_trial2, nwarm_trial1, nwarm_trial2]
 
+  
+  /* define instructions for non-cooperative trial */
+ var instructions3 = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: `
+    <p>You are a contestant on a game show. You will be presented with two images. Your goal is to select the winning image.</p>
+    <p>Your opponent knows which card is the winning card. Your opponent wins if you select the wrong card.</p> 
+    <p>She must provide you with a description of the winning card. This description cannot be false, but it may be misleading.</p>
+    <p>If the winning image is on the left,  
+    press the letter F on the keyboard as fast as you can. If the winning image is on the right, press the letter J 
+    as fast as you can.</p>
+    <center>
+    <div style='width: 700px;'><img src='${imgSax1}'></img>
+    </div>
+    </center>
+    <p>Press any key to begin.</p>
+  `,
+  post_trial_gap: 2000
+};
+timeline.push(instructions3)
+  
   /* define non-cooperative test procedure */
   const test_procedure2 = {
     timeline: [fixation, test],
