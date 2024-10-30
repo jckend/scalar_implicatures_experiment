@@ -625,8 +625,7 @@ timeline.push(instructions0)
   stimulus: `
     <p>You are a contestant on a game show. You will be presented with two images. Your goal is to select the winning image.</p>
     <p>The host cannot tell you which image is the winning image, but she can provide hints. These hints will never be false, but they may be misleading.</p>
-    <p>If the likelier image is on the left, press the left arrow &larr; on the keyboard as fast as you can. If the likelier image is on the right, press the right arrow &rarr; 
-    as fast as you can.</p>
+    <p>If the likelier image is on the left, press the left arrow <i class="material-icons" style="font-size:36px">keyboard_arrow_left</i> on the keyboard as fast as you can. If the likelier image is on the right, press the right arrow <i class="material-icons" style="font-size:36px">keyboard_arrow_right</i> as fast as you can.</p>
     <center>
     <div style='width: 700px;'><img src='${imgSnail1}'></img>
     </div>
