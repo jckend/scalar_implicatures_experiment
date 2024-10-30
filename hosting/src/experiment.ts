@@ -198,7 +198,7 @@ timeline.push(instructions2)
 
   var adhoc_trial1 = {
   type: jsPsychImageKeyboardResponse,
-  stimulus: imgCouple2,
+  stimulus: imgCouples2,
   stimulus_width: 700, 
   choices: ['f', 'j'],
   prompt: "<p>Host hint: <b>The man is wearing a teal shirt</b>.</p>",
