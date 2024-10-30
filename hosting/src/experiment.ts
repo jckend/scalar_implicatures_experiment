@@ -16,6 +16,14 @@ import imgStim2 from './images/all_some_burger2.png'
 import imgStim3 from './images/adhoc.png'
 import imgStim4 from './images/dark_black1.png'
 import imgStim5 from './images/warm_hot.png'
+import imgSnail1 from './images/all_some_snail1.png' 
+import imgSnail2 from './images/all_some_snail2.png' 
+import imgSpoon1 from './images/all_some_spoon1.png' 
+import imgSpoon2 from './images/all_some_spoon2.png' 
+import imgSax1 from './images/all_some_clamp1.png' 
+import imgSax2 from './images/all_some_clamp2.png' 
+import imgCouples1 from './images/couples_adhoc1.png' 
+import imgCouples2 from './images/couples_adhoc2.png' 
 
 /* Alternatively
  * type JsPsychInstance = ReturnType<typeof initJsPsych>
@@ -128,7 +136,7 @@ export async function runExperiment() {
   /* preload images */
   var preload = {
   type: jsPsychPreload,
-  images: [imgStim1, imgStim2, imgStim3, imgStim4, imgStim5]
+  images: [imgStim1, imgStim2, imgStim3, imgStim4, imgStim5, imgSnail1, imgSnail2, imgSpoon1, imgSpoon2, imgSax1, imgSax2, imgCouples1, imgCouples2]
 }
   timeline.push(preload)
 
