@@ -11,10 +11,11 @@ import { getMockDbState } from './lib/mockDatabase' // Mock Database Panel
 import type { jsPsychSurveyMultiChoice, Task, TrialData } from './project'
 import type { DataCollection } from 'jspsych'
 
-import imgStim1 from './images/all_some_burger1.png'
-import imgStim2 from './images/all_some_burger2.png'
+import imgBurg1 from './images/all_some_burger1.png'
+import imgBurg2 from './images/all_some_burger2.png'
 import imgStim3 from './images/adhoc.png'
-import imgStim4 from './images/dark_black1.png'
+import imgDark1 from './images/dark_black1.png'
+import imgDark1 from './images/dark_black2.png'
 import imgStim5 from './images/warm_hot.png'
 import imgSnail1 from './images/all_some_snail1.png' 
 import imgSnail2 from './images/all_some_snail2.png' 
@@ -136,7 +137,7 @@ export async function runExperiment() {
   /* preload images */
   var preload = {
   type: jsPsychPreload,
-  images: [imgStim1, imgStim2, imgStim3, imgStim4, imgStim5, imgSnail1, imgSnail2, imgSpoon1, imgSpoon2, imgSax1, imgSax2, imgCouples1, imgCouples2]
+  images: [imgBurg1, imgBurg2, imgStim3, imgDark1, imgDark2, imgStim5, imgSnail1, imgSnail2, imgSpoon1, imgSpoon2, imgSax1, imgSax2, imgCouples1, imgCouples2]
 }
   timeline.push(preload)
 
@@ -171,7 +172,7 @@ timeline.push(instructions2)
   /* define trial stimuli array for timeline variables */
   var few_trial1 = {
   type: jsPsychImageKeyboardResponse,
-  stimulus: imgStim1,
+  stimulus: imgBurg1,
   stimulus_width: 700, 
   choices: ['f', 'j'],
   prompt: "<p>Opponent description: <b>Few of the items are spoons</b>.</p>",
@@ -207,7 +208,7 @@ timeline.push(instructions2)
 
   var most_trial1 = {
   type: jsPsychImageKeyboardResponse,
-  stimulus: imgStim2,
+  stimulus: imgBurg2,
   stimulus_width: 700, 
   choices: ['f', 'j'],
   prompt: "<p>Host hint: <b>Most of the items are burgers</b>.</p>",
@@ -234,13 +235,12 @@ timeline.push(instructions2)
   
   var hair_trial1 = {
   type: jsPsychImageKeyboardResponse,
-  stimulus: imgStim4,
+  stimulus: imgDark2,
   stimulus_width: 700, 
   choices: ['f', 'j'],
   prompt: "<p>Host hint: <b>The figure on the card has dark hair</b>.</p>",
   }
   timeline.push(hair_trial1)
-
 
 
   /* Mock Database Panel */
