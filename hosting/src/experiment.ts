@@ -150,7 +150,7 @@ export async function runExperiment() {
   /* preload images */
   var preload = {
   type: jsPsychPreload,
-  images: [imgBurg1, imgBurg2, imgStim3, imgDark1, imgDark2, imgWarm1, imgWarm2, imgSnail1, imgSnail2, imgSpoon1, imgSpoon2, imgSax1, imgSax2, imgCouples1, imgCouples2]
+  images: [imgBurg1, imgBurg2, imgStim3, imgDark1, imgDark2, imgWarm1, imgWarm2, imgSnail1, imgSnail2, imgSpoon1, imgSpoon2, imgSax1, imgSax2, imgCouples1, imgCouples2, imgPartic1, imgPartic2]
 }
   timeline.push(preload)
 
