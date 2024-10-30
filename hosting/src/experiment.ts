@@ -179,15 +179,14 @@ export async function runExperiment() {
 };
 timeline.push(instructions1) 
 
-  var few_trial1 = {
+  var few_trial0 = {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgBurg1,
   stimulus_width: 700, 
   choices: [37, 39],
   prompt: "<p>Host hint: <b>Few of the items are spoons</b>.</p>",
   }
-
-  timeline.push(few_trial1) 
+  timeline.push(few_trial0) 
 
 
     /* define trial stimuli array for timeline variables */
