@@ -342,7 +342,7 @@ export async function runExperiment() {
   const trials = [few_trial1, few_trial2, few_trial3, few_trial4, some_trial1, some_trial2, some_trial3, some_trial4, some_trial5, some_trial6, most_trial1, most_trial2, most_trial3, hair_trial1, adhoc_trial1, adhoc_trial2, partic_trial1, partic_trial2, warm_trial1, warm_trial2]
     
   /* define instructions for semi-cooperative trial */
- var instructions2 = {
+ var instructions = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: `
     <p>You are a contestant on a game show. You will be presented with two images. Your goal is to select the winning image.</p>
@@ -358,7 +358,7 @@ export async function runExperiment() {
   `,
   post_trial_gap: 2000
 };
-timeline.push(instructions2)
+timeline.push(instructions)
 
   /* define fixation and test trials */
   const fixation = {
@@ -398,7 +398,6 @@ timeline.push(instructions2)
     randomize_order: true,
   }
   timeline.push(test_procedure)
-
 
   /* Mock Database Panel */
   if (debug && mock) {
