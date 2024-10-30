@@ -248,8 +248,6 @@ export async function runExperiment() {
   prompt: "<p>Host hint: <b>Some of the items are burgers</b>.</p>",
   }
 
-
-
   var adhoc_trial1 = {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgCouples2,
@@ -266,13 +264,36 @@ export async function runExperiment() {
   prompt: "<p>Host hint: <b>The man on the left is wearing a teal shirt</b>.</p>",
   }
 
-
   var most_trial1 = {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgBurg2,
   stimulus_width: 700, 
   choices: ['f', 'j'],
   prompt: "<p>Host hint: <b>Most of the items are burgers</b>.</p>",
+  }
+
+  var most_trial2 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgBurg1,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Host hint: <b>Most of the items are burgers</b>.</p>",
+  }
+
+  var most_trial3 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgSnail1,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Host hint: <b>Most of the items are spoons</b>.</p>",
+  }
+
+  var most_trial4 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgSax1,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Host hint: <b>Most of the items are saxophones</b>.</p>",
   }
 
   var hair_trial1 = {
@@ -295,7 +316,7 @@ export async function runExperiment() {
     press the letter F on the keyboard as fast as you can. If the winning image is on the right, press the letter J 
     as fast as you can.</p>
     <center>
-    <div style='width: 700px;'><img src='${imgStim3}'></img>
+    <div style='width: 700px;'><img src='${imgSnail1}'></img>
     </div>
     </center>
     <p>Press any key to begin.</p>
