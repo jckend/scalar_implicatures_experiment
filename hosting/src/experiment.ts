@@ -25,6 +25,8 @@ import imgSax1 from './images/all_some_clamp1.png'
 import imgSax2 from './images/all_some_clamp2.png' 
 import imgCouples1 from './images/couples_adhoc1.png' 
 import imgCouples2 from './images/couples_adhoc2.png' 
+import imgPartic1 from './images/participated_won_1.png' 
+import imgPartic2 from './images/participated_won_2.png' 
 
 /* Alternatively
  * type JsPsychInstance = ReturnType<typeof initJsPsych>
@@ -304,7 +306,25 @@ export async function runExperiment() {
   prompt: "<p>Host hint: <b>The figure on the card has dark hair</b>.</p>",
   }
 
-  const trials = [few_trial1, few_trial2, few_trial3, few_trial4, some_trial1, some_trial2, some_trial3, some_trial4, some_trial5, some_trial6, most_trial1, most_trial2, most_trial3, hair_trial1, adhoc_trial1, adhoc_trial2]
+  var partic_trial1 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgPartic2,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Host hint: <b>The medal was won by someone who participated in the race</b>.</p>",
+  }
+
+  var partic_trial2 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgPartic1,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Host hint: <b>The medal was won by someone who participated in the race</b>.</p>",
+  }
+
+
+
+  const trials = [few_trial1, few_trial2, few_trial3, few_trial4, some_trial1, some_trial2, some_trial3, some_trial4, some_trial5, some_trial6, most_trial1, most_trial2, most_trial3, hair_trial1, adhoc_trial1, adhoc_trial2, partic_trial1, partic_trial2]
     
   /* define instructions for semi-cooperative trial */
  var instructions2 = {
