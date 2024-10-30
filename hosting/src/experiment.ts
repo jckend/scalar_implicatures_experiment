@@ -433,6 +433,16 @@ export async function runExperiment() {
 };
 timeline.push(instructions0)
 
+  /* define training procedure */
+  const test_procedure0 = {
+    timeline: [fixation, test],
+    timeline_variables: training,
+    repetitions: 3,
+    randomize_order: true,
+  }
+  timeline.push(test_procedure0)
+
+
   /* define instructions for semi-cooperative trial */
  var instructions1 = {
   type: jsPsychHtmlKeyboardResponse,
