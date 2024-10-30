@@ -404,7 +404,7 @@ export async function runExperiment() {
     type: jsPsychImageKeyboardResponse,
     stimulus: jsPsych.timelineVariable('stimulus') as unknown as string,
     prompt: jsPsych.timelineVariable('prompt') as unknown as string,
-    choices: ['f', 'j'] satisfies KeyboardResponse[],
+    choices: ['ArrowLeft','ArrowRight'] satisfies KeyboardResponse[],
     data: {
       task: 'response' satisfies Task
     },
