@@ -149,7 +149,74 @@ export async function runExperiment() {
   }
   timeline.push(welcome)
 
+    /* define trial stimuli array for timeline variables */
+  var few_trial1 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgBurg1,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Opponent description: <b>Few of the items are spoons</b>.</p>",
+  }
 
+  var few_trial2 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgSnail2,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Host hint: <b>Few of the items on the card are snails</b>.</p>",
+  }
+
+  var heat_trial1 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgStim5,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Host hint: <b>The item on the card is warm</b>.</p>",
+  }
+
+  var some_trial1 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgSnail1,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Host hint: <b>Some of the items are spoons</b>.</p>",
+  }
+
+  var some_trial2 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgSax1,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Host hint: <b>Some of the items are saxophones</b>.</p>",
+  }
+
+
+  var adhoc_trial1 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgCouples2,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Host hint: <b>A man is wearing a teal shirt</b>.</p>",
+  }
+
+  var most_trial1 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgBurg2,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Host hint: <b>Most of the items are burgers</b>.</p>",
+  }
+
+  var hair_trial1 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgDark2,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Host hint: <b>The figure on the card has dark hair</b>.</p>",
+  }
+
+  const trials = [few_trial1, few_trial2, some_trial1, some_trial2, most_trial1, hair_trial1, adhoc_trial1]
+    
   /* define instructions for semi-cooperative trial */
  var instructions2 = {
   type: jsPsychHtmlKeyboardResponse,
@@ -169,78 +236,75 @@ export async function runExperiment() {
 };
 timeline.push(instructions2)
 
-  /* define trial stimuli array for timeline variables */
-  var few_trial1 = {
-  type: jsPsychImageKeyboardResponse,
-  stimulus: imgBurg1,
-  stimulus_width: 700, 
-  choices: ['f', 'j'],
-  prompt: "<p>Opponent description: <b>Few of the items are spoons</b>.</p>",
-  }
   timeline.push(few_trial1)
-
-  var heat_trial1 = {
-  type: jsPsychImageKeyboardResponse,
-  stimulus: imgStim5,
-  stimulus_width: 700, 
-  choices: ['f', 'j'],
-  prompt: "<p>Host hint: <b>The item on the card is warm</b>.</p>",
-  }
   timeline.push(heat_trial1)
-
-  var some_trial1 = {
-  type: jsPsychImageKeyboardResponse,
-  stimulus: imgSnail1,
-  stimulus_width: 700, 
-  choices: ['f', 'j'],
-  prompt: "<p>Host hint: <b>Some of the items are spoons</b>.</p>",
-  }
   timeline.push(some_trial1)
-
-  var adhoc_trial1 = {
-  type: jsPsychImageKeyboardResponse,
-  stimulus: imgCouples2,
-  stimulus_width: 700, 
-  choices: ['f', 'j'],
-  prompt: "<p>Host hint: <b>A man is wearing a teal shirt</b>.</p>",
-  }
   timeline.push(adhoc_trial1)
-
-  var most_trial1 = {
-  type: jsPsychImageKeyboardResponse,
-  stimulus: imgBurg2,
-  stimulus_width: 700, 
-  choices: ['f', 'j'],
-  prompt: "<p>Host hint: <b>Most of the items are burgers</b>.</p>",
-  }
   timeline.push(most_trial1)
-
-  var some_trial2 = {
-  type: jsPsychImageKeyboardResponse,
-  stimulus: imgSax1,
-  stimulus_width: 700, 
-  choices: ['f', 'j'],
-  prompt: "<p>Host hint: <b>Some of the items are saxophones</b>.</p>",
-  }
   timeline.push(some_trial2)
-
-  var few_trial2 = {
-  type: jsPsychImageKeyboardResponse,
-  stimulus: imgSnail2,
-  stimulus_width: 700, 
-  choices: ['f', 'j'],
-  prompt: "<p>Host hint: <b>Few of the items on the card are snails</b>.</p>",
-  }
   timeline.push(few_trial2)
-  
-  var hair_trial1 = {
-  type: jsPsychImageKeyboardResponse,
-  stimulus: imgDark2,
-  stimulus_width: 700, 
-  choices: ['f', 'j'],
-  prompt: "<p>Host hint: <b>The figure on the card has dark hair</b>.</p>",
-  }
   timeline.push(hair_trial1)
+
+  /* define fixation and test trials */
+  const fixation = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: '<div style="font-size:60px;">+</div>',
+    choices: 'NO_KEYS',
+    trial_duration: function () {
+      return jsPsych.randomization.sampleWithoutReplacement(
+        [250, 500, 750, 1000, 1250, 1500, 1750, 2000],
+        1,
+      )[0] as number
+    },
+    data: {
+      task: 'fixation' satisfies Task,
+    },
+  }
+
+  const test = {
+    type: jsPsychImageKeyboardResponse,
+    stimulus: jsPsych.timelineVariable('stimulus') as unknown as string,
+    choices: ['f', 'j'] satisfies KeyboardResponse[],
+    data: {
+      task: 'response' satisfies Task,
+    },
+    on_finish: function (data: TrialData) {
+      data.correct = jsPsych.pluginAPI.compareKeys(data.response || null, data.correct_response || null)
+      data.saveIncrementally = true
+    },
+  }
+
+  /* define test procedure */
+  const test_procedure = {
+    timeline: [fixation, test],
+    timeline_variables: trials,
+    repetitions: 3,
+    randomize_order: true,
+  }
+  timeline.push(test_procedure)
+
+
+  
+  /* define instructions for semi-cooperative trial */
+ var instructions2 = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: `
+    <p>You are a contestant on a game show. You will be presented with two images. Your goal is to select the winning image.</p>
+    <p>Your opponent knows which card is the winning card. Your opponent wins if you select the wrong card.</p> 
+    <p>She must provide you with a description of the winning card. This description cannot be false, but it may be misleading.</p>
+    <p>If the winning image is on the left,  
+    press the letter F on the keyboard as fast as you can. If the winning image is on the right, press the letter J 
+    as fast as you can.</p>
+    <center>
+    <div style='width: 700px;'><img src='${imgStim3}'></img>
+    </div>
+    </center>
+    <p>Press any key to begin.</p>
+  `,
+  post_trial_gap: 2000
+};
+timeline.push(instructions2)
+
 
 
   /* Mock Database Panel */
