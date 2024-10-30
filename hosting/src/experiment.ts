@@ -40,7 +40,7 @@ const mock = mockStore()
 
 type Task = 'response' | 'fixation'
 type Response = 'left' | 'right'
-type KeyboardResponse = 'leftarrow'| 'rightarrow'
+type KeyboardResponse = 'ArrowLeft' | 'ArrowRight'
 
 interface TrialData {
   task: Task
@@ -167,7 +167,7 @@ export async function runExperiment() {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgBurg1,
   stimulus_width: 700, 
-  choices: ['leftarrow', 'rightarrow'],
+  choices: ['ArrowLeft','ArrowRight'],
   prompt: "<p><b>Few of the items are spoons</b>.</p>",
   }
 
@@ -175,7 +175,7 @@ export async function runExperiment() {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgWarm1,
   stimulus_width: 700, 
-  choices: ['leftarrow', 'rightarrow'],
+  choices: ['ArrowLeft','ArrowRight'],
   prompt: "<p><b>The item on the card is warm</b>.</p>",
   }
 
@@ -183,7 +183,7 @@ export async function runExperiment() {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgSnail1,
   stimulus_width: 700, 
-  choices: ['leftarrow', 'rightarrow'],
+  choices: ['ArrowLeft','ArrowRight'],
   prompt: "<p><b>Some of the items are spoons</b>.</p>",
   }
 
@@ -191,7 +191,7 @@ export async function runExperiment() {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgCouples1,
   stimulus_width: 700, 
-  choices: ['leftarrow', 'rightarrow'],
+  choices: ['ArrowLeft','ArrowRight'],
   prompt: "<p><b>The man on the card is wearing a teal shirt</b>.</p>",
   }
 
@@ -199,11 +199,9 @@ export async function runExperiment() {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgBurg2,
   stimulus_width: 700, 
-  choices: ['leftarrow', 'rightarrow'],
+  choices: ['ArrowLeft','ArrowRight'],
   prompt: "<p><b>Most of the items are burgers</b>.</p>",
   }
-
-
 
     /* define trial variables for cooperative trials */
   var few_trial1 = {
