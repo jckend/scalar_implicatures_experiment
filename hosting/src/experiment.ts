@@ -170,7 +170,7 @@ export async function runExperiment() {
     <p>If the likelier image is on the left, press the left arrow &larr; on the keyboard as fast as you can. If the likelier image is on the right, press the right arrow &rarr;	 
     as fast as you can.</p>
     <center>
-    <div style='width: 700px;'><img src='${imgBurg2}'></img>
+    <div style='width: 700px;'><img src='${imgBurg1}'></img>
     </div>
     </center>
     <p>Press any key to begin.</p>
@@ -189,7 +189,7 @@ timeline.push(instructions1)
   timeline.push(few_trial0) 
 
 
-    /* define trial stimuli array for timeline variables */
+/* define trial stimuli array for timeline variables */
   var few_trial1 = {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgBurg1,
