@@ -304,7 +304,7 @@ export async function runExperiment() {
   prompt: "<p>Host hint: <b>The figure on the card has dark hair</b>.</p>",
   }
 
-  const trials = [few_trial1, few_trial2, some_trial1, some_trial2, some_trial3, most_trial1, hair_trial1, adhoc_trial1, adhoc_trial2]
+  const trials = [few_trial1, few_trial2, few_trial3, few_trial4, some_trial1, some_trial2, some_trial3, some_trial4, some_trial5, some_trial6, most_trial1, most_trial2, most_trial3, hair_trial1, adhoc_trial1, adhoc_trial2]
     
   /* define instructions for semi-cooperative trial */
  var instructions2 = {
@@ -376,7 +376,7 @@ timeline.push(instructions2)
     press the letter F on the keyboard as fast as you can. If the winning image is on the right, press the letter J 
     as fast as you can.</p>
     <center>
-    <div style='width: 700px;'><img src='${imgStim3}'></img>
+    <div style='width: 700px;'><img src='${imgSax1}'></img>
     </div>
     </center>
     <p>Press any key to begin.</p>
@@ -385,6 +385,14 @@ timeline.push(instructions2)
 };
 timeline.push(instructions2)
 
+  /* define test procedure */
+  const test_procedure2 = {
+    timeline: [fixation, test],
+    timeline_variables: trials,
+    repetitions: 3,
+    randomize_order: true,
+  }
+  timeline.push(test_procedure2)
 
 
   /* Mock Database Panel */
