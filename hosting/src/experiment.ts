@@ -382,7 +382,7 @@ export async function runExperiment() {
   prompt: "<p>Host hint: <b>The item on the card is warm</b>.</p>",
   }
 
-  const training =[few_trial0, some_trial0, adhoc_trial0, warm_trial0, most_trial0]
+  const training =[few_trial0, some_trial0, adhoc_trial0, heat_trial0, most_trial0]
   const trials = [few_trial1, few_trial2, few_trial3, few_trial4, some_trial1, some_trial2, some_trial3, some_trial4, some_trial5, some_trial6, most_trial1, most_trial2, most_trial3, hair_trial1, adhoc_trial1, adhoc_trial2, partic_trial1, partic_trial2, warm_trial1, warm_trial2]
 
 
@@ -432,6 +432,15 @@ export async function runExperiment() {
   post_trial_gap: 2000
 };
 timeline.push(instructions0)
+
+  /* define training procedure */
+  const test_procedure0 = {
+    timeline: [fixation, test],
+    timeline_variables: training,
+    repetitions: 3,
+    randomize_order: true,
+  }
+  timeline.push(test_procedure0)
 
 
   /* define instructions for semi-cooperative trial */
