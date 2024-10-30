@@ -169,68 +169,14 @@ export async function runExperiment() {
 timeline.push(instructions2)
 
   /* define trial stimuli array for timeline variables */
-  var most_trial1 = {
+  var few_trial1 = {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgStim1,
   stimulus_width: 700, 
   choices: ['f', 'j'],
-  prompt: "<p>Host hint: <b>Most of the items are burgers</b>.</p>",
+  prompt: "<p>Opponent description: <b>Few of the items are spoons</b>.</p>",
   }
-  timeline.push(most_trial1)
-
-  var most_trial2 = {
-  type: jsPsychImageKeyboardResponse,
-  stimulus: imgStim1,
-  stimulus_width: 700, 
-  choices: ['f', 'j'],
-  prompt: "<p>Host hint: <b>Most but not all of the items are burgers</b>.</p>",
-  }
-  timeline.push(most_trial2)
-
-  var some_trial1 = {
-  type: jsPsychImageKeyboardResponse,
-  stimulus: imgStim2,
-  stimulus_width: 700, 
-  choices: ['f', 'j'],
-  prompt: "<p>Host hint: <b>Some of the items are burgers</b>.</p>",
-  }
-  timeline.push(some_trial1)
-
-  var some_trial2 = {
-  type: jsPsychImageKeyboardResponse,
-  stimulus: imgStim2,
-  stimulus_width: 700, 
-  choices: ['f', 'j'],
-  prompt: "<p>Host hint: <b>Some but not all of the items are burgers</b>.</p>",
-  }
-  timeline.push(some_trial2)
-
-  var adhoc_trial1 = {
-  type: jsPsychImageKeyboardResponse,
-  stimulus: imgStim3,
-  stimulus_width: 700, 
-  choices: ['f', 'j'],
-  prompt: "<p>Host hint: <b>The top item is a burger</b>.</p>",
-  }
-  timeline.push(adhoc_trial1)
-
-  var hair_trial1 = {
-  type: jsPsychImageKeyboardResponse,
-  stimulus: imgStim4,
-  stimulus_width: 700, 
-  choices: ['f', 'j'],
-  prompt: "<p>Host hint: <b>The figure on the card has dark hair</b>.</p>",
-  }
-  timeline.push(hair_trial1)
-
-  var hair_trial2 = {
-  type: jsPsychImageKeyboardResponse,
-  stimulus: imgStim4,
-  stimulus_width: 700, 
-  choices: ['f', 'j'],
-  prompt: "<p>Host hint: <b>The figure on the card has dark hair, but not black hair</b>.</p>",
-  }
-  timeline.push(hair_trial2)
+  timeline.push(few_trial1)
 
   var heat_trial1 = {
   type: jsPsychImageKeyboardResponse,
@@ -241,14 +187,59 @@ timeline.push(instructions2)
   }
   timeline.push(heat_trial1)
 
-  var heat_trial2 = {
+  var some_trial1 = {
   type: jsPsychImageKeyboardResponse,
-  stimulus: imgStim5,
+  stimulus: imgSnail1,
   stimulus_width: 700, 
   choices: ['f', 'j'],
-  prompt: "<p>Host hint: <b>The item on the card is warm but not hot</b>.</p>",
+  prompt: "<p>Host hint: <b>Some of the items are spoons</b>.</p>",
   }
-  timeline.push(heat_trial2)
+  timeline.push(most_trial2)
+
+  var adhoc_trial1 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgCouple2,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Host hint: <b>The man is wearing a teal shirt</b>.</p>",
+  }
+  timeline.push(adhoc_trial1)
+
+  var most_trial1 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgStim2,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Host hint: <b>Most of the items are burgers</b>.</p>",
+  }
+  timeline.push(some_trial1)
+
+  var some_trial2 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgSax1,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Host hint: <b>Some of the items are saxophones</b>.</p>",
+  }
+  timeline.push(some_trial2)
+
+  var few_trial2 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgSnail2,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Host hint: <b>Few of the items on the card are snails</b>.</p>",
+  }
+  timeline.push(few_trial2)
+  
+  var hair_trial1 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgStim4,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Host hint: <b>The figure on the card has dark hair</b>.</p>",
+  }
+  timeline.push(hair_trial1)
 
 
     /* define instructions for semi-cooperative trial */
@@ -272,21 +263,12 @@ timeline.push(instructions2)
 timeline.push(instructions2)
 
   /* define trial stimuli array for timeline variables */
-  var most_trial3 = {
-  type: jsPsychImageKeyboardResponse,
-  stimulus: imgStim1,
-  stimulus_width: 700, 
-  choices: ['f', 'j'],
-  prompt: "<p>Opponent description: <b>Most of the items are burgers</b>.</p>",
-  }
-  timeline.push(most_trial3)
-
   var most_trial4 = {
   type: jsPsychImageKeyboardResponse,
-  stimulus: imgStim1,
+  stimulus: imgSax1,
   stimulus_width: 700, 
   choices: ['f', 'j'],
-  prompt: "<p>Opponent description: <b>Most but not all of the items are burgers</b>.</p>",
+  prompt: "<p>Opponent description: <b>Most of the items are saxophones</b>.</p>",
   }
   timeline.push(most_trial4)
 
@@ -298,24 +280,6 @@ timeline.push(instructions2)
   prompt: "<p>Opponent description: <b>Some of the items are burgers</b>.</p>",
   }
   timeline.push(some_trial3)
-
-  var some_trial4 = {
-  type: jsPsychImageKeyboardResponse,
-  stimulus: imgStim2,
-  stimulus_width: 700, 
-  choices: ['f', 'j'],
-  prompt: "<p>Opponent description: <b>Some but not all of the items are burgers</b>.</p>",
-  }
-  timeline.push(some_trial4)
-
-  var adhoc_trial2 = {
-  type: jsPsychImageKeyboardResponse,
-  stimulus: imgStim3,
-  stimulus_width: 700, 
-  choices: ['f', 'j'],
-  prompt: "<p>Opponent description: <b>The top item is a burger</b>.</p>",
-  }
-  timeline.push(adhoc_trial2)
 
   var hair_trial3 = {
   type: jsPsychImageKeyboardResponse,
@@ -344,15 +308,23 @@ timeline.push(instructions2)
   }
   timeline.push(heat_trial3)
 
-  var heat_trial4 = {
+  var adhoc_trial2 = {
   type: jsPsychImageKeyboardResponse,
-  stimulus: imgStim5,
+  stimulus: imgCouples1,
   stimulus_width: 700, 
   choices: ['f', 'j'],
-  prompt: "<p>Opponent description: <b>The item on the card is warm but not hot</b>.</p>",
+  prompt: "<p>Opponent description: <b>The man on the left is wearing a teal shirt</b>.</p>",
   }
-  timeline.push(heat_trial4)
+  timeline.push(adhoc_trial2)
 
+  var some_trial4 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgSnails1,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p>Opponent description: <b>Some of the items are spoons</b>.</p>",
+  }
+  timeline.push(some_trial4)
 
 
   /* Mock Database Panel */
