@@ -162,23 +162,6 @@ export async function runExperiment() {
   }
   timeline.push(welcome)
 
-    /* define instructions for semi-cooperative trial */
- var instructions0 = {
-  type: jsPsychHtmlKeyboardResponse,
-  stimulus: `
-    <p>You will be presented with two images. Select the image you think is likelier to fit the description.</p>
-    <p>If the likelier image is on the left, press the left arrow &larr; on the keyboard as fast as you can. If the likelier image is on the right, press the right arrow &rarr; 
-    as fast as you can.</p>
-    <center>
-    <div style='width: 700px;'><img src='${imgBurg2}'></img>
-    </div>
-    </center>
-    <p>Press any key to begin.</p>
-  `,
-  post_trial_gap: 2000
-};
-timeline.push(instructions0)
-
 
     /* define trial variables for cooperative trials */
   var few_trial1 = {
@@ -358,7 +341,24 @@ timeline.push(instructions0)
   }
 
   const trials = [few_trial1, few_trial2, few_trial3, few_trial4, some_trial1, some_trial2, some_trial3, some_trial4, some_trial5, some_trial6, most_trial1, most_trial2, most_trial3, hair_trial1, adhoc_trial1, adhoc_trial2, partic_trial1, partic_trial2, warm_trial1, warm_trial2]
-    
+
+/* define instructions for training trials*/
+ var instructions0 = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: `
+    <p>You will be presented with two images. Select the image you think is likelier to fit the description.</p>
+    <p>If the likelier image is on the left, press the left arrow &larr; on the keyboard as fast as you can. If the likelier image is on the right, press the right arrow &rarr; 
+    as fast as you can.</p>
+    <center>
+    <div style='width: 700px;'><img src='${imgBurg2}'></img>
+    </div>
+    </center>
+    <p>Press any key to begin.</p>
+  `,
+  post_trial_gap: 2000
+};
+timeline.push(instructions0)
+
   /* define instructions for semi-cooperative trial */
  var instructions1 = {
   type: jsPsychHtmlKeyboardResponse,
