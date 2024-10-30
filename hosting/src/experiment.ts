@@ -162,6 +162,48 @@ export async function runExperiment() {
   }
   timeline.push(welcome)
 
+  /* define trial variables for training trials */
+  var few_trial0 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgBurg1,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p><b>Few of the items are spoons</b>.</p>",
+  }
+
+  var heat_trial0 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgWarm1,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p><b>The item on the card is warm</b>.</p>",
+  }
+
+  var some_trial0 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgSnail1,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p><b>Some of the items are spoons</b>.</p>",
+  }
+
+  var adhoc_trial0 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgCouples1,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p><b>The man on the card is wearing a teal shirt</b>.</p>",
+  }
+
+  var most_trial0 = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: imgBurg2,
+  stimulus_width: 700, 
+  choices: ['f', 'j'],
+  prompt: "<p><b>Most of the items are burgers</b>.</p>",
+  }
+
+
 
     /* define trial variables for cooperative trials */
   var few_trial1 = {
@@ -340,7 +382,39 @@ export async function runExperiment() {
   prompt: "<p>Host hint: <b>The item on the card is warm</b>.</p>",
   }
 
+  const training =[few_trial0, some_trial0, adhoc_trial0, warm_trial0, most_trial0]
   const trials = [few_trial1, few_trial2, few_trial3, few_trial4, some_trial1, some_trial2, some_trial3, some_trial4, some_trial5, some_trial6, most_trial1, most_trial2, most_trial3, hair_trial1, adhoc_trial1, adhoc_trial2, partic_trial1, partic_trial2, warm_trial1, warm_trial2]
+
+
+  /* define fixation and test trials */
+  const fixation = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: '<div style="font-size:60px;">+</div>',
+    choices: 'NO_KEYS',
+    trial_duration: function () {
+      return jsPsych.randomization.sampleWithoutReplacement(
+        [250, 500, 750, 1000, 1250, 1500, 1750, 2000],
+        1,
+      )[0] as number
+    },
+    data: {
+      task: 'fixation' satisfies Task,
+    },
+  }
+
+  const test = {
+    type: jsPsychImageKeyboardResponse,
+    stimulus: jsPsych.timelineVariable('stimulus') as unknown as string,
+    prompt: jsPsych.timelineVariable('prompt') as unknown as string,
+    choices: ['f', 'j'] satisfies KeyboardResponse[],
+    data: {
+      task: 'response' satisfies Task
+    },
+    on_finish: function (data: TrialData) {
+      data.correct = jsPsych.pluginAPI.compareKeys(data.response || null, data.correct_response || null)
+      data.saveIncrementally = true
+    },
+  }
 
 /* define instructions for training trials*/
  var instructions0 = {
@@ -377,37 +451,7 @@ timeline.push(instructions0)
   post_trial_gap: 2000
 };
 timeline.push(instructions1)
-
-  /* define fixation and test trials */
-  const fixation = {
-    type: jsPsychHtmlKeyboardResponse,
-    stimulus: '<div style="font-size:60px;">+</div>',
-    choices: 'NO_KEYS',
-    trial_duration: function () {
-      return jsPsych.randomization.sampleWithoutReplacement(
-        [250, 500, 750, 1000, 1250, 1500, 1750, 2000],
-        1,
-      )[0] as number
-    },
-    data: {
-      task: 'fixation' satisfies Task,
-    },
-  }
-
-  const test = {
-    type: jsPsychImageKeyboardResponse,
-    stimulus: jsPsych.timelineVariable('stimulus') as unknown as string,
-    prompt: jsPsych.timelineVariable('prompt') as unknown as string,
-    choices: ['f', 'j'] satisfies KeyboardResponse[],
-    data: {
-      task: 'response' satisfies Task
-    },
-    on_finish: function (data: TrialData) {
-      data.correct = jsPsych.pluginAPI.compareKeys(data.response || null, data.correct_response || null)
-      data.saveIncrementally = true
-    },
-  }
-
+  
   /* define test procedure */
   const test_procedure = {
     timeline: [fixation, test],
