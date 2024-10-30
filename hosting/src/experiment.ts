@@ -194,7 +194,7 @@ timeline.push(instructions2)
   choices: ['f', 'j'],
   prompt: "<p>Host hint: <b>Some of the items are spoons</b>.</p>",
   }
-  timeline.push(most_trial2)
+  timeline.push(some_trial1)
 
   var adhoc_trial1 = {
   type: jsPsychImageKeyboardResponse,
@@ -212,7 +212,7 @@ timeline.push(instructions2)
   choices: ['f', 'j'],
   prompt: "<p>Host hint: <b>Most of the items are burgers</b>.</p>",
   }
-  timeline.push(some_trial1)
+  timeline.push(most_trial1)
 
   var some_trial2 = {
   type: jsPsychImageKeyboardResponse,
