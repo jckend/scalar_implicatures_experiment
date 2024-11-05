@@ -583,7 +583,7 @@ export async function runExperiment() {
   stimulus: jsPsych.timelineVariable('prompt'),
   choices: jsPsych.NO_KEYS,
   trial_duration: 2000
-};
+}
 
   const test = {
     type: jsPsychImageKeyboardResponse,
