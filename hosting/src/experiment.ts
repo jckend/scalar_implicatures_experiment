@@ -232,7 +232,7 @@ export async function runExperiment() {
   type: jsPsychImageKeyboardResponse,
   stimulus: imgSnail2,
   stimulus_width: 700, 
- choices: ['ArrowLeft','ArrowRight'],
+  choices: ['ArrowLeft','ArrowRight'],
   prompt: "<p>Host hint: <b>Few of the items on the card are snails</b>.</p>",
   }
 
@@ -578,6 +578,13 @@ export async function runExperiment() {
     },
   }
 
+  const question = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: jsPsych.timelineVariable('prompt'),
+  choices: jsPsych.NO_KEYS,
+  trial_duration: 2000
+};
+
   const test = {
     type: jsPsychImageKeyboardResponse,
     stimulus: jsPsych.timelineVariable('stimulus') as unknown as string,
@@ -610,7 +617,7 @@ timeline.push(instructions0)
 
   /* define training procedure */
   const test_procedure0 = {
-    timeline: [fixation, test],
+    timeline: [fixation, question, test],
     timeline_variables: training,
     repetitions: 3,
     randomize_order: true,
