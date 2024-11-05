@@ -581,7 +581,7 @@ export async function runExperiment() {
   const question = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: jsPsych.timelineVariable('prompt'),
-  choices: jsPsych.NO_KEYS,
+  choices: 'NO_KEYS',
   trial_duration: 2000,
     data: {
       task: 'question' satisfies Task,
