@@ -647,7 +647,7 @@ timeline.push(instructions1)
   
   /* define test procedure */
   const test_procedure = {
-    timeline: [fixation, test],
+    timeline: [fixation, question, test],
     timeline_variables: trials,
     repetitions: 3,
     randomize_order: true,
@@ -673,7 +673,7 @@ timeline.push(instructions2)
   
   /* define test procedure */
   const test_procedure2 = {
-    timeline: [fixation, test],
+    timeline: [fixation, question, test],
     timeline_variables: trials,
     repetitions: 3,
     randomize_order: true,
