@@ -155,26 +155,6 @@ export async function runExperiment() {
 }
   timeline.push(preload)
 
-    /* function for cosent check*/
-var check_consent = function(elem) {
-    if (document.getElementById('consent_checkbox').checked) {
-        return true;
-    }
-    else {
-        alert("If you wish to participate, you must check the box next to the statement 'I agree to participate in this study.'");
-        return false;
-    }
-    return false;
-}
-
-/* consent check */
-var consent = {
-    type: jsPsychExternalHtml,
-    url: "consent.html",
-    cont_btn: "start",
-    check_fn: check_consent
-}
-timeline.push(consent)
 
   /* define welcome message trial */
   const welcome = {
