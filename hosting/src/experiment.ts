@@ -155,6 +155,26 @@ export async function runExperiment() {
 }
   timeline.push(preload)
 
+    /* function for cosent check*/
+var check_consent = function(elem) {
+    if (document.getElementById('consent_checkbox').checked) {
+        return true;
+    }
+    else {
+        alert("If you wish to participate, you must check the box next to the statement 'I agree to participate in this study.'");
+        return false;
+    }
+    return false;
+}
+
+/* consent check */
+var consent = {
+    type: jsPsychExternalHtml,
+    url: "consent.html",
+    cont_btn: "start",
+    check_fn: check_consent
+}
+timeline.push(consent)
 
   /* define welcome message trial */
   const welcome = {
@@ -602,28 +622,6 @@ export async function runExperiment() {
       data.saveIncrementally = true
     },
   }
-
-  // sample function that might be used to check if a participant has given
-// consent to participate.
-var check_consent = function(elem) {
-    if (document.getElementById('consent_checkbox').checked) {
-        return true;
-    }
-    else {
-        alert("If you wish to participate, you must check the box next to the statement 'I agree to participate in this study.'");
-        return false;
-    }
-    return false;
-};
-
-// declare the block.
-var consent = {
-    type: jsPsychExternalHtml,
-    url: "consent.html",
-    cont_btn: "start",
-    check_fn: check_consent
-}
-timeline.push(consent)
 
 /* define instructions for training trials*/
  var instructions0 = {
