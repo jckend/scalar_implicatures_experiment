@@ -1,6 +1,7 @@
 import jsPsychSurveyMultiChoice from '@jspsych/plugin-survey-multi-choice'
 import jsPsychImageKeyboardResponse from '@jspsych/plugin-image-keyboard-response'
 import jsPsychHtmlKeyboardResponse from '@jspsych/plugin-html-keyboard-response'
+import jsPsychHtmlButtonResponse from '@jspsych/plugin-html-button-response'
 import jsPsychPreload from '@jspsych/plugin-preload'
 import { initJsPsych } from 'jspsych'
 import externalHtml from '@jspsych/plugin-external-html'
