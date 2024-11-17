@@ -1,11 +1,11 @@
 import type { FirebaseOptions } from 'firebase/app'
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 export const firebaseConfig = {
-  apiKey: 'REPLACE-WITH-YOURS',
-  authDomain: 'REPLACE-WITH-YOURS.firebaseapp.com',
-  projectId: 'REPLACE-WITH-YOURS',
-  storageBucket: 'REPLACE-WITH-YOURS.appspot.com',
-  messagingSenderId: 'REPLACE-WITH-YOURS',
-  appId: 'REPLACE:WITH:YOURS',
-  measurementId: 'G-REPLACEWITHYOURS',
+  apiKey: "AIzaSyCVUVZ1GAjDCb1WUoNz2VxwIenxI81O3VM",
+  authDomain: "scalar-3ac8c.firebaseapp.com",
+  projectId: "scalar-3ac8c",
+  storageBucket: "scalar-3ac8c.firebasestorage.app",
+  messagingSenderId: "529117945658",
+  appId: "1:529117945658:web:f103acf76b0d90804e7a03",
+  measurementId: "G-D77WVWF8BE"
 } as FirebaseOptions
