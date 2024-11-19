@@ -1,7 +1,7 @@
 import type { FirebaseOptions } from 'firebase/app'
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 export const firebaseConfig = {
-  apiKey: 'AIzaSyCVUVZ1GAjDCb1WUoNz2VxwIenxI81O3VM',
+  apiKey: 'AIzaSyBH40Rzp_I2kZPWtnLZo3FAXGZtm5D9yeo',
   authDomain: 'scalar-3ac8c.firebaseapp.com',
   projectId: 'scalar-3ac8c',
   messagingSenderId: '529117945658',
