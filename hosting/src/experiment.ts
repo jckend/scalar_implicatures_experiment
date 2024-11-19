@@ -566,9 +566,6 @@ export async function runExperiment(updateDebugPanel: () => void) {
     some_trial4,
     some_trial5,
     some_trial6,
-    most_trial1,
-    most_trial2,
-    most_trial3,
     hair_trial1,
     adhoc_trial1,
     adhoc_trial2,
@@ -588,9 +585,6 @@ export async function runExperiment(updateDebugPanel: () => void) {
     nsome_trial4,
     nsome_trial5,
     nsome_trial6,
-    nmost_trial1,
-    nmost_trial2,
-    nmost_trial3,
     nhair_trial1,
     nadhoc_trial1,
     nadhoc_trial2,
@@ -738,7 +732,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
   /* define test procedure */
   const test_procedure2 = {
     timeline: [fixation, question, test],
-    timeline_variables: trials,
+    timeline_variables: ntrials,
     repetitions: 2,
     randomize_order: true,
   }
