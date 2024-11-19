@@ -4,7 +4,7 @@ import { prolificCCode } from './lib/prolificCred'
 
 const debug = true
 
-const mock = false
+const mock = true
 
 const prolificCUrlLive = `https://app.prolific.com/submissions/complete?cc=${prolificCCode}`
 
