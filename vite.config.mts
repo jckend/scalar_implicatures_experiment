@@ -9,6 +9,7 @@ import { createHtmlPlugin } from 'vite-plugin-html'
 
 import tailwindConfig from './tailwind.config'
 
+import type { AcceptedPlugin } from 'postcss'
 import type { UserConfig } from 'vite'
 
 const filesPathToExclude: (string | RegExp)[] = [/[-_]buildignore/]
@@ -17,18 +18,16 @@ const filesPathToExclude: (string | RegExp)[] = [/[-_]buildignore/]
 function getCurrentCommitHash() {
   try {
     return execSync('git log -1 --format="%H"').toString().trim()
-  } catch (error) {
-    console.warn('Failed to get Git commit hash:', error)
-    return 'unknown'
+  } catch (err) {
+    console.warn('Failed to get Git commit hash:', err)
+    return 'gitHashIsUnknown'
   }
 }
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default defineConfig(({ command, mode }) => {
-  // console.log('MODE: ', process.env.NODE_ENV)
-  console.log('MODE: ', mode)
+  console.log('VITE COMMAND: ', command)
+  console.log('VITE MODE: ', mode)
+  console.log('NODE MODE: ', process.env.NODE_ENV)
 
   let title = 'Expt-Template Mode Unknown'
   if (mode === 'development') {
@@ -53,8 +52,7 @@ export default defineConfig(({ command, mode }) => {
     ],
     css: {
       postcss: {
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-        plugins: [tailwindcssNesting, tailwindcss(tailwindConfig), autoprefixer],
+        plugins: [tailwindcssNesting, tailwindcss(tailwindConfig), autoprefixer as unknown as AcceptedPlugin],
       },
     },
     define: {

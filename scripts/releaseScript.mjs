@@ -8,7 +8,7 @@ import readlineSync from 'readline-sync'
 // @ts-ignore
 import pkg from 'shelljs'
 
-const { cd, exec, error } = pkg
+const { cd, exec, error: shellError } = pkg
 // import * as shell from 'shelljs'
 
 // Import the package.json file
@@ -42,7 +42,7 @@ async function updatePackageJsonVersion(newVersion, projectDir) {
  * @param {string} task
  */
 function checkStatus(task) {
-  if (error()) {
+  if (shellError()) {
     console.log('\n-------------------------------------------------------------')
     console.error(`${task} failed, aborting the script.`)
     console.log('-------------------------------------------------------------\n')
@@ -68,9 +68,7 @@ async function attemptRelease(projectPath) {
       '\n-------------------------------------------------------------\n',
   )
   exec('yarn lint:prod')
-  checkStatus('Lint Hosting')
-  exec('yarn lint-parent')
-  checkStatus('Lint Parent')
+  checkStatus('Lint')
   cd(projectPath)
   console.log(
     '\n-------------------------------------------------------------\n\n' + `Current Version: ${currentVersion}`,

@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
+
 import { dirname, resolve } from 'path'
 import { fileURLToPath } from 'url'
 
@@ -36,7 +37,17 @@ const allExtensions = [...allTsExtensionsArray, ...allJsExtensionsArray].join(',
 
 const importRules = {
   ...importPlugin.flatConfigs.recommended.rules,
+  'import/named': 'error',
   'import/no-unresolved': 'error',
+  '@typescript-eslint/consistent-type-imports': [
+    'error',
+    {
+      prefer: 'type-imports',
+      disallowTypeAnnotations: true,
+      fixStyle: 'inline-type-imports',
+    },
+  ],
+  '@typescript-eslint/no-import-type-side-effects': 'error',
   'sort-imports': [
     'error',
     {
@@ -64,27 +75,20 @@ const importRules = {
       ],
       'pathGroups': [
         {
-          pattern: './images/**',
-          group: 'object',
-          position: 'after',
-        },
-        {
-          pattern: '**/*.+(png|jpg|jpeg|gif|svg)',
-          group: 'object',
-          position: 'after',
-        },
-        {
-          pattern: './styles/**',
+          pattern: '*.png',
           group: 'unknown',
           position: 'after',
+          patternOptions: { matchBase: true },
         },
         {
-          pattern: '**/*.css',
+          pattern: '*.jpg',
           group: 'unknown',
           position: 'after',
+          patternOptions: { matchBase: true },
         },
       ],
       'newlines-between': 'always',
+      'distinctGroup': true,
       'alphabetize': {
         order: 'asc',
         caseInsensitive: true, // ignore case
@@ -116,6 +120,7 @@ const typescriptRules = {
   ...stylisticPlugin.configs['disable-legacy'].rules,
   ...importRules,
   ...baseRules,
+  '@typescript-eslint/no-unused-vars': ['warn'],
 }
 
 const javascriptRules = {
@@ -138,6 +143,7 @@ const typescriptRulesDev = {
   '@typescript-eslint/prefer-nullish-coalescing': ['off'],
   '@typescript-eslint/no-inferrable-types': ['off'],
   '@typescript-eslint/dot-notation': ['off'],
+  '@typescript-eslint/no-unnecessary-condition': ['warn'],
 }
 
 /** @type {import("eslint").Linter.Config[]} */
@@ -187,8 +193,12 @@ const config = [
           /* for jspsyc */
         },
         typescript: {
-          extensions: ['.ts', '.d.ts'],
+          project: tsconfig,
+          alwaysTryTypes: true,
         },
+      },
+      'import/parsers': {
+        '@typescript-eslint/parser': ['.ts'],
       },
       /* for firebase */
       'import/ignore': ['node_modules/firebase'],
@@ -259,24 +269,6 @@ const config = [
     },
   },
   {
-    ignores: [
-      /* specialized ignore patterns */
-      '**/*_lintignore*',
-      '**/*-lintignore*',
-      '**/*_buildignore*',
-      '**/*-buildignore*',
-      /* generated directories */
-      '.yarn/',
-      'hosting/dist/',
-      'build/',
-      /* generated files */
-      '.pnp.*',
-      'vite.config.mts.timestamp-*.mjs',
-      /* editor config */
-      /* project specific patterns */
-    ],
-  },
-  {
     /* utility scripts: javascript */
     files: [`./scripts/*.{${allJsExtensions}}`],
     settings: {
@@ -304,12 +296,19 @@ const config = [
       '**/*-buildignore*',
       /* generated directories */
       '.yarn/',
+      '**/node_modules/',
+      '.firebase/',
       'hosting/dist/',
       'build/',
+      '_build/',
       /* generated files */
+      '*.lock',
+      '*-lock.*',
       '.pnp.*',
       'vite.config.mts.timestamp-*.mjs',
       /* editor config */
+      '**/.vscode/',
+      '**/.idea/',
       /* project specific patterns */
     ],
   },

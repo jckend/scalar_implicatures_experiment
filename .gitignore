@@ -15,8 +15,10 @@ logs/
 #########
 ### generated files ###
 #########
+**/.DS_Store
 _build.zip
 ./*.log
+vite.config.mts.timestamp-*.mjs
 
 #########
 ### generated yarn files
