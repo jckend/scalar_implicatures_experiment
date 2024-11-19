@@ -4,6 +4,7 @@ export const firebaseConfig = {
   apiKey: "AIzaSyCVUVZ1GAjDCb1WUoNz2VxwIenxI81O3VM",
   authDomain: "scalar-3ac8c.firebaseapp.com",
   projectId: "scalar-3ac8c",
-  storageBucket: "scalar-3ac8c.firebasestorage.app",
+  messagingSenderId: "529117945658",
   appId: "1:529117945658:web:f103acf76b0d90804e7a03",
+  measurementId: "G-D77WVWF8BE"
 } as FirebaseOptions
