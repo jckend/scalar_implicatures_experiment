@@ -6,5 +6,5 @@ export const firebaseConfig = {
   projectId: 'scalar-3ac8c',
   messagingSenderId: '529117945658',
   appId: '1:529117945658:web:f103acf76b0d90804e7a03',
-  measurementId: 'G-D77WVWF8BE'
+  measurementId: 'G-D77WVWF8BE',
 } as FirebaseOptions
