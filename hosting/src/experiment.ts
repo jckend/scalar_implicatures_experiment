@@ -715,7 +715,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
   var instructions2 = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: `
-    <div style='width: 320px; height: 50px; padding: 10px; border: 5px solid gray; margin: 0;'> You are a contestant on a game show. You will be presented with two images. Your goal is to select the winning image, while your opponent's goal is to get you to select the lose image. Your opponent will provide you with a description of the winning image. These descriptions will never be false, but they may be misleading.</div>
+    <div style='width: 1000px; height: 50px; padding: 10px; border: 5px solid gray; margin: 0;'> You are a contestant on a game show. You will be presented with two images. Your goal is to select the winning image, while your opponent's goal is to get you to select the lose image. Your opponent will provide you with a description of the winning image. These descriptions will never be false, but they may be misleading.</div>
     <p>If the winning image is on the left, press the left arrow <kbd>&larr;</kbd> on the keyboard as fast as you can. If the winning image is on the right, press the right arrow <kbd>&rarr;</kbd> as fast as you can.</p>
     <center>
     <div style='width: 700px;'><img src='${imgSnail1}'></img>
