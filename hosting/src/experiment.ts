@@ -681,7 +681,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
   const test_procedure0 = {
     timeline: [fixation, question, test],
     timeline_variables: training,
-    repetitions: 2,
+    repetitions: 1,
     randomize_order: true,
   }
   timeline.push(test_procedure0)
@@ -690,7 +690,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
   var instructions1 = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: `
-    <p style="color: skyblue"><strong>Scenario:</strong> You are a contestant on a game show. You will be presented with two images. Your goal is to select the winning image. The host cannot tell you which image is the winning image, but she can provide hints. These hints will never be false, but they may be misleading.</p>
+    <h1 style="border:2px solid DodgerBlue;"><strong>Scenario:</strong> You are a contestant on a game show. You will be presented with two images. Your goal is to select the winning image. The host cannot tell you which image is the winning image, but she can provide hints. These hints will never be false, but they may be misleading.</h1>
     <p>If the winning image is on the left, press the left arrow <kbd>&larr;</kbd> on the keyboard as fast as you can. If the winning image is on the right, press the right arrow <kbd>&rarr;</kbd> as fast as you can.</p>
     <center>
     <div style='width: 700px;'><img src='${imgSnail1}'></img>
