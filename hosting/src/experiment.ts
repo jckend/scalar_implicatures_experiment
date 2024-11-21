@@ -600,7 +600,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
         // get the data from the previous trial,
         // and check which key was pressed
         var data = jsPsych.data.get().last(1).values()[0];
-        if(jsPsych.pluginAPI.compareKeys(data.response, 'ArrowLeft') || jsPsych.pluginAPI.compareKeys(data.response, 'ArrowRight')){
+        if(data.response == 'ArrowLeft') || data.response == 'ArrowRight')){
             return false;
         } else {
             return true;
