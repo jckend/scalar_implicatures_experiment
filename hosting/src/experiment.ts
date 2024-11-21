@@ -199,7 +199,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>Most of the items are burgers</b>.</p>',
   }
-
+  
   /* define trial variables for cooperative trials */
   var few_trial1 = {
     type: jsPsychImageKeyboardResponse,
@@ -593,6 +593,20 @@ export async function runExperiment(updateDebugPanel: () => void) {
     nwarm_trial1,
     nwarm_trial2,
   ]
+
+    var if_node = {
+    timeline: training,
+    conditional_function: function(){
+        // get the data from the previous trial,
+        // and check which key was pressed
+        var data = jsPsych.data.get().last(1).values()[0];
+        if(jsPsych.pluginAPI.compareKeys(data.response, 'ArrowLeft') || jsPsych.pluginAPI.compareKeys(data.response, 'ArrowRight')){
+            return false;
+        } else {
+            return true;
+        }
+    }
+}
 
   /* consent */
   const consent = {
