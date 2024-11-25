@@ -253,7 +253,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     type: jsPsychImageKeyboardResponse,
     stimulus: imgSax1,
     stimulus_width: 700,
-    choices: ['f', 'j'],
+    choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p>Host hint: <b>Some of the items are saxophones</b>.</p>',
   }
 
