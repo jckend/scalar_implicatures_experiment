@@ -165,7 +165,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgBurg1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>Few of the items are spoons</b>.</p>',
+    prompt: '<p><b>Few of the items are spoons</b>.</p>', 
   }
 
   var heat_trial0 = {
@@ -253,7 +253,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     type: jsPsychImageKeyboardResponse,
     stimulus: imgSax1,
     stimulus_width: 700,
-    choices: ['f', 'j'],
+    choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p>Host hint: <b>Some of the items are saxophones</b>.</p>',
   }
 
