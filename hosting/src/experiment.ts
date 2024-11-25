@@ -199,7 +199,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>Most of the items are burgers</b>.</p>',
   }
-  
+
   /* define trial variables for cooperative trials */
   var few_trial1 = {
     type: jsPsychImageKeyboardResponse,
@@ -253,7 +253,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     type: jsPsychImageKeyboardResponse,
     stimulus: imgSax1,
     stimulus_width: 700,
-    choices: ['ArrowLeft', 'ArrowRight'],
+    choices: ['f', 'j'],
     prompt: '<p>Host hint: <b>Some of the items are saxophones</b>.</p>',
   }
 
