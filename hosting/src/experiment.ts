@@ -594,20 +594,6 @@ export async function runExperiment(updateDebugPanel: () => void) {
     nwarm_trial2,
   ]
 
-    var if_node = {
-    timeline: training,
-    conditional_function: function(){
-        // get the data from the previous trial,
-        // and check which key was pressed
-        var data = jsPsych.data.get().last(1).values()[0];
-        if(data.response == 'ArrowLeft' || data.response == 'ArrowRight'){
-            return false;
-        } else {
-            return true;
-        }
-    }
-}
-
   /* consent */
   const consent = {
     type: jsPsychHtmlButtonResponse,
