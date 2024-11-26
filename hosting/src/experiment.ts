@@ -701,7 +701,8 @@ export async function runExperiment(updateDebugPanel: () => void) {
     timeline: [fixation, question, test, if_node],
     timeline_variables: training,
     repetitions: 1,
-    randomize_order: false
+    randomize_order: false,
+    on_finish: function(){jsPsych.data.displayData(); }
   }
   timeline.push(test_procedure0)
 
