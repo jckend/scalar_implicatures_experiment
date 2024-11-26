@@ -699,10 +699,10 @@ var if_node = {
   /* define training procedure */
   const test_procedure0 = {
     timeline: [fixation, question, test, if_node],
-    on_finish: function(){jsPsych.data.displayData();
     timeline_variables: training,
     repetitions: 1,
     randomize_order: false,
+    on_finish: function(){jsPsych.data.displayData();
   }
   timeline.push(test_procedure0)
 
