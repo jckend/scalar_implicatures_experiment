@@ -197,20 +197,6 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: 'You entered an invalid response. If the likelier image is on the left, press the left arrow <kbd>&larr;</kbd> on the keyboard as fast as you can. If the likelier image is on the right, press the right arrow <kbd>&rarr;</kbd> as fast as you can.'
 }
 
-var if_node = {
-    timeline: [if_trial],
-    conditional_function: function(){
-        // get the data from the previous trial,
-        // and check which key was pressed
-        var data = jsPsych.data.get().last(1).values()[0];
-        if(jsPsych.pluginAPI.compareKeys(data.response, 'ArrowLeft' || 'ArrowRight')){
-            return false;
-        } else {
-            return true;
-        }
-    }
-}
-
   var most_trial0 = {
     type: jsPsychImageKeyboardResponse,
     stimulus: imgBurg2,
@@ -679,6 +665,20 @@ var if_node = {
       data.saveIncrementally = true
     },
   }
+
+  const if_node = {
+    timeline: [if_trial],
+    conditional_function: function(){
+        // get the data from the previous trial,
+        // and check which key was pressed
+        var data = jsPsych.data.get().last(1).values()[0];
+        if(jsPsych.pluginAPI.compareKeys(data.response, 'ArrowLeft' || 'ArrowRight')){
+            return false;
+        } else {
+            return true;
+        }
+    }
+}
 
   /* define instructions for training trials*/
   var instructions0 = {
