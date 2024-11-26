@@ -685,11 +685,10 @@ export async function runExperiment(updateDebugPanel: () => void) {
 
   /* define training procedure */
   const test_procedure0 = {
-    timeline: [fixation, question, test, if_node],
+    timeline: [fixation, question, test],
     timeline_variables: training,
     repetitions: 1,
     randomize_order: false,
-    on_finish: function(){jsPsych.data.displayData(); }
   }
   timeline.push(test_procedure0)
 
