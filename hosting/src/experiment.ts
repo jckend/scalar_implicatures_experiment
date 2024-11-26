@@ -573,7 +573,7 @@ var if_node = {
     prompt: '<p>Opponent description: <b>The item on the card is warm</b>.</p>',
   }
 
-  const training = [few_trial0, if_node, some_trial0, adhoc_trial0, heat_trial0, most_trial0]
+  const training = [few_trial0, some_trial0, adhoc_trial0, heat_trial0, most_trial0, if_node]
   const trials = [
     few_trial1,
     few_trial2,
