@@ -127,8 +127,8 @@ def _cli():
     )
     parser.add_argument(
         "--cred",
-        dest="credpath",
-        required=r"C:\Users\caleb\Documents\GitHub\scalar_implicatures_experiment\scalar-3ac8c-firebase-adminsdk-fufi1-78fcb3c622.json",
+        dest=r"C:\Users\caleb\Documents\GitHub\scalar_implicatures_experiment\scalar-3ac8c-firebase-adminsdk-fufi1-78fcb3c622.json",
+        required=True,
         help="Path to Firebase credentials JSON file",
     )
     parser.add_argument(
