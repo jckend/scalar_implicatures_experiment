@@ -78,6 +78,8 @@ export async function runExperiment(updateDebugPanel: () => void) {
 
   /* initialize jsPsych */
   const jsPsych = initJsPsych({
+    show_progress_bar: true,
+    auto_update_progress_bar: false,
     on_data_update: function (trialData: TrialData) {
       if (debug) {
         console.log('jsPsych-update :: trialData ::', trialData)
@@ -152,10 +154,15 @@ export async function runExperiment(updateDebugPanel: () => void) {
   }
   timeline.push(preload)
 
+  const n_trials = 50 
+  
   /* define welcome message trial */
   const welcome = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: '<span class="text-xl">Welcome to the experiment. Press any key to begin.</span>',
+    on_start: function() {
+        // set progress bar to 0 at the start of experiment
+        jsPsych.setProgressBar(0);},
   }
   timeline.push(welcome)
 
@@ -191,12 +198,6 @@ export async function runExperiment(updateDebugPanel: () => void) {
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>The man on the card is wearing a teal shirt</b>.</p>',
   }
-
-  var if_trial = {
-    type: jsPsychHtmlKeyboardResponse,
-    stimulus: 'You entered an invalid response. If the likelier image is on the left, press the left arrow <kbd>&larr;</kbd> on the keyboard as fast as you can. If the likelier image is on the right, press the right arrow <kbd>&rarr;</kbd> as fast as you can.',
-    post_trial_gap: 2000,
-}
 
   var most_trial0 = {
     type: jsPsychImageKeyboardResponse,
