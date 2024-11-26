@@ -193,8 +193,9 @@ export async function runExperiment(updateDebugPanel: () => void) {
   }
 
   var if_trial = {
-    type: 'html-keyboard-response',
-    stimulus: 'You entered an invalid response. If the likelier image is on the left, press the left arrow <kbd>&larr;</kbd> on the keyboard as fast as you can. If the likelier image is on the right, press the right arrow <kbd>&rarr;</kbd> as fast as you can.'
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: 'You entered an invalid response. If the likelier image is on the left, press the left arrow <kbd>&larr;</kbd> on the keyboard as fast as you can. If the likelier image is on the right, press the right arrow <kbd>&rarr;</kbd> as fast as you can.',
+    post_trial_gap: 2000,
 }
 
   var most_trial0 = {
