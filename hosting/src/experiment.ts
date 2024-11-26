@@ -162,10 +162,10 @@ export async function runExperiment(updateDebugPanel: () => void) {
   /* define trial variables for training trials */
   var few_trial0 = {
     type: jsPsychImageKeyboardResponse,
-    prompt: '<p><b>Few of the items are spoons</b>.</p>', 
     stimulus: imgBurg1,
-    stimulus_width: 700,
+    stimulus_width: 400,
     choices: ['ArrowLeft', 'ArrowRight'],
+    prompt: '<p><b>Few of the items are spoons</b>.</p>', 
   }
 
   var heat_trial0 = {
