@@ -667,20 +667,6 @@ export async function runExperiment(updateDebugPanel: () => void) {
     },
   }
 
-  const if_node = {
-    timeline: [if_trial],
-    conditional_function: function(){
-        // get the data from the previous trial,
-        // and check which key was pressed
-        var data = jsPsych.data.get().last(1).values()[0];
-        if(jsPsych.pluginAPI.compareKeys(data.response, 'ArrowLeft' || 'ArrowRight')){
-            return false;
-        } else {
-            return true;
-        }
-    }
-}
-
   /* define instructions for training trials*/
   var instructions0 = {
     type: jsPsychHtmlKeyboardResponse,
