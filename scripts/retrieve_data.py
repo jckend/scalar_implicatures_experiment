@@ -136,7 +136,7 @@ def _cli():
     )
     parser.add_argument(
         "--collection",
-        dest= ["exptData", "sharedData"],
+        dest= "exptData",
         nargs="+",
         required=True,
         help="Name of the Firestore collections to retrieve",
