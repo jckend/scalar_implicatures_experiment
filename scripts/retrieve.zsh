@@ -10,7 +10,7 @@ cd "${project}/scripts" || { printf "Failed to change directory to ${project}/sc
 
 ### Update with your filenames and paths ###
 python retrieve_data.py \
-    --cred "myproject-firebase-adminsdk.json" \
-    --out "${project}/data" \
+    --cred "~/Desktop/scalar_ex-firebase-adminsdk.json"" \
+    --out "~/Desktop/scalar_ex/dataout" \
     --collection 'exptData' 'sharedData' \
     --encrypted
