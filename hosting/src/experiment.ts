@@ -192,6 +192,25 @@ export async function runExperiment(updateDebugPanel: () => void) {
     prompt: '<p><b>The man on the card is wearing a teal shirt</b>.</p>',
   }
 
+  var if_trial = {
+    type: 'html-keyboard-response',
+    stimulus: 'You entered an invalid response. If the likelier image is on the left, press the left arrow <kbd>&larr;</kbd> on the keyboard as fast as you can. If the likelier image is on the right, press the right arrow <kbd>&rarr;</kbd> as fast as you can.'
+}
+
+var if_node = {
+    timeline: [if_trial],
+    conditional_function: function(){
+        // get the data from the previous trial,
+        // and check which key was pressed
+        var data = jsPsych.data.get().last(1).values()[0];
+        if(jsPsych.pluginAPI.compareKeys(data.response, 'ArrowLeft' || 'ArrowRight')){
+            return false;
+        } else {
+            return true;
+        }
+    }
+}
+
   var most_trial0 = {
     type: jsPsychImageKeyboardResponse,
     stimulus: imgBurg2,
@@ -554,7 +573,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     prompt: '<p>Opponent description: <b>The item on the card is warm</b>.</p>',
   }
 
-  const training = [few_trial0, some_trial0, adhoc_trial0, heat_trial0, most_trial0]
+  const training = [few_trial0, if_node, some_trial0, adhoc_trial0, heat_trial0, most_trial0]
   const trials = [
     few_trial1,
     few_trial2,
@@ -682,7 +701,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     timeline: [fixation, question, test],
     timeline_variables: training,
     repetitions: 1,
-    randomize_order: true,
+    randomize_order: false,
   }
   timeline.push(test_procedure0)
 
