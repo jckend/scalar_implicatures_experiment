@@ -166,6 +166,3 @@ def main(
 
 if __name__ == "__main__":
     main(**_cli())
-
-if __name__ == "__main__":
-    main(**_cli())
