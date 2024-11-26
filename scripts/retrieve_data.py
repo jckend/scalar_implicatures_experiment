@@ -127,16 +127,16 @@ def _cli():
     )
     parser.add_argument(
         "--cred",
-        dest=r"C:\Users\caleb\Documents\GitHub\scalar_implicatures_experiment\scalar-3ac8c-firebase-adminsdk-fufi1-78fcb3c622.json",
+        dest="credpath",
         required=True,
         help="Path to Firebase credentials JSON file",
     )
     parser.add_argument(
-        "--out", dest=r"C:\Users\caleb\Documents\GitHub\scalar_implicatures_experiment\dataout", required=True, help="Output directory path"
+        "--out", dest="exportpath", required=True, help="Output directory path"
     )
     parser.add_argument(
         "--collection",
-        dest= 'exptData' 'sharedData',
+        dest="collections",
         nargs="+",
         required=True,
         help="Name of the Firestore collections to retrieve",
@@ -163,6 +163,9 @@ def main(
         encrypted=encrypted,
     )
 
+
+if __name__ == "__main__":
+    main(**_cli())
 
 if __name__ == "__main__":
     main(**_cli())
