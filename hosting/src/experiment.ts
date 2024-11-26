@@ -79,7 +79,6 @@ export async function runExperiment(updateDebugPanel: () => void) {
   /* initialize jsPsych */
   const jsPsych = initJsPsych({
     show_progress_bar: true,
-    auto_update_progress_bar: false,
     on_data_update: function (trialData: TrialData) {
       if (debug) {
         console.log('jsPsych-update :: trialData ::', trialData)
@@ -160,9 +159,6 @@ export async function runExperiment(updateDebugPanel: () => void) {
   const welcome = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: '<span class="text-xl">Welcome to the experiment. Press any key to begin.</span>',
-    on_start: function() {
-        // set progress bar to 0 at the start of experiment
-        jsPsych.setProgressBar(0);},
   }
   timeline.push(welcome)
 
