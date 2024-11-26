@@ -166,7 +166,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
   var few_trial0 = {
     type: jsPsychImageKeyboardResponse,
     stimulus: imgBurg1,
-    stimulus_width: 400,
+    stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>Few of the items are spoons</b>.</p>', 
   }
