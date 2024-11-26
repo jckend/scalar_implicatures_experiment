@@ -10,7 +10,7 @@ cd "${project}/scripts" || { printf "Failed to change directory to ${project}/sc
 
 ### Update with your filenames and paths ###
 python retrieve_data.py \
-    --cred "~/scalar_implicature_experiment/scalar-3ac8c-firebase-adminsdk-fufi1-78fcb3c622.json" \
-    --out "~/scalar_implicature_experiment/dataout" \
+    --cred "C:\Users\caleb\Documents\GitHub\scalar_implicatures_experiment\scalar-3ac8c-firebase-adminsdk-fufi1-78fcb3c622.json" \
+    --out "C:\Users\caleb\Documents\GitHub\scalar_implicatures_experiment\dataout" \
     --collection 'exptData' 'sharedData' \
     --encrypted
