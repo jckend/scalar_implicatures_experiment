@@ -701,8 +701,7 @@ var if_node = {
     timeline: [fixation, question, test, if_node],
     timeline_variables: training,
     repetitions: 1,
-    randomize_order: false,
-    on_finish: function(){jsPsych.data.displayData();
+    randomize_order: false
   }
   timeline.push(test_procedure0)
 
