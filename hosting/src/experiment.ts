@@ -694,7 +694,7 @@ var feedback = {
 
   /* define training procedure */
   const test_procedure0 = {
-    timeline: [fixation, question, test, end],
+    timeline: [fixation, question, test],
     timeline_variables: training,
     repetitions: 1,
     randomize_order: false,
