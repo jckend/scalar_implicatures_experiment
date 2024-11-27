@@ -559,8 +559,8 @@ export async function runExperiment(updateDebugPanel: () => void) {
 var feedback = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: function(){
-    var last_trial_correct = jsPsych.data.get().last(1).values()[0].correct;
-    if (last_trial_correct) {
+    var last_trial = jsPsych.data.getLastTrialData();
+    if (last_trial.key_press == 37) {
       return "Correct!"; 
     } else {
       return "Wrong."; 
