@@ -152,8 +152,6 @@ export async function runExperiment(updateDebugPanel: () => void) {
     ],
   }
   timeline.push(preload)
-
-  const n_trials = 50 
   
   /* define welcome message trial */
   const welcome = {
@@ -559,7 +557,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
 
   /*feedback*/
 var feedback = {
-  type: 'html-keyboard-response',
+  type: jsPsychHtmlKeyboardResponse,
   stimulus: function(){
     var last_trial_correct = jsPsych.data.get().last(1).values()[0].correct;
     if (last_trial_correct) {
@@ -570,7 +568,6 @@ var feedback = {
   },
   choices: jsPsych.NO_KEYS
 }
-
 
   const training = [few_trial0, feedback, some_trial0, adhoc_trial0, heat_trial0, most_trial0]
   const trials = [
