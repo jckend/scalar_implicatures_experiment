@@ -557,26 +557,22 @@ export async function runExperiment(updateDebugPanel: () => void) {
     prompt: '<p>Opponent description: <b>The item on the card is warm</b>.</p>',
   }
 
-  /*conditional error timeline*/
-var feedback_trial = {
-  type: 'text',
-  text: 'You got the last question wrong.'
-}
-
-var feedback_chunk = {
-  chunk_type: 'if',
-  timeline: [feedback_trial],
-  conditional_function: function(){
-    var data = jsPsych.data.getLastTrialData();
-    if(data.key_press == 37){
-      return false;
+  /*feedback*/
+var feedback = {
+  type: 'html-keyboard-response',
+  stimulus: function(){
+    var last_trial_correct = jsPsych.data.get().last(1).values()[0].correct;
+    if (last_trial_correct) {
+      return "Correct!"; 
     } else {
-      return true;
+      return "Wrong."; 
     }
-  }
+  },
+  choices: jsPsych.NO_KEYS
 }
 
-  const training = [few_trial0, feedback_chunk, some_trial0, adhoc_trial0, heat_trial0, most_trial0]
+
+  const training = [few_trial0, feedback, some_trial0, adhoc_trial0, heat_trial0, most_trial0]
   const trials = [
     few_trial1,
     few_trial2,
