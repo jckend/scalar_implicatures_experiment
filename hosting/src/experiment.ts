@@ -566,7 +566,7 @@ var feedback = {
       return "Wrong."; 
     }
   },
-  choices: jsPsych.NO_KEYS
+  choices: 'NO_KEYS',
 }
 
   const training = [few_trial0, feedback, some_trial0, adhoc_trial0, heat_trial0, most_trial0]
