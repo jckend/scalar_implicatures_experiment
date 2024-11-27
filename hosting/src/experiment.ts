@@ -557,7 +557,26 @@ export async function runExperiment(updateDebugPanel: () => void) {
     prompt: '<p>Opponent description: <b>The item on the card is warm</b>.</p>',
   }
 
-  const training = [few_trial0, some_trial0, adhoc_trial0, heat_trial0, most_trial0]
+  /*conditional error timeline*/
+var feedback_trial = {
+  type: 'text',
+  text: 'You got the last question wrong.'
+}
+
+var feedback_chunk = {
+  chunk_type: 'if',
+  timeline: [feedback_trial],
+  conditional_function: function(){
+    var data = jsPsych.data.getLastTrialData();
+    if(data.key_press == 37){
+      return false;
+    } else {
+      return true;
+    }
+  }
+}
+
+  const training = [few_trial0, feedback_chunk, some_trial0, adhoc_trial0, heat_trial0, most_trial0]
   const trials = [
     few_trial1,
     few_trial2,
@@ -664,30 +683,6 @@ export async function runExperiment(updateDebugPanel: () => void) {
     },
   }
 
-var feedback_trial = {
-  type: 'text',
-  text: 'You got the last question wrong.'
-}
-
-var feedback_chunk = {
-  chunk_type: 'if',
-  timeline: [feedback_trial],
-  conditional_function: function(){
-    var data = jsPsych.data.getLastTrialData();
-    if(data.key_press == 37){
-      return false;
-    } else {
-      return true;
-    }
-  }
-}
-
-  var end = {
-  type: 'text',
-  text: 'Training complete.'
-}
-
-
   /* define instructions for training trials*/
   var instructions0 = {
     type: jsPsychHtmlKeyboardResponse,
@@ -706,7 +701,7 @@ var feedback_chunk = {
 
   /* define training procedure */
   const test_procedure0 = {
-    timeline: [fixation, question, test, feedback_chunk, end],
+    timeline: [fixation, question, test, end],
     timeline_variables: training,
     repetitions: 1,
     randomize_order: false,
