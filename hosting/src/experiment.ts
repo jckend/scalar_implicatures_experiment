@@ -40,7 +40,7 @@ import imgWarm2 from './images/warmhot_2.png'
 const debug = debugging()
 const mock = mockStore()
 
-type Task = 'response' | 'fixation' | 'question'
+type Task = 'response' | 'fixation' | 'question' | 'feedback'
 type Response = 'left' | 'right'
 type KeyboardResponse = 'ArrowLeft' | 'ArrowRight'
 
