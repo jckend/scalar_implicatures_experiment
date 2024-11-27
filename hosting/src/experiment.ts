@@ -555,21 +555,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     prompt: '<p>Opponent description: <b>The item on the card is warm</b>.</p>',
   }
 
-  /*feedback*/
-var feedback = {
-  type: jsPsychHtmlKeyboardResponse,
-  stimulus: function(){
-    var last_trial = jsPsych.data.getLastTrialData();
-    if (last_trial.key_press == 37) {
-      return "Correct!"; 
-    } else {
-      return "Wrong."; 
-    }
-  },
-  choices: 'NO_KEYS',
-}
-
-  const training = [few_trial0, feedback, some_trial0, adhoc_trial0, heat_trial0, most_trial0]
+  const training = [few_trial0, some_trial0, adhoc_trial0, heat_trial0, most_trial0]
   const trials = [
     few_trial1,
     few_trial2,
@@ -676,6 +662,20 @@ var feedback = {
     },
   }
 
+const feedback = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: function(){
+    var last_trial = jsPsych.data.getLastTrialData();
+    if (last_trial.key_press == 37) {
+      return "Correct!"; 
+    } else {
+      return "Wrong."; 
+    }
+  },
+  choices: 'NO_KEYS',
+}
+
+
   /* define instructions for training trials*/
   var instructions0 = {
     type: jsPsychHtmlKeyboardResponse,
@@ -719,7 +719,7 @@ var feedback = {
 
   /* define test procedure */
   const test_procedure = {
-    timeline: [fixation, question, test],
+    timeline: [fixation, question, test, feedback],
     timeline_variables: trials,
     repetitions: 1,
     randomize_order: true,
