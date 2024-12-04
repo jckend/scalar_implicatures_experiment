@@ -166,7 +166,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgSnail1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>All items are spoons</b>.</p>',
+    prompt: '<center><b>All items are spoons</b>.</center>',
   }
 
     var most_trial0 = {
