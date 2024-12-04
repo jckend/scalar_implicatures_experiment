@@ -739,7 +739,7 @@ const feedback = {
 
   /* define test procedure */
   const test_procedure = {
-    timeline: [fixation, question, test, feedback],
+    timeline: [fixation, question, test],
     timeline_variables: trials,
     repetitions: 1,
     randomize_order: true,
