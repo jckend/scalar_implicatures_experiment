@@ -161,6 +161,22 @@ export async function runExperiment(updateDebugPanel: () => void) {
   timeline.push(welcome)
 
   /* define trial variables for training trials */
+  var all_trial0 = {
+    type: jsPsychImageKeyboardResponse,
+    stimulus: imgSnail1,
+    stimulus_width: 700,
+    choices: ['ArrowLeft', 'ArrowRight'],
+    prompt: '<p><b>All of the items are spoons</b>.</p>',
+  }
+
+    var most_trial0 = {
+    type: jsPsychImageKeyboardResponse,
+    stimulus: imgBurg2,
+    stimulus_width: 700,
+    choices: ['ArrowLeft', 'ArrowRight'],
+    prompt: '<p><b>Most of the items are spoons</b>.</p>',
+  }
+
   var few_trial0 = {
     type: jsPsychImageKeyboardResponse,
     prompt: '<p><b>Few of the items are spoons</b>.</p>', 
@@ -555,7 +571,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     prompt: '<p>Opponent description: <b>The item on the card is warm</b>.</p>',
   }
 
-  const training = [few_trial0, some_trial0, adhoc_trial0, heat_trial0, most_trial0]
+  const training = [all_trial0, most_trial0, few_trial0, some_trial0, adhoc_trial0, heat_trial0, most_trial0]
   const trials = [
     few_trial1,
     few_trial2,
