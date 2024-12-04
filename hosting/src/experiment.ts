@@ -669,7 +669,8 @@ export async function runExperiment(updateDebugPanel: () => void) {
 
   const test = {
     type: jsPsychImageKeyboardResponse,
-    stimulus: jsPsych.timelineVariable('prompt') jsPsych.timelineVariable('stimulus') as unknown as string,
+    prompt: jsPsych.timelineVariable('prompt') as unknown as string,
+    stimulus: jsPsych.timelineVariable('stimulus') as unknown as string,
     choices: ['ArrowLeft', 'ArrowRight'] satisfies KeyboardResponse[],
     data: {
       task: 'response' satisfies Task,
@@ -680,19 +681,6 @@ export async function runExperiment(updateDebugPanel: () => void) {
       data.saveIncrementally = true
     },
   }
-
-const feedback = {
-  type: jsPsychHtmlKeyboardResponse,
-  stimulus: function(){
-    var last_trial = jsPsych.data.getLastTrialData();
-    if (last_trial.key_press == 37) {
-      return "Correct!"; 
-    } else {
-      return "Wrong."; 
-    }
-  },
-  choices: 'NO_KEYS',
-}
 
 
   /* define instructions for training trials*/
