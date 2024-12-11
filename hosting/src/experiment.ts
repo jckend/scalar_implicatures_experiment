@@ -335,8 +335,17 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgBurg1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Host hint: <b>All items are burgers</b>.</p>',
+    prompt: '<p>Host hint: <b>All the items are burgers</b>.</p>',
   }
+
+  var all_trial2 = {
+    type: jsPsychImageKeyboardResponse,
+    stimulus: imgSnail1,
+    stimulus_width: 700,
+    choices: ['ArrowLeft', 'ArrowRight'],
+    prompt: '<p>Host hint: <b>All the items are snails</b>.</p>',
+  }
+
 
   var most_trial3 = {
     type: jsPsychImageKeyboardResponse,
@@ -367,7 +376,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgPartic2,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Host hint: <b>The medal was won by someone who participated</b>.</p>',
+    prompt: '<p>Host hint: <b>The medal was won by a participant</b>.</p>',
   }
 
   var partic_trial2 = {
@@ -375,7 +384,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgPartic1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Host hint: <b>The medal was won by someone who participated</b>.</p>',
+    prompt: '<p>Host hint: <b>The medal was won by a participant</b>.</p>',
   }
 
   var warm_trial1 = {
@@ -507,6 +516,15 @@ export async function runExperiment(updateDebugPanel: () => void) {
     prompt: '<p>Opponent description: <b>All items are burgers</b>.</p>',
   }
 
+  var nall_trial2 = {
+    type: jsPsychImageKeyboardResponse,
+    stimulus: imgSnail1,
+    stimulus_width: 700,
+    choices: ['ArrowLeft', 'ArrowRight'],
+    prompt: '<p>Opponent description: <b>All items are snails</b>.</p>',
+  }
+
+
   var nmost_trial2 = {
     type: jsPsychImageKeyboardResponse,
     stimulus: imgBurg1,
@@ -544,7 +562,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgPartic2,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Opponent description: <b>The medal was won by someone who participated</b>.</p>',
+    prompt: '<p>Opponent description: <b>The medal was won by a participant</b>.</p>',
   }
 
   var npartic_trial2 = {
@@ -552,7 +570,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgPartic1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Opponent description: <b>The medal was won by someone who participated</b>.</p>',
+    prompt: '<p>Opponent description: <b>The medal was won by a participant</b>.</p>',
   }
 
   var nwarm_trial1 = {
@@ -591,6 +609,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     warm_trial1,
     warm_trial2,
     all_trial1,
+    all_trial2,
     most_trial1
   ]
   const ntrials = [
@@ -612,6 +631,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     nwarm_trial1,
     nwarm_trial2,
     nall_trial1,
+    nall_trial2,
     nmost_trial2
   ]
 
