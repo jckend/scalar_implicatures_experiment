@@ -12,7 +12,7 @@ export const contactInfo: Record<'name' | 'email', string> = {
 }
 
 export const prolificCUrlLive = 'https://app.prolific.com/submissions/complete'
-export const prolificCUrlTest = 'https://daeh.info'
+export const prolificCUrlTest = 'https://jckend.github.io/#home'
 
 const firebaseCredMock: FirebaseOptions = {
   apiKey: 'DUMMY-STRING',
