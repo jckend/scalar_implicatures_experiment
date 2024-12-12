@@ -343,7 +343,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgSnail1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Host hint: <b>All the items are snails</b>.</p>',
+    prompt: '<p>Host hint: <b>All the items are spoons</b>.</p>',
   }
 
 
@@ -521,7 +521,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgSnail1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Opponent description: <b>All items are snails</b>.</p>',
+    prompt: '<p>Opponent description: <b>All items are spoons</b>.</p>',
   }
 
 
