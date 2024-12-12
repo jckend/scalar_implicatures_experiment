@@ -352,7 +352,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgSnail1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Host hint: <b>Most of the items are spoons</b>.</p>',
+    prompt: '<p>Host hint: <b>Most items are spoons</b>.</p>',
   }
 
   var most_trial4 = {
@@ -360,7 +360,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgSax1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Host hint: <b>Most of the items are saxophones</b>.</p>',
+    prompt: '<p>Host hint: <b>Most items are saxophones</b>.</p>',
   }
 
   var hair_trial1 = {
@@ -433,7 +433,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgSnail2,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Opponent description: <b>Few items on the card are snails</b>.</p>',
+    prompt: '<p>Opponent description: <b>Few items are snails</b>.</p>',
   }
 
   var nheat_trial1 = {
@@ -546,7 +546,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgSax1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Opponent description: <b>Most of the items are saxophones</b>.</p>',
+    prompt: '<p>Opponent description: <b>Most items are saxophones</b>.</p>',
   }
 
   var nhair_trial1 = {
@@ -578,7 +578,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgWarm1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Opponent description: <b>The item on the card is warm</b>.</p>',
+    prompt: '<p>Opponent description: <b>The item is warm</b>.</p>',
   }
 
   var nwarm_trial2 = {
@@ -586,7 +586,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgWarm2,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Opponent description: <b>The item on the card is warm</b>.</p>',
+    prompt: '<p>Opponent description: <b>The item is warm</b>.</p>',
   }
 
   const training = [all_trial0, most_trial0, few_trial0, some_trial0, adhoc_trial0, heat_trial0, most_trial0]
