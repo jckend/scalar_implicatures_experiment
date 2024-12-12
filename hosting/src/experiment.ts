@@ -54,8 +54,7 @@ const debuggingText = debug ? `<br /><br />redirect link : ${prolificCUrl}` : '<
 const exitMessage = `<p class="align-middle text-center"> 
 Please wait. You will be redirected back to Prolific in a few moments. 
 <br /><br />
-If not, please use the following completion code to ensure compensation for this study: ${prolificCC}
-${debuggingText}
+If not, please use the following completion code to ensure compensation for this study: C2TJMYKC.
 </p>`
 
 const exitExperiment = (): void => {
