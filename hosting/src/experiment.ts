@@ -167,7 +167,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
       ImgAvocado1,
       ImgAvocado2, 
       ImgPetri1,
-      ImgPetri2
+      ImgPetri2,
     ],
   }
   timeline.push(preload)
@@ -518,7 +518,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     all_trial1,
     all_trial2,
     good_trial1,
-    good_trial2
+    good_trial2,
   ]
 
   /* consent */
