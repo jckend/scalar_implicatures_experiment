@@ -222,7 +222,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgBurg1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Host hint: <b>Few items are spoons</b>.</p>',
+    prompt: '<p><b>Few items are spoons</b>.</p>',
   }
 
   var few_trial2 = {
@@ -230,7 +230,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgSax1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Host hint: <b>Few items are clamps</b>.</p>',
+    prompt: '<p><b>Few items are clamps</b>.</p>',
   }
 
   var few_trial3 = {
@@ -238,7 +238,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgSax2,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Host hint: <b>Few items are clamps</b>.</p>',
+    prompt: '<p><b>Few items are clamps</b>.</p>',
   }
 
   var few_trial4 = {
@@ -246,7 +246,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgSnail2,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Host hint: <b>Few items are snails</b>.</p>',
+    prompt: '<p><b>Few items are snails</b>.</p>',
   }
 
   var heat_trial1 = {
@@ -254,7 +254,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgWarm1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Host hint: <b>The item on the card is warm</b>.</p>',
+    prompt: '<p><b>The item on the card is warm</b>.</p>',
   }
 
   var some_trial1 = {
@@ -262,7 +262,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgSnail1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Host hint: <b>Some items are spoons</b>.</p>',
+    prompt: '<p><b>Some items are spoons</b>.</p>',
   }
 
   var some_trial2 = {
@@ -270,7 +270,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgSax1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Host hint: <b>Some items are saxophones</b>.</p>',
+    prompt: '<p><b>Some items are saxophones</b>.</p>',
   }
 
   var some_trial3 = {
@@ -278,7 +278,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgBurg1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Host hint: <b>Some items are burgers</b>.</p>',
+    prompt: '<p><b>Some items are burgers</b>.</p>',
   }
 
   var some_trial4 = {
@@ -286,7 +286,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgSnail2,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Host hint: <b>Some items are spoons</b>.</p>',
+    prompt: '<p><b>Some items are spoons</b>.</p>',
   }
 
   var some_trial5 = {
@@ -294,7 +294,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgSax2,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Host hint: <b>Some items are saxophones</b>.</p>',
+    prompt: '<p><b>Some items are saxophones</b>.</p>',
   }
 
   var some_trial6 = {
@@ -302,7 +302,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgBurg2,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Host hint: <b>Some items are burgers</b>.</p>',
+    prompt: '<p><b>Some items are burgers</b>.</p>',
   }
 
   var adhoc_trial1 = {
@@ -310,7 +310,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgCouples2,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Host hint: <b>A man is wearing a teal shirt</b>.</p>',
+    prompt: '<p><b>A man is wearing a teal shirt</b>.</p>',
   }
 
   var adhoc_trial2 = {
@@ -318,7 +318,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgCouples1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Host hint: <b>A man is wearing a teal shirt</b>.</p>',
+    prompt: '<p><b>A man is wearing a teal shirt</b>.</p>',
   }
 
   var most_trial1 = {
@@ -326,7 +326,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgBurg2,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Host hint: <b>Most items are burgers</b>.</p>',
+    prompt: '<p><b>Most items are burgers</b>.</p>',
   }
 
   var all_trial1 = {
@@ -334,7 +334,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgBurg1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Host hint: <b>All the items are burgers</b>.</p>',
+    prompt: '<p><b>All the items are burgers</b>.</p>',
   }
 
   var all_trial2 = {
@@ -342,7 +342,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgSnail1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Host hint: <b>All the items are spoons</b>.</p>',
+    prompt: '<p><b>All the items are spoons</b>.</p>',
   }
 
 
@@ -359,7 +359,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgSax1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Host hint: <b>Most items are saxophones</b>.</p>',
+    prompt: '<p><b>Most items are saxophones</b>.</p>',
   }
 
   var hair_trial1 = {
@@ -367,7 +367,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgDark2,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Host hint: <b>The man has dark hair</b>.</p>',
+    prompt: '<p><b>The man has dark hair</b>.</p>',
   }
 
   var partic_trial1 = {
@@ -375,7 +375,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgPartic2,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Host hint: <b>The medal was won by a participant</b>.</p>',
+    prompt: '<p><b>The medal was won by a participant</b>.</p>',
   }
 
   var partic_trial2 = {
@@ -383,7 +383,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgPartic1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Host hint: <b>The medal was won by a participant</b>.</p>',
+    prompt: '<p><b>The medal was won by a participant</b>.</p>',
   }
 
   var warm_trial1 = {
@@ -391,7 +391,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgWarm1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Host hint: <b>The item is warm</b>.</p>',
+    prompt: '<p><b>The item is warm</b>.</p>',
   }
 
   var warm_trial2 = {
@@ -399,7 +399,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgWarm2,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Host hint: <b>The item is warm</b>.</p>',
+    prompt: '<p><b>The item is warm</b>.</p>',
   }
 
   const training = [all_trial0, most_trial0, few_trial0, some_trial0, adhoc_trial0, heat_trial0, most_trial0]
