@@ -462,6 +462,23 @@ export async function runExperiment(updateDebugPanel: () => void) {
     prompt: '<p><b>The item is warm</b>.</p>',
   }
 
+    var good_trial1 = {
+    type: jsPsychImageKeyboardResponse,
+    stimulus: imgGrades1,
+    stimulus_width: 700,
+    choices: ['ArrowLeft', 'ArrowRight'],
+    prompt: '<p><b>The grade is good</b>.</p>',
+  }
+
+  var good_trial2 = {
+    type: jsPsychImageKeyboardResponse,
+    stimulus: imgGrades,
+    stimulus_width: 700,
+    choices: ['ArrowLeft', 'ArrowRight'],
+    prompt: '<p><b>The grade is good</b>.</p>',
+  }
+
+
   const training = [all_trial0, most_trial0, few_trial0, some_trial0, adhoc_trial0, heat_trial0, most_trial0]
   const trials = [
     few_trial1,
@@ -490,6 +507,8 @@ export async function runExperiment(updateDebugPanel: () => void) {
     warm_trial2,
     all_trial1,
     all_trial2,
+    good_trial1,
+    good_trial2
   ]
 
   /* consent */
