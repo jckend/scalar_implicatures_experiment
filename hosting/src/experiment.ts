@@ -22,6 +22,8 @@ import imgSnail1 from './images/all_some_snail1.png'
 import imgSnail2 from './images/all_some_snail2.png'
 import imgSpoon1 from './images/all_some_spoon1.png'
 import imgSpoon2 from './images/all_some_spoon2.png'
+import imgGorilla1 from './images/all_some_gorilla1.png'
+import imgGorilla2 from './images/all_some_gorilla2.png'
 import imgCouples1 from './images/couples_adhoc1.png'
 import imgCouples2 from './images/couples_adhoc2.png'
 import imgDark1 from './images/dark_black1.png'
@@ -259,10 +261,10 @@ export async function runExperiment(updateDebugPanel: () => void) {
 
   var some_trial1 = {
     type: jsPsychImageKeyboardResponse,
-    stimulus: imgSnail1,
+    stimulus: imgGorilla1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>Some items are spoons</b>.</p>',
+    prompt: '<p><b>Some items are gorillas.</b>.</p>',
   }
 
   var some_trial2 = {
@@ -299,10 +301,10 @@ export async function runExperiment(updateDebugPanel: () => void) {
 
   var some_trial6 = {
     type: jsPsychImageKeyboardResponse,
-    stimulus: imgBurg2,
+    stimulus: imgGorilla2,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>Some items are burgers</b>.</p>',
+    prompt: '<p><b>Some items are gorillas.</b>.</p>',
   }
 
   var adhoc_trial1 = {
@@ -348,10 +350,10 @@ export async function runExperiment(updateDebugPanel: () => void) {
 
   var most_trial3 = {
     type: jsPsychImageKeyboardResponse,
-    stimulus: imgSnail1,
+    stimulus: imgGorilla1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Host hint: <b>Most items are spoons</b>.</p>',
+    prompt: '<p><b>Most items are gorillas</b>.</p>',
   }
 
   var most_trial4 = {
