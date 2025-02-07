@@ -32,8 +32,6 @@ import imgPetri1 from 'C:/Users/caleb/petri_adhoc1.png'
 import imgPetri2 from 'C:/Users/caleb/petri_adhoc2.png'
 import imgTube1 from 'C:/Users/caleb/tube_adhoc1.png'
 import imgTube2 from 'C:/Users/caleb/tube_adhoc2.png'
-import imgGrades1 from 'C:/Users/caleb/grades1.png'
-import imgGrades2 from 'C:/Users/caleb/grades2.png'
 import imgDark1 from './images/dark_black1.png'
 import imgDark2 from './images/dark_black2.png'
 import imgPartic1 from './images/participated_won_1.png'
@@ -162,8 +160,6 @@ export async function runExperiment(updateDebugPanel: () => void) {
       ImgTube2, 
       ImgGorilla1,
       ImgGorilla2, 
-      ImgGrades1,
-      ImgGrades2,
       ImgAvocado1,
       ImgAvocado2, 
       ImgPetri1,
@@ -472,22 +468,6 @@ export async function runExperiment(updateDebugPanel: () => void) {
     prompt: '<p><b>The item is warm</b>.</p>',
   }
 
-    var good_trial1 = {
-    type: jsPsychImageKeyboardResponse,
-    stimulus: imgGrades1,
-    stimulus_width: 700,
-    choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>The grade is good</b>.</p>',
-  }
-
-  var good_trial2 = {
-    type: jsPsychImageKeyboardResponse,
-    stimulus: imgGrades2,
-    stimulus_width: 700,
-    choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>The grade is good</b>.</p>',
-  }
-
 
   const training = [all_trial0, most_trial0, few_trial0, some_trial0, adhoc_trial0, heat_trial0, most_trial0]
   const trials = [
@@ -517,8 +497,6 @@ export async function runExperiment(updateDebugPanel: () => void) {
     warm_trial2,
     all_trial1,
     all_trial2,
-    good_trial1,
-    good_trial2,
   ]
 
   /* consent */
