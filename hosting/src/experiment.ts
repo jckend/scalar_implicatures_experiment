@@ -32,9 +32,6 @@ import imgPetri1 from 'C:/Users/caleb/petri_adhoc1.png'
 import imgPetri2 from 'C:/Users/caleb/petri_adhoc2.png'
 import imgTube1 from 'C:/Users/caleb/tube_adhoc1.png'
 import imgTube2 from 'C:/Users/caleb/tube_adhoc2.png'
-import ImgPrice from 'C:/Users/caleb/price1.png'
-import ImgGrades1 from 'C:/Users/caleb/grades1.png'
-import ImgGrades2 from 'C:/Users/caleb/grades2.png'
 import imgDark1 from './images/dark_black1.png'
 import imgDark2 from './images/dark_black2.png'
 import imgPartic1 from './images/participated_won_1.png'
@@ -463,15 +460,6 @@ export async function runExperiment(updateDebugPanel: () => void) {
     prompt: '<p><b>The item is warm</b>.</p>',
   }
 
-  var price_trial1 = {
-    type: jsPsychImageKeyboardResponse,
-    stimulus: imgPrice,
-    stimulus_width: 700,
-    choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>The item is cheap</b>.</p>',
-  }
-
-
   const training = [all_trial0, most_trial0, few_trial0, some_trial0, adhoc_trial0, heat_trial0, most_trial0]
   const trials = [
     few_trial1,
@@ -498,7 +486,6 @@ export async function runExperiment(updateDebugPanel: () => void) {
     partic_trial2,
     warm_trial1,
     warm_trial2,
-    price_trial1,
     all_trial1,
     all_trial2,
   ]
