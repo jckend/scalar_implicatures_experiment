@@ -26,6 +26,8 @@ import imgGorilla1 from './images/all_some_gorilla1.png'
 import imgGorilla2 from './images/all_some_gorilla2.png'
 import imgCouples1 from './images/couples_adhoc1.png'
 import imgCouples2 from './images/couples_adhoc2.png'
+import imgAvocado1 from './images/avocoda_adhoc1.png'
+import imgAvocado2 from './images/avocoda_adhoc2.png'
 import imgDark1 from './images/dark_black1.png'
 import imgDark2 from './images/dark_black2.png'
 import imgPartic1 from './images/participated_won_1.png'
@@ -323,6 +325,23 @@ export async function runExperiment(updateDebugPanel: () => void) {
     prompt: '<p><b>A man is wearing a teal shirt</b>.</p>',
   }
 
+  var adhoc_trial3 = {
+    type: jsPsychImageKeyboardResponse,
+    stimulus: imgAvocado1,
+    stimulus_width: 700,
+    choices: ['ArrowLeft', 'ArrowRight'],
+    prompt: '<p><b>There is an avocado on top.</b>.</p>',
+  }
+
+    var adhoc_trial4 = {
+    type: jsPsychImageKeyboardResponse,
+    stimulus: imgAvocado2,
+    stimulus_width: 700,
+    choices: ['ArrowLeft', 'ArrowRight'],
+    prompt: '<p><b>There is an avocado on top.</b>.</p>',
+  }
+
+
   var most_trial1 = {
     type: jsPsychImageKeyboardResponse,
     stimulus: imgBurg2,
@@ -419,6 +438,8 @@ export async function runExperiment(updateDebugPanel: () => void) {
     hair_trial1,
     adhoc_trial1,
     adhoc_trial2,
+    adhoc_trial3,
+    adhoc_trial4,
     partic_trial1,
     partic_trial2,
     warm_trial1,
