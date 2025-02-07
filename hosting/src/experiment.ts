@@ -402,192 +402,6 @@ export async function runExperiment(updateDebugPanel: () => void) {
     prompt: '<p>Host hint: <b>The item is warm</b>.</p>',
   }
 
-  /* define trial variables for non-cooperative trials */
-  var nfew_trial1 = {
-    type: jsPsychImageKeyboardResponse,
-    stimulus: imgBurg1,
-    stimulus_width: 700,
-    choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Opponent description: <b>Few items are spoons</b>.</p>',
-  }
-
-  var nfew_trial2 = {
-    type: jsPsychImageKeyboardResponse,
-    stimulus: imgSax1,
-    stimulus_width: 700,
-    choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Opponent description: <b>Few items are clamps</b>.</p>',
-  }
-
-  var nfew_trial3 = {
-    type: jsPsychImageKeyboardResponse,
-    stimulus: imgSax2,
-    stimulus_width: 700,
-    choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Opponent description: <b>Few items are clamps</b>.</p>',
-  }
-
-  var nfew_trial4 = {
-    type: jsPsychImageKeyboardResponse,
-    stimulus: imgSnail2,
-    stimulus_width: 700,
-    choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Opponent description: <b>Few items are snails</b>.</p>',
-  }
-
-  var nheat_trial1 = {
-    type: jsPsychImageKeyboardResponse,
-    stimulus: imgWarm1,
-    stimulus_width: 700,
-    choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Opponent description: <b>The item is warm</b>.</p>',
-  }
-
-  var nsome_trial1 = {
-    type: jsPsychImageKeyboardResponse,
-    stimulus: imgSnail1,
-    stimulus_width: 700,
-    choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Opponent description: <b>Some items are spoons</b>.</p>',
-  }
-
-  var nsome_trial2 = {
-    type: jsPsychImageKeyboardResponse,
-    stimulus: imgSax1,
-    stimulus_width: 700,
-    choices: ['f', 'j'],
-    prompt: '<p>Opponent description: <b>Some items are saxophones</b>.</p>',
-  }
-
-  var nsome_trial3 = {
-    type: jsPsychImageKeyboardResponse,
-    stimulus: imgBurg1,
-    stimulus_width: 700,
-    choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Opponent description: <b>Some items are burgers</b>.</p>',
-  }
-
-  var nsome_trial4 = {
-    type: jsPsychImageKeyboardResponse,
-    stimulus: imgSnail2,
-    stimulus_width: 700,
-    choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Opponent description: <b>Some items are spoons</b>.</p>',
-  }
-
-  var nsome_trial5 = {
-    type: jsPsychImageKeyboardResponse,
-    stimulus: imgSax2,
-    stimulus_width: 700,
-    choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Opponent description: <b>Some items are saxophones</b>.</p>',
-  }
-
-  var nsome_trial6 = {
-    type: jsPsychImageKeyboardResponse,
-    stimulus: imgBurg2,
-    stimulus_width: 700,
-    choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Opponent description: <b>Some items are burgers</b>.</p>',
-  }
-
-  var nadhoc_trial1 = {
-    type: jsPsychImageKeyboardResponse,
-    stimulus: imgCouples2,
-    stimulus_width: 700,
-    choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Opponent description: <b>A man is wearing a teal shirt</b>.</p>',
-  }
-
-  var nadhoc_trial2 = {
-    type: jsPsychImageKeyboardResponse,
-    stimulus: imgCouples1,
-    stimulus_width: 700,
-    choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Opponent description: <b>A man is wearing a teal shirt</b>.</p>',
-  }
-
-  var nall_trial1 = {
-    type: jsPsychImageKeyboardResponse,
-    stimulus: imgBurg2,
-    stimulus_width: 700,
-    choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Opponent description: <b>All items are burgers</b>.</p>',
-  }
-
-  var nall_trial2 = {
-    type: jsPsychImageKeyboardResponse,
-    stimulus: imgSnail1,
-    stimulus_width: 700,
-    choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Opponent description: <b>All items are spoons</b>.</p>',
-  }
-
-
-  var nmost_trial2 = {
-    type: jsPsychImageKeyboardResponse,
-    stimulus: imgBurg1,
-    stimulus_width: 700,
-    choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Opponent description: <b>Most items are burgers</b>.</p>',
-  }
-
-  var nmost_trial3 = {
-    type: jsPsychImageKeyboardResponse,
-    stimulus: imgSnail1,
-    stimulus_width: 700,
-    choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Opponent description: <b>Most items are spoons</b>.</p>',
-  }
-
-  var nmost_trial4 = {
-    type: jsPsychImageKeyboardResponse,
-    stimulus: imgSax1,
-    stimulus_width: 700,
-    choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Opponent description: <b>Most items are saxophones</b>.</p>',
-  }
-
-  var nhair_trial1 = {
-    type: jsPsychImageKeyboardResponse,
-    stimulus: imgDark2,
-    stimulus_width: 700,
-    choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Opponent description: <b>The man has dark hair</b>.</p>',
-  }
-
-  var npartic_trial1 = {
-    type: jsPsychImageKeyboardResponse,
-    stimulus: imgPartic2,
-    stimulus_width: 700,
-    choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Opponent description: <b>The medal was won by a participant</b>.</p>',
-  }
-
-  var npartic_trial2 = {
-    type: jsPsychImageKeyboardResponse,
-    stimulus: imgPartic1,
-    stimulus_width: 700,
-    choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Opponent description: <b>The medal was won by a participant</b>.</p>',
-  }
-
-  var nwarm_trial1 = {
-    type: jsPsychImageKeyboardResponse,
-    stimulus: imgWarm1,
-    stimulus_width: 700,
-    choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Opponent description: <b>The item is warm</b>.</p>',
-  }
-
-  var nwarm_trial2 = {
-    type: jsPsychImageKeyboardResponse,
-    stimulus: imgWarm2,
-    stimulus_width: 700,
-    choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p>Opponent description: <b>The item is warm</b>.</p>',
-  }
-
   const training = [all_trial0, most_trial0, few_trial0, some_trial0, adhoc_trial0, heat_trial0, most_trial0]
   const trials = [
     few_trial1,
@@ -610,28 +424,6 @@ export async function runExperiment(updateDebugPanel: () => void) {
     all_trial1,
     all_trial2,
     most_trial1
-  ]
-  const ntrials = [
-    nfew_trial1,
-    nfew_trial2,
-    nfew_trial3,
-    nfew_trial4,
-    nsome_trial1,
-    nsome_trial2,
-    nsome_trial3,
-    nsome_trial4,
-    nsome_trial5,
-    nsome_trial6,
-    nhair_trial1,
-    nadhoc_trial1,
-    nadhoc_trial2,
-    npartic_trial1,
-    npartic_trial2,
-    nwarm_trial1,
-    nwarm_trial2,
-    nall_trial1,
-    nall_trial2,
-    nmost_trial2
   ]
 
   /* consent */
@@ -731,8 +523,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
   var instructions1 = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: `
-    <p style="background-color:Tomato;"><strong>Scenario:</strong> You are a contestant on a game show. You will be presented with two images. Your goal is to select the winning image. The host cannot tell you which image is the winning image, but she can provide hints. These hints will never be false, but they may be misleading.</p>
-    <p>If the winning image is on the left, press the left arrow <kbd>&larr;</kbd> on the keyboard as fast as you can. If the winning image is on the right, press the right arrow <kbd>&rarr;</kbd> as fast as you can.</p>
+    <p>If the likelier image is on the left, press the left arrow <kbd>&larr;</kbd> on the keyboard as fast as you can. If the likelier image is on the right, press the right arrow <kbd>&rarr;</kbd> as fast as you can.</p>
     <center>
     <div style='width: 700px;'><img src='${imgSnail1}'></img>
     </div>
@@ -751,31 +542,6 @@ export async function runExperiment(updateDebugPanel: () => void) {
     randomize_order: true,
   }
   timeline.push(test_procedure)
-
-  /* define instructions for semi-cooperative trial */
-  var instructions2 = {
-    type: jsPsychHtmlKeyboardResponse,
-    stimulus: `
-    <p style="background-color:Tomato;"><strong>Scenario:</strong> You are a contestant on a game show. You will be presented with two images. Your goal is to select the winning image, while your opponent's goal is to get you to select the losing image. Your opponent will provide you with a description of the winning image. These descriptions will never be false, but they may be misleading.</p>
-    <p>If the winning image is on the left, press the left arrow <kbd>&larr;</kbd> on the keyboard as fast as you can. If the winning image is on the right, press the right arrow <kbd>&rarr;</kbd> as fast as you can.</p>
-    <center>
-    <div style='width: 700px;'><img src='${imgSnail1}'></img>
-    </div>
-    </center>
-    <p>Press any key to begin.</p>
-  `,
-    post_trial_gap: 2000,
-  }
-  timeline.push(instructions2)
-
-  /* define test procedure */
-  const test_procedure2 = {
-    timeline: [fixation, question, test],
-    timeline_variables: ntrials,
-    repetitions: 1,
-    randomize_order: true,
-  }
-  timeline.push(test_procedure2)
 
   /* start the experiment */
   // @ts-expect-error allow timeline to be type jsPsych TimelineArray
