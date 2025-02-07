@@ -38,7 +38,7 @@ import imgPartic1 from './images/participated_won_1.png'
 import imgPartic2 from './images/participated_won_2.png'
 import imgWarm1 from './images/warmhot_1.png'
 import imgWarm2 from './images/warmhot_2.png'
-import ImgPrice from 'C:/Users/caleb/price.png'
+import ImgPrice from 'C:/Users/caleb/price1.png'
 import ImgGrades1 from 'C:/Users/caleb/grades1.png'
 import ImgGrades2 from 'C:/Users/caleb/grades2.png'
 
