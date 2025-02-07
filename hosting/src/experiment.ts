@@ -38,6 +38,7 @@ import imgPartic1 from './images/participated_won_1.png'
 import imgPartic2 from './images/participated_won_2.png'
 import imgWarm1 from './images/warmhot_1.png'
 import imgWarm2 from './images/warmhot_2.png'
+import ImgPrice from 'C:/Users/caleb/price.png'
 
 /* Alternatively
  * type JsPsychInstance = ReturnType<typeof initJsPsych>
@@ -460,6 +461,14 @@ export async function runExperiment(updateDebugPanel: () => void) {
     prompt: '<p><b>The item is warm</b>.</p>',
   }
 
+  var price_trial1 = {
+    type: jsPsychImageKeyboardResponse,
+    stimulus: imgPrice,
+    stimulus_width: 700,
+    choices: ['ArrowLeft', 'ArrowRight'],
+    prompt: '<p><b>The item is cheap</b>.</p>',
+  }
+
 
   const training = [all_trial0, most_trial0, few_trial0, some_trial0, adhoc_trial0, heat_trial0, most_trial0]
   const trials = [
@@ -487,6 +496,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     partic_trial2,
     warm_trial1,
     warm_trial2,
+    price_trial1,
     all_trial1,
     all_trial2,
   ]
@@ -603,7 +613,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
   const test_procedure = {
     timeline: [fixation, question, test],
     timeline_variables: trials,
-    repetitions: 1,
+    repetitions: 2,
     randomize_order: true,
   }
   timeline.push(test_procedure)
