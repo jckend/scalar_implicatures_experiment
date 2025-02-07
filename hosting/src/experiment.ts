@@ -28,8 +28,12 @@ import imgCouples1 from './images/couples_adhoc1.png'
 import imgCouples2 from './images/couples_adhoc2.png'
 import imgAvocado1 from 'C:/Users/caleb/avocoda_adhoc1.png'
 import imgAvocado2 from 'C:/Users/caleb/avocoda_adhoc2.png'
+import imgPetri1 from 'C:/Users/caleb/petri_adhoc1.png'
+import imgPetri2 from 'C:/Users/caleb/petri_adhoc2.png'
 import imgTube1 from 'C:/Users/caleb/tube_adhoc1.png'
 import imgTube2 from 'C:/Users/caleb/tube_adhoc2.png'
+import imgGrades1 from 'C:/Users/caleb/grades1.png'
+import imgGrades2 from 'C:/Users/caleb/grades.png'
 import imgDark1 from './images/dark_black1.png'
 import imgDark2 from './images/dark_black2.png'
 import imgPartic1 from './images/participated_won_1.png'
@@ -359,6 +363,23 @@ export async function runExperiment(updateDebugPanel: () => void) {
     prompt: '<p><b>There is a tube on the bottom</b>.</p>',
   }
 
+    var adhoc_trial7 = {
+    type: jsPsychImageKeyboardResponse,
+    stimulus: imgPetri1,
+    stimulus_width: 700,
+    choices: ['ArrowLeft', 'ArrowRight'],
+    prompt: '<p><b>There is a petri dish on the right</b>.</p>',
+  }
+
+    var adhoc_trial8 = {
+    type: jsPsychImageKeyboardResponse,
+    stimulus: imgPetri2,
+    stimulus_width: 700,
+    choices: ['ArrowLeft', 'ArrowRight'],
+    prompt: '<p><b>There is a petri dish on the right</b>.</p>',
+  }
+
+
   
   var most_trial1 = {
     type: jsPsychImageKeyboardResponse,
@@ -453,20 +474,22 @@ export async function runExperiment(updateDebugPanel: () => void) {
     some_trial4,
     some_trial5,
     some_trial6,
-    hair_trial1,
+    most_trial1,
     adhoc_trial1,
     adhoc_trial2,
     adhoc_trial3,
     adhoc_trial4,
     adhoc_trial5,
     adhoc_trial6,
+    adhoc_trial7,
+    adhoc_trial8,
+    hair_trial1,
     partic_trial1,
     partic_trial2,
     warm_trial1,
     warm_trial2,
     all_trial1,
     all_trial2,
-    most_trial1
   ]
 
   /* consent */
