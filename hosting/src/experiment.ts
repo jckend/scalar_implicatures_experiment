@@ -28,6 +28,8 @@ import imgCouples1 from './images/couples_adhoc1.png'
 import imgCouples2 from './images/couples_adhoc2.png'
 import imgAvocado1 from 'C:/Users/caleb/avocoda_adhoc1.png'
 import imgAvocado2 from 'C:/Users/caleb/avocoda_adhoc2.png'
+import imgTube1 from 'C:/Users/caleb/tube_adhoc1.png'
+import imgTube2 from 'C:/Users/caleb/tube_adhoc2.png'
 import imgDark1 from './images/dark_black1.png'
 import imgDark2 from './images/dark_black2.png'
 import imgPartic1 from './images/participated_won_1.png'
@@ -247,10 +249,10 @@ export async function runExperiment(updateDebugPanel: () => void) {
 
   var few_trial4 = {
     type: jsPsychImageKeyboardResponse,
-    stimulus: imgSnail2,
+    stimulus: imgGorilla2,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>Few items are snails</b>.</p>',
+    prompt: '<p><b>Few items are snakes</b>.</p>',
   }
 
   var heat_trial1 = {
@@ -266,7 +268,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgGorilla1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>Some items are gorillas.</b>.</p>',
+    prompt: '<p><b>Some items are gorillas</b>.</p>',
   }
 
   var some_trial2 = {
@@ -330,7 +332,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgAvocado1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>There is an avocado on top.</b>.</p>',
+    prompt: '<p><b>There is an avocado at the top</b>.</p>',
   }
 
     var adhoc_trial4 = {
@@ -338,10 +340,26 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgAvocado2,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>There is an avocado on top.</b>.</p>',
+    prompt: '<p><b>There is an avocado at the top</b>.</p>',
   }
 
+    var adhoc_trial5 = {
+    type: jsPsychImageKeyboardResponse,
+    stimulus: imgTube1,
+    stimulus_width: 700,
+    choices: ['ArrowLeft', 'ArrowRight'],
+    prompt: '<p><b>There is a tube on the bottom</b>.</p>',
+  }
 
+    var adhoc_trial6 = {
+    type: jsPsychImageKeyboardResponse,
+    stimulus: imgTube2,
+    stimulus_width: 700,
+    choices: ['ArrowLeft', 'ArrowRight'],
+    prompt: '<p><b>There is a tube on the bottom</b>.</p>',
+  }
+
+  
   var most_trial1 = {
     type: jsPsychImageKeyboardResponse,
     stimulus: imgBurg2,
@@ -440,6 +458,8 @@ export async function runExperiment(updateDebugPanel: () => void) {
     adhoc_trial2,
     adhoc_trial3,
     adhoc_trial4,
+    adhoc_trial5,
+    adhoc_trial6,
     partic_trial1,
     partic_trial2,
     warm_trial1,
