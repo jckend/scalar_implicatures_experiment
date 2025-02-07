@@ -158,6 +158,16 @@ export async function runExperiment(updateDebugPanel: () => void) {
       imgCouples2,
       imgPartic1,
       imgPartic2,
+      ImgTube1,
+      ImgTube2, 
+      ImgGorilla1,
+      ImgGorilla2, 
+      ImgGrades1,
+      ImgGrades2,
+      ImgAvocado1,
+      ImgAvocado2, 
+      ImgPetri1,
+      ImgPetri2
     ],
   }
   timeline.push(preload)
