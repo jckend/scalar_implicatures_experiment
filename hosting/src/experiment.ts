@@ -482,7 +482,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
 
   var good_trial2 = {
     type: jsPsychImageKeyboardResponse,
-    stimulus: imgGrades,
+    stimulus: imgGrades2,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>The grade is good</b>.</p>',
