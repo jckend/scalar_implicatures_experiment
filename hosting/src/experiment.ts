@@ -22,7 +22,7 @@ import imgSnail1 from './images/all_some_snail1.png'
 import imgSnail2 from './images/all_some_snail2.png'
 import imgSpoon1 from './images/all_some_spoon1.png'
 import imgSpoon2 from './images/all_some_spoon2.png'
-import imgGorilla1 from 'all_some_gorilla1.png"
+import imgGorilla1 from 'all_some_gorilla1.png'
 import imgGorilla2 from 'all_some_gorilla2.png'
 import imgCouples1 from './images/couples_adhoc1.png'
 import imgCouples2 from './images/couples_adhoc2.png'
