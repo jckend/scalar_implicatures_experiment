@@ -175,6 +175,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     trial_duration: 4000,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<center><b>All items are spoons</b>.</center>',
+    response_ends_trial: true,
   }
 
     var most_trial0 = {
