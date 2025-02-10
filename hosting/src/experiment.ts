@@ -614,7 +614,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
         }
     }
   }
-time.push(loop_node) 
+  timeline.push(loop_node) 
 
   /* define instructions for semi-cooperative trial */
   var instructions1 = {
