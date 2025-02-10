@@ -372,7 +372,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
   var adhoc_trial3 = {
     type: jsPsychImageKeyboardResponse,
     stimulus: imgAvocado1,
-    stimulus_height: 150,
+    stimulus_height: 100,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>There is an avocado at the top</b>.</p>',
     trial_duration: 4000,
@@ -382,7 +382,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     var adhoc_trial4 = {
     type: jsPsychImageKeyboardResponse,
     stimulus: imgAvocado2,
-    stimulus_height: 150,
+    stimulus_height: 100,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>There is an avocado at the top</b>.</p>',
     trial_duration: 4000,
@@ -392,7 +392,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     var adhoc_trial5 = {
     type: jsPsychImageKeyboardResponse,
     stimulus: imgTube1,
-    stimulus_height: 150,
+    stimulus_height: 100,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>There is a tube on the bottom</b>.</p>',
     trial_duration: 4000,
@@ -402,7 +402,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     var adhoc_trial6 = {
     type: jsPsychImageKeyboardResponse,
     stimulus: imgTube2,
-    stimulus_height: 150,
+    stimulus_height: 100,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>There is a tube on the bottom</b>.</p>',
     trial_duration: 4000,
@@ -651,19 +651,16 @@ export async function runExperiment(updateDebugPanel: () => void) {
     repetitions: 1,
     randomize_order: true,
   }
-  timeline.push(test_procedure0)
-
+  
   var more_training = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: 'You have completed the training trials. Press <b>R</b> for additional training trials, or <b>C</b> to continue.'
   }
-  timeline.push(more_training)
-
+  
   var loop_node = {
-    timeline: [fixation, question, test],
-    timeline_variables: training,
+    timeline: [test_procedure0, more_training],
     loop_function: function(data){
-        if(jsPsych.pluginAPI.compareKeys(data.values()[0].response, 'r')){
+        if(jsPsych.pluginAPI.compareKeys(data.values()[1].response, 'r')){
             return true;
         } else {
             return false;
