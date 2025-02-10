@@ -535,6 +535,18 @@ export async function runExperiment(updateDebugPanel: () => void) {
     response_ends_trial: true,
   }
 
+  var price_trial = {
+    type: jsPsychImageKeyboardResponse,
+    stimulus: imgPrice,
+    stimulus_width: 700,
+    choices: ['ArrowLeft', 'ArrowRight'],
+    prompt: '<p><b>The item is cheap</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
+  }
+
+
+
   const training = [all_trial0, most_trial0, few_trial0, some_trial0, adhoc_trial0, heat_trial0, most_trial0]
   const trials = [
     few_trial1,
@@ -563,6 +575,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     warm_trial2,
     all_trial1,
     all_trial2,
+    price_trial,
   ]
 
   /* consent */
