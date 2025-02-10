@@ -172,9 +172,9 @@ export async function runExperiment(updateDebugPanel: () => void) {
     type: jsPsychImageKeyboardResponse,
     stimulus: imgSnail1,
     stimulus_width: 700,
-    trial_duration: 4000,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<center><b>All items are spoons</b>.</center>',
+    trial_duration: 4000,
     response_ends_trial: true,
   }
 
@@ -182,54 +182,60 @@ export async function runExperiment(updateDebugPanel: () => void) {
     type: jsPsychImageKeyboardResponse,
     stimulus: imgBurg2,
     stimulus_width: 700,
-    trial_duration: 4000,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>Most items are spoons</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
   }
 
   var few_trial0 = {
     type: jsPsychImageKeyboardResponse,
     stimulus: imgBurg1,
     stimulus_width: 700,
-    trial_duration: 4000,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>Few items are spoons</b>.</p>', 
+    prompt: '<p><b>Few items are spoons</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
   }
 
   var heat_trial0 = {
     type: jsPsychImageKeyboardResponse,
     stimulus: imgWarm1,
     stimulus_width: 700,
-    trial_duration: 4000,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>The item is warm</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
   }
 
   var some_trial0 = {
     type: jsPsychImageKeyboardResponse,
     stimulus: imgSnail1,
     stimulus_width: 700,
-    trial_duration: 4000,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>Some items are spoons</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
   }
 
   var adhoc_trial0 = {
     type: jsPsychImageKeyboardResponse,
     stimulus: imgCouples1,
     stimulus_width: 700,
-    trial_duration: 4000,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>A man is wearing a teal shirt</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
   }
 
   var most_trial0 = {
     type: jsPsychImageKeyboardResponse,
     stimulus: imgBurg2,
     stimulus_width: 700,
-    trial_duration: 4000,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>Most items are burgers</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
   }
 
   /* define trial variables for cooperative trials */
