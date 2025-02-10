@@ -587,7 +587,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     post_trial_gap: 2000,
   }
   timeline.push(instructions0)
-
+  
   /* define training procedure */
   const test_procedure0 = {
     timeline: [fixation, question, test],
@@ -596,6 +596,25 @@ export async function runExperiment(updateDebugPanel: () => void) {
     randomize_order: false,
   }
   timeline.push(test_procedure0)
+
+  var more_training = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: 'This completes the training trials. Press R to repeat these trials, or C to continue.'
+  }
+  timeline.push(more_training)
+
+  var loop_node = {
+    timeline: [fixation, question, test],
+    timeline_variables: training,
+    loop_function: function(data){
+        if(jsPsych.pluginAPI.compareKeys(data.values()[0].response, 'r')){
+            return true;
+        } else {
+            return false;
+        }
+    }
+  }
+time.push(loop_node) 
 
   /* define instructions for semi-cooperative trial */
   var instructions1 = {
