@@ -245,6 +245,8 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>Few items are spoons</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
   }
 
   var few_trial2 = {
@@ -253,6 +255,8 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>Few items are clamps</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
   }
 
   var few_trial3 = {
@@ -261,6 +265,8 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>Few items are clamps</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
   }
 
   var few_trial4 = {
@@ -269,6 +275,8 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>Few items are snakes</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
   }
 
   var heat_trial1 = {
@@ -277,6 +285,8 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>The item on the card is warm</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
   }
 
   var some_trial1 = {
@@ -285,6 +295,8 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>Some items are gorillas</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
   }
 
   var some_trial2 = {
@@ -293,6 +305,8 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>Some items are saxophones</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
   }
 
   var some_trial3 = {
@@ -301,6 +315,8 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>Some items are burgers</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
   }
 
   var some_trial4 = {
@@ -309,6 +325,8 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>Some items are spoons</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
   }
 
   var some_trial5 = {
@@ -317,6 +335,8 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>Some items are saxophones</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
   }
 
   var some_trial6 = {
@@ -325,6 +345,8 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>Some items are gorillas.</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
   }
 
   var adhoc_trial1 = {
@@ -333,6 +355,8 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>A man is wearing a teal shirt</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
   }
 
   var adhoc_trial2 = {
@@ -341,38 +365,48 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>A man is wearing a teal shirt</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
   }
 
   var adhoc_trial3 = {
     type: jsPsychImageKeyboardResponse,
     stimulus: imgAvocado1,
-    stimulus_width: 700,
+    stimulus_width: 350,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>There is an avocado at the top</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
   }
 
     var adhoc_trial4 = {
     type: jsPsychImageKeyboardResponse,
     stimulus: imgAvocado2,
-    stimulus_width: 700,
+    stimulus_width: 350,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>There is an avocado at the top</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
   }
 
     var adhoc_trial5 = {
     type: jsPsychImageKeyboardResponse,
     stimulus: imgTube1,
-    stimulus_width: 700,
+    stimulus_width: 350,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>There is a tube on the bottom</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
   }
 
     var adhoc_trial6 = {
     type: jsPsychImageKeyboardResponse,
     stimulus: imgTube2,
-    stimulus_width: 700,
+    stimulus_width: 350,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>There is a tube on the bottom</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
   }
 
     var adhoc_trial7 = {
@@ -381,6 +415,8 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>There is a petri dish on the right</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
   }
 
     var adhoc_trial8 = {
@@ -389,9 +425,9 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>There is a petri dish on the right</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
   }
-
-
   
   var most_trial1 = {
     type: jsPsychImageKeyboardResponse,
@@ -399,6 +435,8 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>Most items are burgers</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
   }
 
   var all_trial1 = {
@@ -407,6 +445,8 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>All the items are burgers</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
   }
 
   var all_trial2 = {
@@ -415,6 +455,8 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>All the items are spoons</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
   }
 
 
@@ -424,6 +466,8 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>Most items are gorillas</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
   }
 
   var most_trial4 = {
@@ -432,6 +476,8 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>Most items are saxophones</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
   }
 
   var hair_trial1 = {
@@ -440,6 +486,8 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>The man has dark hair</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
   }
 
   var partic_trial1 = {
@@ -448,6 +496,8 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>The medal was won by a participant</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
   }
 
   var partic_trial2 = {
@@ -456,6 +506,8 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>The medal was won by a participant</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
   }
 
   var warm_trial1 = {
@@ -464,6 +516,8 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>The item is warm</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
   }
 
   var warm_trial2 = {
@@ -472,6 +526,8 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>The item is warm</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
   }
 
   const training = [all_trial0, most_trial0, few_trial0, some_trial0, adhoc_trial0, heat_trial0, most_trial0]
@@ -593,13 +649,13 @@ export async function runExperiment(updateDebugPanel: () => void) {
     timeline: [fixation, question, test],
     timeline_variables: training,
     repetitions: 1,
-    randomize_order: false,
+    randomize_order: true,
   }
   timeline.push(test_procedure0)
 
   var more_training = {
     type: jsPsychHtmlKeyboardResponse,
-    stimulus: 'This completes the training trials. Press R to repeat these trials, or C to continue.'
+    stimulus: 'You have completed the training trials. Press <b>R</b> for additional training trials, or <b>C</b> to continue.'
   }
   timeline.push(more_training)
 
@@ -616,10 +672,11 @@ export async function runExperiment(updateDebugPanel: () => void) {
   }
   timeline.push(loop_node) 
 
-  /* define instructions for semi-cooperative trial */
+  /* define instructions for main trial */
   var instructions1 = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: `
+    <p>You will be presented with two images. Select the image you think is likelier to fit the description.</p>
     <p>If the likelier image is on the left, press the left arrow <kbd>&larr;</kbd> on the keyboard as fast as you can. If the likelier image is on the right, press the right arrow <kbd>&rarr;</kbd> as fast as you can.</p>
     <center>
     <div style='width: 700px;'><img src='${imgSnail1}'></img>
