@@ -372,7 +372,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
   var adhoc_trial3 = {
     type: jsPsychImageKeyboardResponse,
     stimulus: imgAvocado1,
-    stimulus_height: 100,
+    stimulus_height: 50,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>There is an avocado at the top</b>.</p>',
     trial_duration: 4000,
@@ -382,7 +382,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     var adhoc_trial4 = {
     type: jsPsychImageKeyboardResponse,
     stimulus: imgAvocado2,
-    stimulus_height: 100,
+    stimulus_height: 50,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>There is an avocado at the top</b>.</p>',
     trial_duration: 4000,
@@ -392,7 +392,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     var adhoc_trial5 = {
     type: jsPsychImageKeyboardResponse,
     stimulus: imgTube1,
-    stimulus_height: 100,
+    stimulus_height: 50,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>There is a tube on the bottom</b>.</p>',
     trial_duration: 4000,
@@ -402,7 +402,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     var adhoc_trial6 = {
     type: jsPsychImageKeyboardResponse,
     stimulus: imgTube2,
-    stimulus_height: 100,
+    stimulus_height: 50,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>There is a tube on the bottom</b>.</p>',
     trial_duration: 4000,
