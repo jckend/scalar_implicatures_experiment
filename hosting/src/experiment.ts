@@ -6,6 +6,7 @@ import jsPsychImageKeyboardResponse from '@jspsych/plugin-image-keyboard-respons
 import jsPsychPreload from '@jspsych/plugin-preload'
 import { initJsPsych } from 'jspsych'
 
+
 import { debugging, getUserInfo, mockStore, prolificCC, prolificCUrl } from './globalVariables'
 import { saveTrialDataComplete, saveTrialDataPartial } from './lib/databaseUtils'
 
@@ -39,6 +40,9 @@ import imgPartic2 from './images/participated_won_2.png'
 import imgWarm1 from './images/warmhot_1.png'
 import imgWarm2 from './images/warmhot_2.png'
 import imgPrice from 'C:/Users/caleb/price1.png'
+import imgTime1 from 'C:/Users/caleb/low_deplete1.png'
+import imgTime2 from 'C:/Users/caleb/low_depleted2.png'
+
 
 /* Alternatively
  * type JsPsychInstance = ReturnType<typeof initJsPsych>
