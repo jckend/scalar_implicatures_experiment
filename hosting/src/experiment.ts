@@ -549,6 +549,27 @@ export async function runExperiment(updateDebugPanel: () => void) {
     response_ends_trial: true,
   }
 
+  var time_trial1 = {
+    type: jsPsychImageKeyboardResponse,
+    stimulus: imgTime1,
+    stimulus_width: 700,
+    choices: ['ArrowLeft', 'ArrowRight'],
+    prompt: '<p><b>The time is running low</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
+  }
+
+  var time_trial2 = {
+    type: jsPsychImageKeyboardResponse,
+    stimulus: imgTime2,
+    stimulus_width: 700,
+    choices: ['ArrowLeft', 'ArrowRight'],
+    prompt: '<p><b>The time is running low</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
+  }
+
+
 
 
   const training = [all_trial0, most_trial0, few_trial0, some_trial0, adhoc_trial0, heat_trial0, most_trial0]
@@ -580,6 +601,8 @@ export async function runExperiment(updateDebugPanel: () => void) {
     all_trial1,
     all_trial2,
     price_trial,
+    time_trial1, 
+    time_trial2
   ]
 
   /* consent */
