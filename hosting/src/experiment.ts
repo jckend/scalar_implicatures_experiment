@@ -35,8 +35,8 @@ import imgTube1 from 'C:/Users/caleb/tube_adhoc1.png'
 import imgTube2 from 'C:/Users/caleb/tube_adhoc2.png'
 import imgDark1 from './images/dark_black1.png'
 import imgDark2 from './images/dark_black2.png'
-import imgPartic1 from './images/participated_won_1.png'
-import imgPartic2 from './images/participated_won_2.png'
+import imgPartic1 from 'C:/Users/caleb/gold_bronze1.png'
+import imgPartic2 from 'C:/Users/caleb/gold_bronze2.png'
 import imgWarm1 from './images/warmhot_1.png'
 import imgWarm2 from './images/warmhot_2.png'
 import imgPrice from 'C:/Users/caleb/price1.png'
@@ -569,6 +569,27 @@ export async function runExperiment(updateDebugPanel: () => void) {
     response_ends_trial: true,
   }
 
+  var okay_trial1 = {
+    type: jsPsychImageKeyboardResponse,
+    stimulus: imgPartic1,
+    stimulus_width: 700,
+    choices: ['ArrowLeft', 'ArrowRight'],
+    prompt: '<p><b>The person who won the medal did okay</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
+  }
+
+  var okay_trial2 = {
+    type: jsPsychImageKeyboardResponse,
+    stimulus: imgPartic2,
+    stimulus_width: 700,
+    choices: ['ArrowLeft', 'ArrowRight'],
+    prompt: '<p><b>The person who won the medal did okay</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
+  }
+
+
 
 
 
@@ -602,7 +623,9 @@ export async function runExperiment(updateDebugPanel: () => void) {
     all_trial2,
     price_trial,
     time_trial1, 
-    time_trial2
+    time_trial2,
+    okay_trial1,
+    okay_trial2
   ]
 
   /* consent */
