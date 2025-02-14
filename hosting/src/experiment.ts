@@ -40,7 +40,7 @@ import imgPartic2 from './images/participated_won_2.png'
 import imgWarm1 from './images/warmhot_1.png'
 import imgWarm2 from './images/warmhot_2.png'
 import imgPrice from 'C:/Users/caleb/price1.png'
-import imgTime1 from 'C:/Users/caleb/low_deplete1.png'
+import imgTime1 from 'C:/Users/caleb/low_depleted1.png'
 import imgTime2 from 'C:/Users/caleb/low_depleted2.png'
 
 
