@@ -39,7 +39,8 @@ import imgPartic1 from 'C:/Users/caleb/gold_bronze1.png'
 import imgPartic2 from 'C:/Users/caleb/gold_bronze2.png'
 import imgWarm1 from './images/warmhot_1.png'
 import imgWarm2 from './images/warmhot_2.png'
-import imgPrice from 'C:/Users/caleb/price1.png'
+import imgPrice1 from 'C:/Users/caleb/free_two1.png'
+import imgPrice2 from 'C:/Users/caleb/free_two2.png'
 import imgTime1 from 'C:/Users/caleb/low_depleted1.png'
 import imgTime2 from 'C:/Users/caleb/low_depleted2.png'
 
@@ -539,15 +540,26 @@ export async function runExperiment(updateDebugPanel: () => void) {
     response_ends_trial: true,
   }
 
-  var price_trial = {
+  var price_trial1 = {
     type: jsPsychImageKeyboardResponse,
-    stimulus: imgPrice,
+    stimulus: imgPrice1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>The item is cheap</b>.</p>',
     trial_duration: 4000,
     response_ends_trial: true,
   }
+
+  var price_trial2 = {
+    type: jsPsychImageKeyboardResponse,
+    stimulus: imgPrice2,
+    stimulus_width: 700,
+    choices: ['ArrowLeft', 'ArrowRight'],
+    prompt: '<p><b>The item is cheap</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
+  }
+
 
   var time_trial1 = {
     type: jsPsychImageKeyboardResponse,
@@ -618,7 +630,8 @@ export async function runExperiment(updateDebugPanel: () => void) {
     warm_trial2,
     all_trial1,
     all_trial2,
-    price_trial,
+    price_trial1,
+    price_trial2,
     time_trial1, 
     time_trial2,
     okay_trial1,
