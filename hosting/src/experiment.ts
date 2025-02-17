@@ -161,7 +161,6 @@ export async function runExperiment(updateDebugPanel: () => void) {
     images: [
       imgBurg1,
       imgBurg2,
-      imgStim3,
       imgDark1,
       imgDark2,
       imgWarm1,
