@@ -14,7 +14,6 @@ import { saveTrialDataComplete, saveTrialDataPartial } from './lib/databaseUtils
 import type { SaveableDataRecord } from '../types/project'
 import type { DataCollection } from 'jspsych'
 
-import imgStim3 from './images/adhoc.png'
 import imgBurg1 from './images/all_some_burger1.png'
 import imgBurg2 from './images/all_some_burger2.png'
 import imgSax1 from './images/all_some_clamp1.png'
@@ -44,9 +43,22 @@ import imgTime1 from 'C:/Users/caleb/low_depleted1.png'
 import imgTime2 from 'C:/Users/caleb/low_depleted2.png'
 import imgGinger1 from 'C:/Users/caleb/all_ginger_some_beaver1.png'
 import imgGinger2 from 'C:/Users/caleb/all_ginger_some_beaver2.png'
-import imgWhale1 from 'C:/User/caleb/all_whale_some_carrot1.png'
+import imgGorilla1 from 'C:/Users/caleb/all_some_gorilla1.png'
+import imgGorilla2 from 'C:/Users/caleb/all_some_gorilla2.png'
+import imgWhale1 from 'C:/Users/caleb/all_whale_some_carrot1.png'
 import imgWhale2 from 'C:/Users/caleb/all_whale_some_carrot2.png'
 
+import imgAvocado1 from 'C:/Users/caleb/avocoda_adhoc1.png'
+import imgAvocado2 from 'C:/Users/caleb/avocoda_adhoc2.png'
+import imgPartic1 from 'C:/Users/caleb/gold_bronze1.png'
+import imgPartic2 from 'C:/Users/caleb/gold_bronze2.png'
+import imgTime1 from 'C:/Users/caleb/low_depleted1.png'
+import imgTime2 from 'C:/Users/caleb/low_depleted2.png'
+import imgPetri1 from 'C:/Users/caleb/petri_adhoc1.png'
+import imgPetri2 from 'C:/Users/caleb/petri_adhoc2.png'
+import imgPrice from 'C:/Users/caleb/price1.png'
+import imgTube1 from 'C:/Users/caleb/tube_adhoc1.png'
+import imgTube2 from 'C:/Users/caleb/tube_adhoc2.png'
 
 /* Alternatively
  * type JsPsychInstance = ReturnType<typeof initJsPsych>
@@ -568,7 +580,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
   }
 
   
-  const training = [all_trial0, most_trial0, few_trial0, some_trial0]
+  const training = [all_trial0, most_trial0, few_trial0, some_trial0,]
   const trials = [
     few_trial1,
     few_trial2,
@@ -600,7 +612,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     time_trial1, 
     time_trial2,
     okay_trial1,
-    okay_trial2
+    okay_trial2,
   ]
 
   /* consent */
