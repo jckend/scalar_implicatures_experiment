@@ -18,6 +18,7 @@ import imgBeaver1 from 'C:/Users/caleb/all_ginger_some_beaver1.png'
 import imgBeaver2 from 'C:/Users/caleb/all_ginger_some_beaver2.png'
 import imgWhale1 from 'C:/Users/caleb/all_whale_some_carrot1.png'
 import imgWhale2 from 'C:/Users/caleb/all_whale_some_carrot2.png'
+import imgCoffee from 'C:/Users/caleb/spoon_coffee.png'
 import imgBurg1 from './images/all_some_burger1.png'
 import imgBurg2 from './images/all_some_burger2.png'
 import imgSax1 from './images/all_some_clamp1.png'
@@ -230,10 +231,10 @@ export async function runExperiment(updateDebugPanel: () => void) {
 
   var adhoc_trial0 = {
     type: jsPsychImageKeyboardResponse,
-    stimulus: imgCouples1,
+    stimulus: imgCoffee,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>A man is wearing a teal shirt</b>.</p>',
+    prompt: '<p><b>There is a coffee on the right</b>.</p>',
     trial_duration: 4000,
     response_ends_trial: true,
   }
