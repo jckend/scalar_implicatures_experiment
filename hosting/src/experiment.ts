@@ -564,7 +564,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
   }
 
   
-  const training = [all_trial0, most_trial0, few_trial0, some_trial0, most_trial0]
+  const training = [all_trial0, most_trial0, few_trial0, some_trial0]
   const trials = [
     few_trial1,
     few_trial2,
