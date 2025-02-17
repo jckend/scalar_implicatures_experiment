@@ -156,30 +156,9 @@ export async function runExperiment(updateDebugPanel: () => void) {
   const timeline: Record<string, unknown>[] = []
 
   /* preload images */
-  const preload = {
+  var preload = {
     type: jsPsychPreload,
-    images: [
-      imgBurg1,
-      imgBurg2,
-      imgDark1,
-      imgDark2,
-      imgWarm1,
-      imgWarm2,
-      imgSnail1,
-      imgSnail2,
-      imgSpoon1,
-      imgSpoon2,
-      imgSax1,
-      imgSax2,
-      imgCouples1,
-      imgCouples2,
-      imgPartic1,
-      imgPartic2,
-      imgGinger1,
-      imgGinger2, 
-      imgWhale1, 
-      imgWhale2,
-    ],
+    auto_preload: true
   }
   timeline.push(preload)
   
