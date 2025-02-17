@@ -14,6 +14,8 @@ import { saveTrialDataComplete, saveTrialDataPartial } from './lib/databaseUtils
 import type { SaveableDataRecord } from '../types/project'
 import type { DataCollection } from 'jspsych'
 
+import imgBeaver1 from 'C:/Users/caleb/all_ginger_some_beaver1.png'
+import imgBeaver2 from 'C:/Users/caleb/all_ginger_some_beaver2.png'
 import imgBurg1 from './images/all_some_burger1.png'
 import imgBurg2 from './images/all_some_burger2.png'
 import imgSax1 from './images/all_some_clamp1.png'
@@ -144,6 +146,8 @@ export async function runExperiment(updateDebugPanel: () => void) {
   const preload = {
     type: jsPsychPreload,
     images: [
+      imgBeaver1,
+      imgBeaver2,
       imgBurg1,
       imgBurg2,
       imgDark1,
@@ -174,10 +178,10 @@ export async function runExperiment(updateDebugPanel: () => void) {
   /* define trial variables for training trials */
   var all_trial0 = {
     type: jsPsychImageKeyboardResponse,
-    stimulus: imgSnail1,
+    stimulus: imgBeaver1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<center><b>All items are spoons</b>.</center>',
+    prompt: '<center><b>All items are ginger roots</b>.</center>',
     trial_duration: 4000,
     response_ends_trial: true,
   }
