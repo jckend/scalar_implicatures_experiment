@@ -41,12 +41,8 @@ import imgWarm2 from './images/warmhot_2.png'
 import imgPrice from 'C:/Users/caleb/price1.png'
 import imgTime1 from 'C:/Users/caleb/low_depleted1.png'
 import imgTime2 from 'C:/Users/caleb/low_depleted2.png'
-import imgGinger1 from 'C:/Users/caleb/all_ginger_some_beaver1.png'
-import imgGinger2 from 'C:/Users/caleb/all_ginger_some_beaver2.png'
 import imgGorilla1 from 'C:/Users/caleb/all_some_gorilla1.png'
 import imgGorilla2 from 'C:/Users/caleb/all_some_gorilla2.png'
-import imgWhale1 from 'C:/Users/caleb/all_whale_some_carrot1.png'
-import imgWhale2 from 'C:/Users/caleb/all_whale_some_carrot2.png'
 import imgAvocado1 from 'C:/Users/caleb/avocoda_adhoc1.png'
 import imgAvocado2 from 'C:/Users/caleb/avocoda_adhoc2.png'
 import imgPartic1 from 'C:/Users/caleb/gold_bronze1.png'
@@ -172,7 +168,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
   /* define trial variables for training trials */
   var all_trial0 = {
     type: jsPsychImageKeyboardResponse,
-    stimulus: imgWhale1,
+    stimulus: imgBurger1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<center><b>All items are whales</b>.</center>',
@@ -182,7 +178,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
 
   var few_trial0 = {
     type: jsPsychImageKeyboardResponse,
-    stimulus: imgGinger1,
+    stimulus: imgBurger1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>Few items are ginger roots</b>.</p>',
@@ -192,7 +188,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
   
   var some_trial0 = {
     type: jsPsychImageKeyboardResponse,
-    stimulus: imgGinger2,
+    stimulus: imgBurger1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>Some items are beavers</b>.</p>',
@@ -202,7 +198,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
 
   var most_trial0 = {
     type: jsPsychImageKeyboardResponse,
-    stimulus: imgWhale2,
+    stimulus: imgBurger1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>Most of the items are whales</b>.</p>',
