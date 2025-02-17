@@ -47,7 +47,6 @@ import imgGorilla1 from 'C:/Users/caleb/all_some_gorilla1.png'
 import imgGorilla2 from 'C:/Users/caleb/all_some_gorilla2.png'
 import imgWhale1 from 'C:/Users/caleb/all_whale_some_carrot1.png'
 import imgWhale2 from 'C:/Users/caleb/all_whale_some_carrot2.png'
-
 import imgAvocado1 from 'C:/Users/caleb/avocoda_adhoc1.png'
 import imgAvocado2 from 'C:/Users/caleb/avocoda_adhoc2.png'
 import imgPartic1 from 'C:/Users/caleb/gold_bronze1.png'
