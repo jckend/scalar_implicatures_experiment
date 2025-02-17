@@ -231,17 +231,6 @@ export async function runExperiment(updateDebugPanel: () => void) {
     response_ends_trial: true,
   }
 
-
-  var most_trial0 = {
-    type: jsPsychImageKeyboardResponse,
-    stimulus: imgGinger2,
-    stimulus_width: 700,
-    choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>Most items are ginger roots</b>.</p>',
-    trial_duration: 4000,
-    response_ends_trial: true,
-  }
-
   /* define trial variables for cooperative trials */
   var few_trial1 = {
     type: jsPsychImageKeyboardResponse,
