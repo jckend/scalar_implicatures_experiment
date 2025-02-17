@@ -349,7 +349,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgGorilla2,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>Some items are gorillas.</b>.</p>',
+    prompt: '<p><b>Some items are gorillas</b>.</p>',
     trial_duration: 4000,
     response_ends_trial: true,
   }
@@ -589,10 +589,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     response_ends_trial: true,
   }
 
-
-
-
-
+  
   const training = [all_trial0, most_trial0, few_trial0, some_trial0, adhoc_trial0, heat_trial0, most_trial0]
   const trials = [
     few_trial1,
