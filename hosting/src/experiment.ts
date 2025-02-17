@@ -241,15 +241,6 @@ export async function runExperiment(updateDebugPanel: () => void) {
     response_ends_trial: true,
   }
 
-  var most_trial0 = {
-    type: jsPsychImageKeyboardResponse,
-    stimulus: imgVolcano2,
-    stimulus_width: 700,
-    choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>The item is hot</b>.</p>',
-    trial_duration: 4000,
-    response_ends_trial: true,
-  }
 
   /* define trial variables for cooperative trials */
   var few_trial1 = {
@@ -609,7 +600,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
   }
 
   
-  const training = [all_trial0, most_trial0, few_trial0, some_trial0, adhoc_trial0, heat_trial0, most_trial0]
+  const training = [all_trial0, most_trial0, few_trial0, some_trial0, adhoc_trial0, heat_trial0]
   const trials = [
     few_trial1,
     few_trial2,
