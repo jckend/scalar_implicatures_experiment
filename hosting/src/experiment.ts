@@ -682,6 +682,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     prompt: jsPsych.timelineVariable('prompt') as unknown as string,
     stimulus: jsPsych.timelineVariable('stimulus') as unknown as string,
     choices: ['ArrowLeft', 'ArrowRight'] satisfies KeyboardResponse[],
+    trial_duration: 4000,
     data: {
       task: 'response' satisfies Task,
       // correct_response: jsPsych.timelineVariable('correct_response') as unknown as string,
