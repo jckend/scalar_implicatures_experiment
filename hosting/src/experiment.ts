@@ -42,6 +42,10 @@ import imgWarm2 from './images/warmhot_2.png'
 import imgPrice from 'C:/Users/caleb/price1.png'
 import imgTime1 from 'C:/Users/caleb/low_depleted1.png'
 import imgTime2 from 'C:/Users/caleb/low_depleted2.png'
+import imgGinger1 from 'C:/Users/caleb/all_ginger_some_beaver1.png'
+import imgGinger2 from 'C:/Users/caleb/all_ginger_some_beaver2.png'
+import imgWhale1 from 'C:/Users/caleb/all_whale_some_carrot1.png'
+import imgWhale2 from 'C:/Users/caleb/all_whale_some_carrot2.png'
 
 
 /* Alternatively
@@ -175,70 +179,52 @@ export async function runExperiment(updateDebugPanel: () => void) {
   /* define trial variables for training trials */
   var all_trial0 = {
     type: jsPsychImageKeyboardResponse,
-    stimulus: imgSnail1,
+    stimulus: imgWhale1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<center><b>All items are spoons</b>.</center>',
-    trial_duration: 4000,
-    response_ends_trial: true,
-  }
-
-    var most_trial0 = {
-    type: jsPsychImageKeyboardResponse,
-    stimulus: imgBurg2,
-    stimulus_width: 700,
-    choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>Most items are spoons</b>.</p>',
+    prompt: '<center><b>All items are whales</b>.</center>',
     trial_duration: 4000,
     response_ends_trial: true,
   }
 
   var few_trial0 = {
     type: jsPsychImageKeyboardResponse,
-    stimulus: imgBurg1,
+    stimulus: imgGinger1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>Few items are spoons</b>.</p>',
+    prompt: '<p><b>Few items are ginger roots</b>.</p>',
     trial_duration: 4000,
     response_ends_trial: true,
   }
-
-  var heat_trial0 = {
-    type: jsPsychImageKeyboardResponse,
-    stimulus: imgWarm1,
-    stimulus_width: 700,
-    choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>The item is warm</b>.</p>',
-    trial_duration: 4000,
-    response_ends_trial: true,
-  }
-
+  
   var some_trial0 = {
     type: jsPsychImageKeyboardResponse,
-    stimulus: imgSnail1,
+    stimulus: imgGinger2,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>Some items are spoons</b>.</p>',
-    trial_duration: 4000,
-    response_ends_trial: true,
-  }
-
-  var adhoc_trial0 = {
-    type: jsPsychImageKeyboardResponse,
-    stimulus: imgCouples1,
-    stimulus_width: 700,
-    choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>A man is wearing a teal shirt</b>.</p>',
+    prompt: '<p><b>Some items are beavers</b>.</p>',
     trial_duration: 4000,
     response_ends_trial: true,
   }
 
   var most_trial0 = {
     type: jsPsychImageKeyboardResponse,
-    stimulus: imgBurg2,
+    stimulus: imgWhale2,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>Most items are burgers</b>.</p>',
+    prompt: '<p><b>Most of the items are whales</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
+  }
+
+
+
+  var most_trial0 = {
+    type: jsPsychImageKeyboardResponse,
+    stimulus: imgGinger2,
+    stimulus_width: 700,
+    choices: ['ArrowLeft', 'ArrowRight'],
+    prompt: '<p><b>Most items are ginger roots</b>.</p>',
     trial_duration: 4000,
     response_ends_trial: true,
   }
