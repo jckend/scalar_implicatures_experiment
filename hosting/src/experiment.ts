@@ -44,7 +44,7 @@ import imgTime1 from 'C:/Users/caleb/low_depleted1.png'
 import imgTime2 from 'C:/Users/caleb/low_depleted2.png'
 import imgGinger1 from 'C:/Users/caleb/all_ginger_some_beaver1.png'
 import imgGinger2 from 'C:/Users/caleb/all_ginger_some_beaver2.png'
-import imgWhale1 from 'C:/Users/caleb/all_whale_some_carrot1.png'
+import imgWhale1 from 'C:/User/caleb/all_whale_some_carrot1.png'
 import imgWhale2 from 'C:/Users/caleb/all_whale_some_carrot2.png'
 
 
@@ -165,6 +165,10 @@ export async function runExperiment(updateDebugPanel: () => void) {
       imgCouples2,
       imgPartic1,
       imgPartic2,
+      imgGinger1,
+      imgGinger2, 
+      imgWhale1, 
+      imgWhale2,
     ],
   }
   timeline.push(preload)
