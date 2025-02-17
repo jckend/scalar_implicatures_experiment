@@ -19,6 +19,8 @@ import imgBeaver2 from 'C:/Users/caleb/all_ginger_some_beaver2.png'
 import imgWhale1 from 'C:/Users/caleb/all_whale_some_carrot1.png'
 import imgWhale2 from 'C:/Users/caleb/all_whale_some_carrot2.png'
 import imgCoffee from 'C:/Users/caleb/spoon_coffee.png'
+import imgVolcano1 from 'C:/Users/caleb/volcano1.png'
+import imgVolcano2 from 'C:/Users/caleb/volcano2.png'
 import imgBurg1 from './images/all_some_burger1.png'
 import imgBurg2 from './images/all_some_burger2.png'
 import imgSax1 from './images/all_some_clamp1.png'
@@ -211,7 +213,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
 
   var heat_trial0 = {
     type: jsPsychImageKeyboardResponse,
-    stimulus: imgWarm1,
+    stimulus: imgVolcano1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
     prompt: '<p><b>The item is warm</b>.</p>',
@@ -241,10 +243,10 @@ export async function runExperiment(updateDebugPanel: () => void) {
 
   var most_trial0 = {
     type: jsPsychImageKeyboardResponse,
-    stimulus: imgBurg2,
+    stimulus: imgVolcano2,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>Most items are burgers</b>.</p>',
+    prompt: '<p><b>The item is hot</b>.</p>',
     trial_duration: 4000,
     response_ends_trial: true,
   }
