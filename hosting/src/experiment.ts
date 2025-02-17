@@ -198,10 +198,10 @@ export async function runExperiment(updateDebugPanel: () => void) {
 
   var few_trial0 = {
     type: jsPsychImageKeyboardResponse,
-    stimulus: imgBurg1,
+    stimulus: imgBeaver2,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>Few items are spoons</b>.</p>',
+    prompt: '<p><b>Few items are beavers</b>.</p>',
     trial_duration: 4000,
     response_ends_trial: true,
   }
