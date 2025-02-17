@@ -218,7 +218,6 @@ export async function runExperiment(updateDebugPanel: () => void) {
   }
 
 
-
   var most_trial0 = {
     type: jsPsychImageKeyboardResponse,
     stimulus: imgGinger2,
