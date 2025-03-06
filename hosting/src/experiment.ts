@@ -728,6 +728,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     repetitions: 1,
     randomize_order: true,
   }
+  timeline.push(test_procedure0)
   
   var more_training = {
     type: jsPsychHtmlKeyboardResponse,
