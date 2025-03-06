@@ -736,7 +736,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
   timeline.push(more_training)
   
   var if_node = {
-    timeline: [if_trial],
+    timeline: [test_procedure0],
     conditional_function: function(){
         // get the data from the previous trial,
         // and check which key was pressed
