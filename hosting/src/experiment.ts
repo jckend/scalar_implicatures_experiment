@@ -733,18 +733,22 @@ export async function runExperiment(updateDebugPanel: () => void) {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: 'You have completed the training trials. Press <b>R</b> for additional training trials, or <b>C</b> to continue.'
   }
+  timeline.push(more_training)
   
-  var loop_node = {
-    timeline: [test_procedure0, more_training],
-    loop_function: function(data){
-        if(jsPsych.pluginAPI.compareKeys(data.values()[0].response, 'r')){
-            return true;
-        } else {
+  var if_node = {
+    timeline: [if_trial],
+    conditional_function: function(){
+        // get the data from the previous trial,
+        // and check which key was pressed
+        var data = jsPsych.data.get().last(1).values()[0];
+        if(jsPsych.pluginAPI.compareKeys(data.response, 'c')){
             return false;
+        } else {
+            return true;
         }
     }
   }
-  timeline.push(loop_node) 
+  timeline.push(if_node)
 
   /* define instructions for main trial */
   var instructions1 = {
