@@ -737,7 +737,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
   var loop_node = {
     timeline: [test_procedure0, more_training],
     loop_function: function(data){
-        if(jsPsych.pluginAPI.compareKeys(data.values()[1].response, 'r')){
+        if(jsPsych.pluginAPI.compareKeys(data.values()[0].response, 'r')){
             return true;
         } else {
             return false;
