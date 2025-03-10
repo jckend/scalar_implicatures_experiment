@@ -263,22 +263,22 @@ export async function runExperiment(updateDebugPanel: () => void) {
     response_ends_trial: true,
   }
 
-  var few_trial3 = {
+  var no_trial2 = {
     type: jsPsychImageKeyboardResponse,
     stimulus: imgSax2,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>Few items are clamps</b>.</p>',
+    prompt: '<p><b>No items are clamps</b>.</p>',
     trial_duration: 4000,
     response_ends_trial: true,
   }
 
-  var few_trial4 = {
+  var no_trial1 = {
     type: jsPsychImageKeyboardResponse,
     stimulus: imgGorilla2,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>Few items are snakes</b>.</p>',
+    prompt: '<p><b>No items are snakes</b>.</p>',
     trial_duration: 4000,
     response_ends_trial: true,
   }
@@ -604,8 +604,8 @@ export async function runExperiment(updateDebugPanel: () => void) {
   const trials = [
     few_trial1,
     few_trial2,
-    few_trial3,
-    few_trial4,
+    no_trial2,
+    no_trial1,
     some_trial1,
     some_trial2,
     some_trial3,
@@ -622,8 +622,6 @@ export async function runExperiment(updateDebugPanel: () => void) {
     adhoc_trial7,
     adhoc_trial8,
     hair_trial1,
-    partic_trial1,
-    partic_trial2,
     warm_trial1,
     warm_trial2,
     all_trial1,
