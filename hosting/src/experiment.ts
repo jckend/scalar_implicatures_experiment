@@ -358,7 +358,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgCouples2,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>A man is wearing a teal shirt</b>.</p>',
+    prompt: '<p><b>A man is holding hands with a woman</b>.</p>',
     trial_duration: 4000,
     response_ends_trial: true,
   }
@@ -401,7 +401,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus_height: 700,
     stimulus_width: 700, 
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>There is a tube on the bottom</b>.</p>',
+    prompt: '<p><b>There is a tube at the top</b>.</p>',
     trial_duration: 4000,
     response_ends_trial: true,
   }
@@ -422,7 +422,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgPetri1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>There is a petri dish on the right</b>.</p>',
+    prompt: '<p><b>There are two petri dishes</b>.</p>',
     trial_duration: 4000,
     response_ends_trial: true,
   }
@@ -523,7 +523,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgWarm1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>The item is warm</b>.</p>',
+    prompt: '<p><b>The item is hot</b>.</p>',
     trial_duration: 4000,
     response_ends_trial: true,
   }
@@ -553,7 +553,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgPrice2,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>The item is cheap</b>.</p>',
+    prompt: '<p><b>The item is free</b>.</p>',
     trial_duration: 4000,
     response_ends_trial: true,
   }
@@ -574,7 +574,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgTime2,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>The time is running low</b>.</p>',
+    prompt: '<p><b>The time has elapsed</b>.</p>',
     trial_duration: 4000,
     response_ends_trial: true,
   }
@@ -584,7 +584,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgPartic1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>The person who won the medal did okay</b>.</p>',
+    prompt: '<p><b>The person medaled did okay</b>.</p>',
     trial_duration: 4000,
     response_ends_trial: true,
   }
@@ -594,7 +594,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgPartic2,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>The person who won the medal did okay</b>.</p>',
+    prompt: '<p><b>The person who medaled won</b>.</p>',
     trial_duration: 4000,
     response_ends_trial: true,
   }
