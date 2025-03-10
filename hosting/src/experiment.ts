@@ -358,7 +358,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgCouples2,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>A man is holding hands with a woman</b>.</p>',
+    prompt: '<p><b>Two men are holding hands</b>.</p>',
     trial_duration: 4000,
     response_ends_trial: true,
   }
