@@ -730,7 +730,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
   
   var more_training = {
     type: jsPsychHtmlKeyboardResponse,
-    stimulus: 'You have completed the training trials. Press <b>R</b> for additional training trials, or <b>C</b> to continue.'
+    stimulus: 'You have completed the training trials. Press <b>C</b> to continue to the experiment. Press any other key to repeat the trainin trials'
   }
   timeline.push(more_training)
   
