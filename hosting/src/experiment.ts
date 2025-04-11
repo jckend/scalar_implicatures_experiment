@@ -584,7 +584,7 @@ export async function runExperiment(updateDebugPanel: () => void) {
     stimulus: imgPartic1,
     stimulus_width: 700,
     choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>The person medaled did okay</b>.</p>',
+    prompt: '<p><b>The person who medaled did okay</b>.</p>',
     trial_duration: 4000,
     response_ends_trial: true,
   }
