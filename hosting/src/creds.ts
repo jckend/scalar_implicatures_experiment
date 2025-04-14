@@ -8,7 +8,7 @@ export const firebaseCred: FirebaseOptions = {
   projectId: "scalar-3ac8c",
   storageBucket: "scalar-3ac8c.firebasestorage.app",
   messagingSenderId: "529117945658",
-  appId: "1:529117945658:web:f103acf76b0d90804e7a03",
+  appId: "1:529117945658:web:6c58c55ec656b1c94e7a03",
   measurementId: "G-D77WVWF8BE"
 }
 
