@@ -1,1 +1,1 @@
-export const prolificCCode: string = 'C2TJMYKC'
+export const prolificCCode: 'C2TJMYKC'
