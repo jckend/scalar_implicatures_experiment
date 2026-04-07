@@ -716,21 +716,6 @@ export async function runExperiment(updateDebugPanel: () => void) {
   }
   timeline.push(instructions0)
   
-  /* define training procedure */
-  const test_procedure0 = {
-    timeline: [fixation, question, test],
-    timeline_variables: training,
-    repetitions: 1,
-    randomize_order: true,
-  }
-  timeline.push(test_procedure0)
-  
-  var more_training = {
-    type: jsPsychHtmlKeyboardResponse,
-    stimulus: 'You have completed the training trials. Press <b>C</b> to continue to the experiment. Press any other key to repeat the training trials'
-  }
-  timeline.push(more_training)
-  
   var if_node = {
     timeline: [test_procedure0],
     conditional_function: function(){
