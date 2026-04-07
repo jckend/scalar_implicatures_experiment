@@ -191,15 +191,6 @@ export async function runExperiment(updateDebugPanel: () => void) {
     response_ends_trial: true,
   }
 
-    var most_trial0 = {
-    type: jsPsychImageKeyboardResponse,
-    stimulus: imgWhale1,
-    stimulus_width: 700,
-    choices: ['ArrowLeft', 'ArrowRight'],
-    prompt: '<p><b>Most items are whales</b>.</p>',
-    trial_duration: 4000,
-    response_ends_trial: true,
-  }
 
   var few_trial0 = {
     type: jsPsychImageKeyboardResponse,
@@ -447,6 +438,17 @@ export async function runExperiment(updateDebugPanel: () => void) {
     response_ends_trial: true,
   }
 
+  var most_trial2 = {
+    type: jsPsychImageKeyboardResponse,
+    stimulus: imgWhale1,
+    stimulus_width: 700,
+    choices: ['ArrowLeft', 'ArrowRight'],
+    prompt: '<p><b>Most items are whales</b>.</p>',
+    trial_duration: 4000,
+    response_ends_trial: true,
+  }
+
+
   var all_trial1 = {
     type: jsPsychImageKeyboardResponse,
     stimulus: imgBurg1,
@@ -599,20 +601,15 @@ export async function runExperiment(updateDebugPanel: () => void) {
     response_ends_trial: true,
   }
 
-  
-  const training = [all_trial0, most_trial0, few_trial0, some_trial0, adhoc_trial0, heat_trial0]
-  const trials = [
+    const trials = [
     few_trial1,
     few_trial2,
     no_trial2,
     no_trial1,
     some_trial1,
     some_trial2,
-    some_trial3,
-    some_trial4,
-    some_trial5,
-    some_trial6,
     most_trial1,
+    most_trial2,
     adhoc_trial1,
     adhoc_trial2,
     adhoc_trial3,
